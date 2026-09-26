@@ -1,0 +1,7 @@
+.claude/claudex/
+.DS_Store
+node_modules/
+
+# Nicht öffentlich: zitiert die private EA-Community bzw. fremdes Transkript
+.scratch/yt-os/assets/ki-os-architektur-recherche.md
+.scratch/yt-os/assets/*-transkript.md
