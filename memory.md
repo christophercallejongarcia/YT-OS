@@ -3,13 +3,13 @@
 **Goal:** YT-OS aufsetzen: eine Claude-Code-Pipeline von der YouTube-Outlier-Recherche bis zum veröffentlichten Video. Ziel der 30-Tage-Challenge: Video 1 ist veröffentlicht und jede Pipeline-Stufe wurde einmal echt benutzt, Handarbeit ist erlaubt.
 **Who it is for:** Chris allein als Betreiber. Das Publikum des Kanals sind Selbstständige und Teams (Nische: Claude, KI-Agents, KI-Betriebssystem).
 **Created:** 2026-09-26   **Updated:** 2026-09-26
-**Current layer:** rules
-**Next action:** Layer 3 (Regeln und Hooks) coachen. Layer 2 bleibt in progress, bis die Playbook-Tickets 15 und 16 erledigt sind.
+**Current layer:** skills
+**Next action:** Layer 4 (Skills): festhalten, welche vorhandenen Skills YT-OS nutzt und wo sie liegen. Neue Skills nur nach Wayfinder-Entscheid.
 
 ## Layer status
 - Identity: solid - identity.md steht (Wer, Für wen, Ziel, Stimme, Immer, Nie). CLAUDE.md lädt identity.md, memory.md und AGENTS.md, AGENTS.md verweist auf beide.
 - Substrate: in progress - Gerüst steht: substrate/sources.md, substrate/compendium.md, substrate/playbooks/ (leer). Rohmaterial liegt in Convex bzw. im Vault. Solid, sobald die Playbooks Hooks/Titel und Skript-Aufbau stehen und die schwierige Frage beantwortbar ist.
-- Rules: not started - Kandidaten: Slop-Check, Freigabe vor Upload, keine Makler-Beispiele
+- Rules: solid - rules/never.md (3 Grenzen) und rules/always.md (3 Pflichten), per @-Import in CLAUDE.md immer geladen. Drei Hooks erzwingen das Wichtigste: slop-gate (Claude Code), publish-gate (Claude Code, fragt nach), Git-Guard pre-commit und pre-push (für alle Werkzeuge).
 - Skills: not started - nur was schon läuft (/watch, style-extract, graphics, slop-check), neue Skills erst nach Wayfinder-Entscheid
 - Agents: not started - bewusst zuletzt (Mark Kashef: Agents sind der letzte Layer)
 - Tools: not started - Signal Room über Dateien/Bridge, HyperFrames über CLI, DaVinci über MCP (offen)
@@ -29,6 +29,9 @@
 - 2026-09-26 Playbooks werden nicht jetzt gebaut, sondern als eigene Wayfinder-Tickets (Hooks und Titel, Skript-Aufbau, B-Roll und Edit, Thumbnails, Konkurrenz), mit mehr Zeit. Quellen-Rangfolge: Kallaway und Mark zuerst, Simtent als Entwurf.
 
 - 2026-09-26 Rohmaterial in Convex (Signal Room) bzw. im Vault, kein raw-Ordner in YT-OS. Convex-Skills bleiben im Signal-Room-Repo.
+
+- 2026-09-26 Schlimmster Fehler: etwas geht öffentlich raus ohne Chris' Freigabe, oder Privates landet im öffentlichen Repo. Beides ist per Hook erzwungen, nicht nur als Regel notiert, weil geladene Regeln probabilistisch befolgt werden.
+- 2026-09-26 Commit und Push nach jedem Ticket. Mark committet automatisch ("I auto commit", 2025-09-10). Kein Auto-Commit-Hook, weil parallele Threads im selben Ordner arbeiten und sonst fremde Dateien mitgehen.
 
 ## Open questions
 - Konkurrenz-Creator-Liste (5 bis 10 Kanäle) liefert Chris später über Ticket 19.
