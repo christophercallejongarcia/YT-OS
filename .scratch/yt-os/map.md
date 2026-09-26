@@ -19,6 +19,7 @@ Jede Stufe von Outlier bis Upload hat einen entschiedenen Ansatz und, wo gebaut 
 ## Decisions so far
 
 - [Ziel und Scope festlegen](issues/01-ziel-und-scope.md): Video 1 steht und wird am 27.09. gedreht. YT-OS ist die Schaltzentrale, die Nische ist breit, jede Stufe wird einmal echt benutzt. Editor-Spec entsteht vorab, danach die Ernte. B-Roll wird per Edit-Interview statt Vorab-Markierung geplant, der Recorder im Dreifach-Vergleich.
+- [Poppy-Klon: gibt es einen, den wir übernehmen können?](issues/02-poppy-klon-recherche.md): Nein. Kein brauchbarer Klon, kein White-Label. Am nächsten dran: ThoughtDAG (MIT) und Canvas Chat (YouTube-Node, keine Lizenz). Empfehlung: für Video 2 zuerst ein Ordner-Board mit Claude Code, Board in Signal Room nur bei spürbarem Mehrwert.
 
 ## Not yet specified
 
