@@ -1,0 +1,35 @@
+# YT-OS: vom Outlier bis zum Upload
+
+Type: wayfinder:map
+
+## Destination
+
+Jede Stufe von Outlier bis Upload hat einen entschiedenen Ansatz und, wo gebaut wird, eine Spec. Damit kann Video 1 ("Vom Fragensteller zum Chef") bis Tag 30 der Challenge veröffentlicht werden, und Video 2 läuft durch dieselbe Pipeline.
+
+## Notes
+
+- Domäne: YouTube-Produktion für Chris' deutschen Kanal (Claude, KI-Agents, KI-Betriebssystem für Selbstständige und Teams).
+- Planen, nicht bauen. Ausnahme: Video 1 wird parallel produziert. Die Map darf den Dreh und den Schnitt nie blockieren.
+- Architektur: `docs/yt-os-architektur.png`. YT-OS ist ein isoliertes KI-OS (Mark Kashefs Muster), Apps hängen über Dateien, CLI oder MCP dran.
+- Skills pro Session: `/grilling` für Grilling-Tickets, `/prototype` für Prototyp-Tickets, `/watch` für Videoanalyse, `style-extract` und `hyperframes` für Edit-Themen.
+- Vorhandenes Vokabular für Edits: `/Users/cristobalcallejongarcia/dev/hyperframes/videos/_style-packs/` (ANIMATIONS.md, _elements/ELEMENTS.md).
+- Stil für alle Texte: echte Umlaute, keine Gedankenstriche, kein KI-Sprech.
+- Nach jedem abgeschlossenen Ticket committen und pushen (Arbeitsnachweis für die Challenge).
+
+## Decisions so far
+
+- [Ziel und Scope festlegen](issues/01-ziel-und-scope.md): Video 1 steht und wird am 27.09. gedreht. YT-OS ist die Schaltzentrale, die Nische ist breit, jede Stufe wird einmal echt benutzt. Editor-Spec entsteht vorab, danach die Ernte. B-Roll wird per Edit-Interview statt Vorab-Markierung geplant, der Recorder im Dreifach-Vergleich.
+
+## Not yet specified
+
+- **Upload-Stufe:** Beschreibung, Kapitel, Tags, Veröffentlichungszeit. Vermutlich ein Skill, sobald Titel und Thumbnail stehen.
+- **CTA für Video 1:** bestehender Lead-Magnet oder etwas anderes. Hängt davon ab, was im Video am Ende versprochen wird.
+- **Verbindung Signal Room und YT-OS:** Export-Format nach `substrate/raw/signal-room/`, eventuell ein read-only CLI. Wird klar, wenn der YouTube-Umfang steht.
+- **Skripte für Video 2+:** wie Skript-Board, Hook-Muster und Kallaways Formate (16 Typen, 4-teilige Formel) zusammenspielen.
+- **Review-Schleife:** fertiges Video mit `/watch` prüfen lassen (Brads Muster), bevor es hochgeladen wird.
+
+## Out of scope
+
+- Analytics und Funnel: der nächste Scope nach Video 1.
+- Agents (Persona-Reviewer, Research-Cron): kommen laut Marks Layer-Modell zuletzt, über os-coach.
+- Aufräumen der Makler/Allfinanz-Inhalte: eigenes Handoff in `chriscasa/_handoff/2026-09-26-makler-archivierung.md`.
