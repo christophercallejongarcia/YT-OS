@@ -3,8 +3,8 @@
 **Goal:** YT-OS aufsetzen: eine Claude-Code-Pipeline von der YouTube-Outlier-Recherche bis zum veröffentlichten Video. Ziel der 30-Tage-Challenge: Video 1 ist veröffentlicht und jede Pipeline-Stufe wurde einmal echt benutzt, Handarbeit ist erlaubt.
 **Who it is for:** Chris allein als Betreiber. Das Publikum des Kanals sind Selbstständige und Teams (Nische: Claude, KI-Agents, KI-Betriebssystem).
 **Created:** 2026-09-26   **Updated:** 2026-09-26
-**Current layer:** tools
-**Next action:** Layer 6 (Tools): tools.md mit allen Verbindungen, Lese- oder Schreibzugriff und Verdrahtungsnotiz anlegen, sobald Chris Upload-Weg und Musikquelle entschieden hat.
+**Current layer:** audit
+**Next action:** Morgen Dreh Video 1 (vorher kurze Vorstellung ins Skript). Danach /os-coach audit, um das OS gegen das Ziel zu prüfen.
 
 ## Layer status
 - Identity: solid - identity.md steht (Wer, Für wen, Ziel, Stimme, Immer, Nie). CLAUDE.md lädt identity.md, memory.md und AGENTS.md, AGENTS.md verweist auf beide.
@@ -12,7 +12,7 @@
 - Rules: solid - rules/never.md (3 Grenzen) und rules/always.md (3 Pflichten), per @-Import in CLAUDE.md immer geladen. Drei Hooks erzwingen das Wichtigste: slop-gate (Claude Code), publish-gate (Claude Code, fragt nach), Git-Guard pre-commit und pre-push (für alle Werkzeuge).
 - Skills: in progress - Skript-Kette als 4 Projekt-Skills in .claude/skills/ (skript-mix, skript-anreichern, sprechfassung, text-check), Gerüst in substrate/skript-geruest.md, Übersicht in substrate/skills.md. Solid, sobald die Kette einmal echt für ein Video gelaufen ist.
 - Agents: not started - noch keine Routine, die Chris von Hand über mehrere Skills verkettet und die er aus der Hand geben will. Er prüft nach jeder Skript-Version selbst. Kandidaten für später: Skript-Produzent (führt die Kette), Zuschauer-Personas als Reviewer (Mark: Title Factory).
-- Tools: not started - Signal Room über Dateien/Bridge, HyperFrames über CLI, DaVinci über MCP (offen)
+- Tools: solid - tools.md listet 11 Verbindungen mit Zugriff, Stand und Verdrahtung. Keine Schlüssel im Ordner. Upload vorerst von Hand, Musik über Epidemic Sound.
 
 ## Decisions (append, newest last)
 - 2026-09-26 docs/os-coach-briefing.md existiert nicht. Der Vorgänger-Thread hat es angekündigt, aber vorher zwei Fragen gestellt und nie geschrieben. Start deshalb aus Projekt-Memory, Vorgänger-Transkript und .scratch/yt-os/assets/ki-os-architektur-recherche.md.
@@ -38,6 +38,8 @@
 - 2026-09-26 Skript-Kette mit 4 Versionen statt einem Skill: v1 Mix aus 3 bis 5 Outliern, v2 Community und Faktencheck, v3 Beispiele, v4 Sprechfassung, dann text-check als Prüftor. Chris prüft nach jeder Version. Fester Ablauf aus skript-geruest.md, Herangehensweise pro Abschnitt aus den Playbooks. Vom Simtent-Aufbau ist nur die kurze Vorstellung Pflicht, der Rest wird Playbook.
 
 - 2026-09-26 Agents bewusst noch nicht gebaut: Nach Marks Regel entsteht ein Agent erst aus einer Routine, die man heute von Hand verkettet. Die Skript-Kette läuft mit Freigabe nach jeder Stufe, also ohne Agent.
+
+- 2026-09-26 YouTube-Upload vorerst von Hand, später über die YouTube-API mit Freigabe durch das Publish-Gate. Musik und Sounds über Epidemic Sound, austauschbar.
 
 ## Open questions
 - Konkurrenz-Creator-Liste (5 bis 10 Kanäle) liefert Chris später über Ticket 19.

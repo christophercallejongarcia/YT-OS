@@ -12,6 +12,17 @@ Bearbeitbare Fassung: [docs/yt-os-architektur.excalidraw](docs/yt-os-architektur
 
 Der Ordner ist das OS. Er hat sechs Schichten: Identität, Kontext, Skills, Regeln, Agents und Tools. Die Agenten (Claude Code, Codex, Claude Desktop) werden auf diesen Ordner gerichtet. Apps mit eigenem Repo hängen außen dran und werden über Dateien, CLI oder MCP angebunden. Andere OS bleiben getrennt, es gibt keine geteilten Skills.
 
+## Das OS
+
+| Layer | Datei | Stand |
+|---|---|---|
+| Identität | [identity.md](identity.md) | steht |
+| Kontext | [substrate/](substrate/) | Gerüst, Playbooks folgen |
+| Regeln und Hooks | [rules/](rules/), `.githooks/`, `.claude/hooks/` | steht |
+| Skills | [substrate/skills.md](substrate/skills.md), `.claude/skills/` | Skript-Kette gebaut |
+| Agents | | bewusst zuletzt |
+| Tools | [tools.md](tools.md) | steht |
+
 ## Regeln und Schutz
 
 Das Repo ist öffentlich. Zwei Dateien legen die Grenzen fest: [rules/never.md](rules/never.md) und [rules/always.md](rules/always.md). Die wichtigsten Regeln erzwingen Hooks: Ein Git-Guard blockiert Transkripte, Videos und Zugangsdaten vor jedem Commit und Push. Ein Slop-Gate blockiert KI-Sprech in Skripten, und ein Publish-Gate fragt nach, bevor etwas veröffentlicht wird. Nach dem Klonen einmal ausführen: `git config core.hooksPath .githooks`
@@ -46,5 +57,5 @@ Die Planung läuft als Wayfinder-Map mit Entscheidungs-Tickets unter `.scratch/y
 
 | Datum | Was |
 |---|---|
-| 2026-09-26 | OS-Layer 1 bis 3: Identität, Kontext-Gerüst, Regeln mit Hooks. Wayfinder-Map mit 19 Tickets, 5 Recherchen erledigt |
+| 2026-09-26 | Alle 6 OS-Layer einmal durchlaufen: Identität, Kontext-Gerüst, Regeln mit 4 Hooks (Git-Guard, Slop-Gate, Publish-Gate, Ticket-Ship), Skript-Kette als 4 Skills, Agents bewusst zurückgestellt, Tools-Liste. Wayfinder-Map mit 19 Tickets, 6 entschieden. Poppy-Nachbau recherchiert und MVP geplant |
 | 2026-09-26 | Repo angelegt, Architektur gezeichnet, Referenzen recherchiert, Skript und Briefing für Video 1 abgelegt |

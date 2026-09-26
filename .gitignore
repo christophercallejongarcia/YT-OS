@@ -4,7 +4,7 @@
 # System und lokale Tool-Zustände
 .DS_Store
 node_modules/
-.claude/claudex/
+**/.claude/claudex/
 .claude/settings.local.json
 
 # Zugangsdaten
