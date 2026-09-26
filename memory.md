@@ -3,14 +3,14 @@
 **Goal:** YT-OS aufsetzen: eine Claude-Code-Pipeline von der YouTube-Outlier-Recherche bis zum veröffentlichten Video. Ziel der 30-Tage-Challenge: Video 1 ist veröffentlicht und jede Pipeline-Stufe wurde einmal echt benutzt, Handarbeit ist erlaubt.
 **Who it is for:** Chris allein als Betreiber. Das Publikum des Kanals sind Selbstständige und Teams (Nische: Claude, KI-Agents, KI-Betriebssystem).
 **Created:** 2026-09-26   **Updated:** 2026-09-26
-**Current layer:** skills
-**Next action:** Layer 4 (Skills): festhalten, welche vorhandenen Skills YT-OS nutzt und wo sie liegen. Neue Skills nur nach Wayfinder-Entscheid.
+**Current layer:** agents
+**Next action:** Skript-Kette beim nächsten Video einmal echt durchlaufen und nachschärfen. Layer 5 (Agents) bleibt bewusst zuletzt, Layer 6 (Tools) als tools.md anlegen.
 
 ## Layer status
 - Identity: solid - identity.md steht (Wer, Für wen, Ziel, Stimme, Immer, Nie). CLAUDE.md lädt identity.md, memory.md und AGENTS.md, AGENTS.md verweist auf beide.
 - Substrate: in progress - Gerüst steht: substrate/sources.md, substrate/compendium.md, substrate/playbooks/ (leer). Rohmaterial liegt in Convex bzw. im Vault. Solid, sobald die Playbooks Hooks/Titel und Skript-Aufbau stehen und die schwierige Frage beantwortbar ist.
 - Rules: solid - rules/never.md (3 Grenzen) und rules/always.md (3 Pflichten), per @-Import in CLAUDE.md immer geladen. Drei Hooks erzwingen das Wichtigste: slop-gate (Claude Code), publish-gate (Claude Code, fragt nach), Git-Guard pre-commit und pre-push (für alle Werkzeuge).
-- Skills: not started - nur was schon läuft (/watch, style-extract, graphics, slop-check), neue Skills erst nach Wayfinder-Entscheid
+- Skills: in progress - Skript-Kette als 4 Projekt-Skills in .claude/skills/ (skript-mix, skript-anreichern, sprechfassung, text-check), Gerüst in substrate/skript-geruest.md, Übersicht in substrate/skills.md. Solid, sobald die Kette einmal echt für ein Video gelaufen ist.
 - Agents: not started - bewusst zuletzt (Mark Kashef: Agents sind der letzte Layer)
 - Tools: not started - Signal Room über Dateien/Bridge, HyperFrames über CLI, DaVinci über MCP (offen)
 
@@ -35,8 +35,11 @@
 
 - 2026-09-26 Ein Commit und Push pro Ticket, nicht pro Nachricht. Automatisch nur im Worktree per SessionEnd-Hook (ticket-ship.sh): Branch sichern, bei erledigtem Ticket PR und Squash in master. Passt zur Wayfinder-Regel "ein Ticket pro Session".
 
+- 2026-09-26 Skript-Kette mit 4 Versionen statt einem Skill: v1 Mix aus 3 bis 5 Outliern, v2 Community und Faktencheck, v3 Beispiele, v4 Sprechfassung, dann text-check als Prüftor. Chris prüft nach jeder Version. Fester Ablauf aus skript-geruest.md, Herangehensweise pro Abschnitt aus den Playbooks. Vom Simtent-Aufbau ist nur die kurze Vorstellung Pflicht, der Rest wird Playbook.
+
 ## Open questions
 - Konkurrenz-Creator-Liste (5 bis 10 Kanäle) liefert Chris später über Ticket 19.
-- Q7 bis Q10 aus Wayfinder-Runde 2 sind im Wayfinder-Thread offen.
+- Video 1 hat noch keine kurze Vorstellung von Chris im Skript. Vor dem Dreh ergänzen.
+- Stimmvorlage für sprechfassung: Transkript vom Dreh Video 1 (Ticket 06) in regeln.md einarbeiten.
 
 ## Audit log (append)
