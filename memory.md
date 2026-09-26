@@ -33,6 +33,8 @@
 - 2026-09-26 Schlimmster Fehler: etwas geht öffentlich raus ohne Chris' Freigabe, oder Privates landet im öffentlichen Repo. Beides ist per Hook erzwungen, nicht nur als Regel notiert, weil geladene Regeln probabilistisch befolgt werden.
 - 2026-09-26 Commit und Push nach jedem Ticket. Mark committet automatisch ("I auto commit", 2025-09-10). Kein Auto-Commit-Hook, weil parallele Threads im selben Ordner arbeiten und sonst fremde Dateien mitgehen.
 
+- 2026-09-26 Ein Commit und Push pro Ticket, nicht pro Nachricht. Automatisch nur im Worktree per SessionEnd-Hook (ticket-ship.sh): Branch sichern, bei erledigtem Ticket PR und Squash in master. Passt zur Wayfinder-Regel "ein Ticket pro Session".
+
 ## Open questions
 - Konkurrenz-Creator-Liste (5 bis 10 Kanäle) liefert Chris später über Ticket 19.
 - Q7 bis Q10 aus Wayfinder-Runde 2 sind im Wayfinder-Thread offen.
