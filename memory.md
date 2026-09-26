@@ -4,11 +4,11 @@
 **Who it is for:** Chris allein als Betreiber. Das Publikum des Kanals sind Selbstständige und Teams (Nische: Claude, KI-Agents, KI-Betriebssystem).
 **Created:** 2026-09-26   **Updated:** 2026-09-26
 **Current layer:** substrate
-**Next action:** Layer 2 (Kontext): Hook-Formel und validierte Videoideen aus YT-CommandCenter übernehmen, substrate/ mit raw (lokal) und synthesized (öffentlich) anlegen.
+**Next action:** Ticket 14 klären (Rohmaterial in Convex oder Ordner), dann substrate/sources.md und compendium.md als Gerüst anlegen.
 
 ## Layer status
 - Identity: solid - identity.md steht (Wer, Für wen, Ziel, Stimme, Immer, Nie). CLAUDE.md lädt identity.md, memory.md und AGENTS.md, AGENTS.md verweist auf beide.
-- Substrate: not started - Skript Video 1, Hook-Formel, validierte Ideen aus YT-CommandCenter übernehmen, Recherchen liegen in .scratch/yt-os/assets/
+- Substrate: in progress - Struktur nach Marks Masterclass: sources.md, compendium.md, playbooks/. Playbooks entstehen über Wayfinder-Tickets 15 bis 19. Speicherort des Rohmaterials (Convex oder Ordner) ist Ticket 14.
 - Rules: not started - Kandidaten: Slop-Check, Freigabe vor Upload, keine Makler-Beispiele
 - Skills: not started - nur was schon läuft (/watch, style-extract, graphics, slop-check), neue Skills erst nach Wayfinder-Entscheid
 - Agents: not started - bewusst zuletzt (Mark Kashef: Agents sind der letzte Layer)
@@ -25,6 +25,8 @@
 - 2026-09-26 Identität bestätigt. "Immer echt vor der Kamera" ist selbstverständlich und kommt nicht in identity.md.
 - 2026-09-26 Community-Material und fremde Transkripte dürfen als Arbeitsgrundlage genutzt werden, bleiben aber lokal (substrate/raw/, private/). Das regelt .gitignore, nicht identity.md, weil das Repo öffentlich ist.
 - 2026-09-26 os-coach läuft ab jetzt im Wayfinder-Thread, der zweite os-coach-Thread ist abgelöst.
+
+- 2026-09-26 Playbooks werden nicht jetzt gebaut, sondern als eigene Wayfinder-Tickets (Hooks und Titel, Skript-Aufbau, B-Roll und Edit, Thumbnails, Konkurrenz), mit mehr Zeit. Quellen-Rangfolge: Kallaway und Mark zuerst, Simtent als Entwurf.
 
 ## Open questions
 - Q7 bis Q10 aus Wayfinder-Runde 2 sind im Wayfinder-Thread offen.

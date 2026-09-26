@@ -13,6 +13,7 @@ Jede Stufe von Outlier bis Upload hat einen entschiedenen Ansatz und, wo gebaut 
 - Architektur: `docs/yt-os-architektur.png`. YT-OS ist ein isoliertes KI-OS (Mark Kashefs Muster), Apps hängen über Dateien, CLI oder MCP dran.
 - Skills pro Session: `/grilling` für Grilling-Tickets, `/prototype` für Prototyp-Tickets, `/watch` für Videoanalyse, `style-extract` und `hyperframes` für Edit-Themen.
 - Vorhandenes Vokabular für Edits: `/Users/cristobalcallejongarcia/dev/hyperframes/videos/_style-packs/` (ANIMATIONS.md, _elements/ELEMENTS.md).
+- Playbooks sind der Kern von Layer 2 (Kontext), nach Marks AI-OS-Masterclass. Rangfolge der Quellen: Kallaway und Mark Kashef zuerst, Simtent als erster Entwurf, dazu gezielt weitere YouTube-Videos. Jedes Playbook ist ein eigenes Ticket.
 - Stil für alle Texte: echte Umlaute, keine Gedankenstriche, kein KI-Sprech.
 - Nach jedem abgeschlossenen Ticket committen und pushen (Arbeitsnachweis für die Challenge).
 
