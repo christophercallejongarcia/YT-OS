@@ -3,12 +3,12 @@
 **Goal:** YT-OS aufsetzen: eine Claude-Code-Pipeline von der YouTube-Outlier-Recherche bis zum veröffentlichten Video. Ziel der 30-Tage-Challenge: Video 1 ist veröffentlicht und jede Pipeline-Stufe wurde einmal echt benutzt, Handarbeit ist erlaubt.
 **Who it is for:** Chris allein als Betreiber. Das Publikum des Kanals sind Selbstständige und Teams (Nische: Claude, KI-Agents, KI-Betriebssystem).
 **Created:** 2026-09-26   **Updated:** 2026-09-26
-**Current layer:** substrate
-**Next action:** Ticket 14 klären (Rohmaterial in Convex oder Ordner), dann substrate/sources.md und compendium.md als Gerüst anlegen.
+**Current layer:** rules
+**Next action:** Layer 3 (Regeln und Hooks) coachen. Layer 2 bleibt in progress, bis die Playbook-Tickets 15 und 16 erledigt sind.
 
 ## Layer status
 - Identity: solid - identity.md steht (Wer, Für wen, Ziel, Stimme, Immer, Nie). CLAUDE.md lädt identity.md, memory.md und AGENTS.md, AGENTS.md verweist auf beide.
-- Substrate: in progress - Struktur nach Marks Masterclass: sources.md, compendium.md, playbooks/. Playbooks entstehen über Wayfinder-Tickets 15 bis 19. Speicherort des Rohmaterials (Convex oder Ordner) ist Ticket 14.
+- Substrate: in progress - Gerüst steht: substrate/sources.md, substrate/compendium.md, substrate/playbooks/ (leer). Rohmaterial liegt in Convex bzw. im Vault. Solid, sobald die Playbooks Hooks/Titel und Skript-Aufbau stehen und die schwierige Frage beantwortbar ist.
 - Rules: not started - Kandidaten: Slop-Check, Freigabe vor Upload, keine Makler-Beispiele
 - Skills: not started - nur was schon läuft (/watch, style-extract, graphics, slop-check), neue Skills erst nach Wayfinder-Entscheid
 - Agents: not started - bewusst zuletzt (Mark Kashef: Agents sind der letzte Layer)
@@ -28,7 +28,10 @@
 
 - 2026-09-26 Playbooks werden nicht jetzt gebaut, sondern als eigene Wayfinder-Tickets (Hooks und Titel, Skript-Aufbau, B-Roll und Edit, Thumbnails, Konkurrenz), mit mehr Zeit. Quellen-Rangfolge: Kallaway und Mark zuerst, Simtent als Entwurf.
 
+- 2026-09-26 Rohmaterial in Convex (Signal Room) bzw. im Vault, kein raw-Ordner in YT-OS. Convex-Skills bleiben im Signal-Room-Repo.
+
 ## Open questions
+- Konkurrenz-Creator-Liste (5 bis 10 Kanäle) liefert Chris später über Ticket 19.
 - Q7 bis Q10 aus Wayfinder-Runde 2 sind im Wayfinder-Thread offen.
 
 ## Audit log (append)

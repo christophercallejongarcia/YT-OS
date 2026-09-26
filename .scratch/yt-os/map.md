@@ -24,6 +24,7 @@ Jede Stufe von Outlier bis Upload hat einen entschiedenen Ansatz und, wo gebaut 
 - [DaVinci Resolve Free mit MCP: welche Version, was geht?](issues/03-davinci-free-mcp.md): 21.0.4 Free (Build 21.0.4.5) aus dem Blackmagic-Archiv. 21.1 hat Python aus Free entfernt, also nie updaten. Der MCP läuft über eine Bridge in Resolve (Timeline, Clips, Marker, Render bis 4K/60).
 - [YouTube-Datenquelle für Signal Room](issues/04-youtube-datenquelle.md): Hybrid. Zahlen und Metadaten über die YouTube Data API v3 (kostenlos, ca. 121 von 10.000 Einheiten pro Tag bei 30 Kanälen), Transkripte über einen Apify-Actor nur für Outlier. Neuer Adapter plus Netzwerk-Weiche in Signal Room.
 - [Nates Methode: Skill aus einem Video bauen](issues/05-nate-skill-aus-video.md): Ein Prompt reicht (Video analysieren, Skill bauen, sofort am eigenen Thema testen, Feedback zurückschreiben). Edits diktiert er entlang des Transkripts als Beat-Tabelle mit Ankerwort. Fund: `YouTube-os/video-editor/` hat schon eine 16:9-Pipeline mit Cutsheet. Es fehlen Edit-Interview, Zuordnung N01 bis N38 auf 16:9 und Pacing-Regeln für Langform.
+- [Wo lebt das Rohmaterial: Convex oder Ordner?](issues/14-rohmaterial-speicherort.md): Gesammeltes in Convex (Signal Room), Lernmaterial im Vault, YT-OS nur Verdichtetes. Kein raw-Ordner. Terminal-Zugriff über ein read-only CLI, Convex-Skills bleiben im Signal-Room-Repo.
 
 ## Not yet specified
 
@@ -31,7 +32,7 @@ Jede Stufe von Outlier bis Upload hat einen entschiedenen Ansatz und, wo gebaut 
 
 - **Upload-Stufe:** Beschreibung, Kapitel, Tags, Veröffentlichungszeit. Vermutlich ein Skill, sobald Titel und Thumbnail stehen.
 - **CTA für Video 1:** bestehender Lead-Magnet oder etwas anderes. Hängt davon ab, was im Video am Ende versprochen wird.
-- **Verbindung Signal Room und YT-OS:** Export-Format nach `substrate/raw/signal-room/`, eventuell ein read-only CLI. Wird klar, wenn der YouTube-Umfang steht.
+- **Verbindung Signal Room und YT-OS:** Form des read-only CLI auf Convex und welche Exporte als Datei in YT-OS landen. Wird klar, wenn der YouTube-Umfang steht.
 - **Skripte für Video 2+:** wie Skript-Board, Hook-Muster und Kallaways Formate (16 Typen, 4-teilige Formel) zusammenspielen.
 - **Review-Schleife:** fertiges Video mit `/watch` prüfen lassen (Brads Muster), bevor es hochgeladen wird.
 
