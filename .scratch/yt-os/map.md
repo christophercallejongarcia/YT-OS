@@ -22,8 +22,11 @@ Jede Stufe von Outlier bis Upload hat einen entschiedenen Ansatz und, wo gebaut 
 - [Poppy-Klon: gibt es einen, den wir übernehmen können?](issues/02-poppy-klon-recherche.md): Nein. Kein brauchbarer Klon, kein White-Label. Am nächsten dran: ThoughtDAG (MIT) und Canvas Chat (YouTube-Node, keine Lizenz). Empfehlung: für Video 2 zuerst ein Ordner-Board mit Claude Code, Board in Signal Room nur bei spürbarem Mehrwert.
 - [DaVinci Resolve Free mit MCP: welche Version, was geht?](issues/03-davinci-free-mcp.md): 21.0.4 Free (Build 21.0.4.5) aus dem Blackmagic-Archiv. 21.1 hat Python aus Free entfernt, also nie updaten. Der MCP läuft über eine Bridge in Resolve (Timeline, Clips, Marker, Render bis 4K/60).
 - [YouTube-Datenquelle für Signal Room](issues/04-youtube-datenquelle.md): Hybrid. Zahlen und Metadaten über die YouTube Data API v3 (kostenlos, ca. 121 von 10.000 Einheiten pro Tag bei 30 Kanälen), Transkripte über einen Apify-Actor nur für Outlier. Neuer Adapter plus Netzwerk-Weiche in Signal Room.
+- [Nates Methode: Skill aus einem Video bauen](issues/05-nate-skill-aus-video.md): Ein Prompt reicht (Video analysieren, Skill bauen, sofort am eigenen Thema testen, Feedback zurückschreiben). Edits diktiert er entlang des Transkripts als Beat-Tabelle mit Ankerwort. Fund: `YouTube-os/video-editor/` hat schon eine 16:9-Pipeline mit Cutsheet. Es fehlen Edit-Interview, Zuordnung N01 bis N38 auf 16:9 und Pacing-Regeln für Langform.
 
 ## Not yet specified
+
+- **Konflikt video-editor und Video 1:** Der Style `atlantic-hybrid` schließt Screen-Recordings aus, Video 1 plant Screen-B-Roll. Klären im Edit-Interview oder in der Editor-Spec.
 
 - **Upload-Stufe:** Beschreibung, Kapitel, Tags, Veröffentlichungszeit. Vermutlich ein Skill, sobald Titel und Thumbnail stehen.
 - **CTA für Video 1:** bestehender Lead-Magnet oder etwas anderes. Hängt davon ab, was im Video am Ende versprochen wird.
