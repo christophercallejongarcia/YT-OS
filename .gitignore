@@ -1,7 +1,40 @@
-.claude/claudex/
+# Das Repo ist öffentlich (Arbeitsnachweis für die Challenge).
+# Alles, was fremd, privat oder groß ist, bleibt lokal.
+
+# System und lokale Tool-Zustände
 .DS_Store
 node_modules/
+.claude/claudex/
+.claude/settings.local.json
 
-# Nicht öffentlich: zitiert die private EA-Community bzw. fremdes Transkript
+# Zugangsdaten
+.env
+.env.*
+*.pem
+*credentials*
+*secret*
+
+# Rohmaterial und fremde Inhalte: Community-Material, fremde Transkripte,
+# Mitschnitte. Lokal nutzbar, aber nicht öffentlich.
+substrate/raw/
+**/private/
+*-transkript.md
+*-transcript.md
+*.vtt
+*.srt
 .scratch/yt-os/assets/ki-os-architektur-recherche.md
-.scratch/yt-os/assets/*-transkript.md
+
+# Video- und Audiodateien (Rohmaterial, Renders, Downloads)
+*.mp4
+*.mov
+*.mkv
+*.m4a
+*.wav
+*.mp3
+*.braw
+*.drp
+renders/
+footage/
+
+# Lokale Browser-Automation
+.playwright-mcp/

@@ -1,6 +1,8 @@
 # YT-OS
 
-Eine Claude-Code-Pipeline von der YouTube-Outlier-Recherche bis zum veröffentlichten Video: Signal Room für YouTube, Skript-Board im Poppy-Stil, B-Roll-Aufnahme, Schnitt mit HyperFrames und DaVinci Resolve Free. Ziel der 30-Tage-Challenge: ein veröffentlichtes Video, das komplett mit YT-OS entstanden ist.
+Bevor du handelst, lies `identity.md` (wer dieses OS ist und was es nie tut) und dann `memory.md` (Stand des OS-Aufbaus). Die Planung läuft über die Wayfinder-Map in `.scratch/yt-os/map.md`.
+
+Das Repo ist öffentlich. Community-Material, fremde Transkripte und Rohmaterial gehören nach `substrate/raw/` oder in einen `private/`-Ordner. Beides ist per `.gitignore` ausgeschlossen.
 
 ## Agent skills
 
