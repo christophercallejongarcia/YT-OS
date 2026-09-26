@@ -21,6 +21,7 @@ Jede Stufe von Outlier bis Upload hat einen entschiedenen Ansatz und, wo gebaut 
 - [Ziel und Scope festlegen](issues/01-ziel-und-scope.md): Video 1 steht und wird am 27.09. gedreht. YT-OS ist die Schaltzentrale, die Nische ist breit, jede Stufe wird einmal echt benutzt. Editor-Spec entsteht vorab, danach die Ernte. B-Roll wird per Edit-Interview statt Vorab-Markierung geplant, der Recorder im Dreifach-Vergleich.
 - [Poppy-Klon: gibt es einen, den wir übernehmen können?](issues/02-poppy-klon-recherche.md): Nein. Kein brauchbarer Klon, kein White-Label. Am nächsten dran: ThoughtDAG (MIT) und Canvas Chat (YouTube-Node, keine Lizenz). Empfehlung: für Video 2 zuerst ein Ordner-Board mit Claude Code, Board in Signal Room nur bei spürbarem Mehrwert.
 - [DaVinci Resolve Free mit MCP: welche Version, was geht?](issues/03-davinci-free-mcp.md): 21.0.4 Free (Build 21.0.4.5) aus dem Blackmagic-Archiv. 21.1 hat Python aus Free entfernt, also nie updaten. Der MCP läuft über eine Bridge in Resolve (Timeline, Clips, Marker, Render bis 4K/60).
+- [YouTube-Datenquelle für Signal Room](issues/04-youtube-datenquelle.md): Hybrid. Zahlen und Metadaten über die YouTube Data API v3 (kostenlos, ca. 121 von 10.000 Einheiten pro Tag bei 30 Kanälen), Transkripte über einen Apify-Actor nur für Outlier. Neuer Adapter plus Netzwerk-Weiche in Signal Room.
 
 ## Not yet specified
 
