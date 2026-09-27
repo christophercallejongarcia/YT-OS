@@ -32,7 +32,7 @@ Das Repo ist öffentlich. Zwei Dateien legen die Grenzen fest: [rules/never.md](
 | Stufe | Werkzeug | Stand |
 |---|---|---|
 | 1 Outlier finden | Signal Room (YouTube-Datenquelle fehlt noch) | für Video 1 von Hand |
-| 2 Skript mixen | Skript-Board im Poppy-Stil | für Video 1 von Hand, [Skript](videos/01-stufenleiter/skript.md) |
+| 2 Skript mixen | Skript-Board im Poppy-Stil | für Video 1 von Hand, [Skript](videos/01-stufenleiter/skript.md). Board gebaut bis Phase 5 (27.09.), nutzbar ab Video 2, [Repo](https://github.com/christophercallejongarcia/signal-room-skript-board) |
 | 3 Titel und Thumbnail | Signal Room Cover Lab | offen |
 | 4 Dreh | DJI Osmo Pocket 4, Elgato Teleprompter | gedreht 2026-09-27, [Dreh-Log](videos/01-stufenleiter/dreh-log.md) |
 | 5 B-Roll aufnehmen | B-Roll-Recorder: Playwright und Computer Use | offen |
@@ -58,5 +58,6 @@ Die Planung läuft als Wayfinder-Map mit Entscheidungs-Tickets unter `.scratch/y
 | Datum | Was |
 |---|---|
 | 2026-09-27 | Video 1 gedreht: Haupt-Take 23:38 min in 4K auf der DJI Osmo Pocket 4, dazu 6 kurze Test-Clips. Rohmaterial bleibt lokal, im Repo liegen [Dreh-Log](videos/01-stufenleiter/dreh-log.md) mit Metadaten, SHA-256 und Nachweisbild. Pipeline-Stufe 4 damit einmal echt benutzt |
+| 2026-09-27 | Skript-Board (Stufe 2) gebaut, Phase 0a bis 5 in 9 Commits: Board-Liste, Canvas, YouTube-Node mit Transkript per yt-dlp, Chat-Node mit Claude Code, Codex und Command Code in einer Sandbox. 548 Unit-, 50 Convex- und 26 E2E-Tests grün. Öffentliche Kopie: [signal-room-skript-board](https://github.com/christophercallejongarcia/signal-room-skript-board) |
 | 2026-09-26 | Alle 6 OS-Layer einmal durchlaufen: Identität, Kontext-Gerüst, Regeln mit 4 Hooks (Git-Guard, Slop-Gate, Publish-Gate, Ticket-Ship), Skript-Kette als 4 Skills, Agents bewusst zurückgestellt, Tools-Liste. Wayfinder-Map mit 19 Tickets, 6 entschieden. Poppy-Nachbau recherchiert und MVP geplant |
 | 2026-09-26 | Repo angelegt, Architektur gezeichnet, Referenzen recherchiert, Skript und Briefing für Video 1 abgelegt |
