@@ -4,7 +4,7 @@
 **Who it is for:** Chris allein als Betreiber. Das Publikum des Kanals sind Selbstständige und Teams (Nische: Claude, KI-Agents, KI-Betriebssystem).
 **Created:** 2026-09-26   **Updated:** 2026-09-26
 **Current layer:** audit
-**Next action:** Morgen Dreh Video 1 (vorher kurze Vorstellung ins Skript). Danach /os-coach audit, um das OS gegen das Ziel zu prüfen.
+**Next action:** Video 1 ist gedreht (27.09., 23:38 min, siehe videos/01-stufenleiter/dreh-log.md). Als Nächstes Schnitt in DaVinci Resolve und /os-coach audit.
 
 ## Layer status
 - Identity: solid - identity.md steht (Wer, Für wen, Ziel, Stimme, Immer, Nie). CLAUDE.md lädt identity.md, memory.md und AGENTS.md, AGENTS.md verweist auf beide.
