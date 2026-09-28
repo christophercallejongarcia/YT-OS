@@ -4,13 +4,13 @@ Mein KI-Betriebssystem für YouTube-Produktion. Es verbindet Claude Code, Codex 
 
 Das Ziel der 30-Tage-Challenge (EA-Community, Start 2026-09-25): **Video 1 ist auf YouTube veröffentlicht**, und jede Stufe der Pipeline wurde dafür einmal echt benutzt. Handarbeit ist erlaubt, wo eine Stufe noch hakt. Das Video wartet nie auf eine perfekte Stufe.
 
-![YT-OS Architektur](docs/yt-os-architektur.png)
+![YT-OS Architektur](docs/yt-os-architecture-community.png)
 
-Bearbeitbare Fassung: [docs/yt-os-architektur.excalidraw](docs/yt-os-architektur.excalidraw)
+Bearbeitbare Fassung: [docs/yt-os-architecture-community.excalidraw](docs/yt-os-architecture-community.excalidraw)
 
 ## Wie es aufgebaut ist
 
-Der Ordner ist das OS. Er hat sechs Schichten: Identität, Kontext, Skills, Regeln, Agents und Tools. Die Agenten (Claude Code, Codex, Claude Desktop) werden auf diesen Ordner gerichtet. Apps mit eigenem Repo hängen außen dran und werden über Dateien, CLI oder MCP angebunden. Andere OS bleiben getrennt, es gibt keine geteilten Skills.
+Der Ordner ist das OS. Er hat sechs Schichten: Identität, Kontext, Skills, Regeln, Agents und Tools. Die Agenten (Claude Code, Codex, Claude Desktop, Codex Desktop) werden auf diesen Ordner gerichtet. Apps mit eigenem Repo hängen außen dran und werden über Dateien, CLI oder MCP angebunden. Andere OS bleiben getrennt, es gibt keine geteilten Skills.
 
 ## Das OS
 
