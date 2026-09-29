@@ -30,6 +30,10 @@ Test- und Einzelaufnahmen, zusammen etwa 2 Minuten.
 | `DJI_20260927155807_0008_D.MP4` | 0:10 |
 | `DJI_20260927164437_0010_D.MP4` | 0:01 |
 
+## Transkript
+
+Am 29.09.2026 mit ElevenLabs Scribe erstellt, mit Zeitstempel pro Wort. Es liegt lokal in `private/video-01/` und nicht im Repo.
+
 ## Nächster Schritt
 
 Schnitt in DaVinci Resolve Free, danach Thumbnail.
