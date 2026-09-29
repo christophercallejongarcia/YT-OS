@@ -14,9 +14,9 @@ Signal Room Cover Lab kann laut README Cover-Pakete für Reels und YouTube erzeu
 ### Checkliste vor dem nächsten Lauf
 
 **1. Interview mit Chris (der Agent fragt aktiv nach, bevor er rendert)**
-- [ ] Referenzfotos von Chris: 3 bis 5 Fotos, auf denen er sich gefällt. Dazu die Frage, was anders aussehen soll als auf den Standbildern aus dem Dreh.
-- [ ] Referenz-Thumbnails anderer Creator: 5 bis 10 Stück, die Chris gut findet, pro Bild ein Satz, was ihm daran gefällt.
-- [ ] Klären, ob ein eigenes kurzes Foto-Shooting fürs Thumbnail nötig ist (siehe 3).
+- [x] Referenzfotos von Chris: 3 bis 5 Fotos, auf denen er sich gefällt. Dazu die Frage, was anders aussehen soll als auf den Standbildern aus dem Dreh.
+- [x] Referenz-Thumbnails anderer Creator: 5 bis 10 Stück, die Chris gut findet, pro Bild ein Satz, was ihm daran gefällt.
+- [x] Klären, ob ein eigenes kurzes Foto-Shooting fürs Thumbnail nötig ist (siehe 3).
 
 **2. Recherche: worauf es bei Thumbnails ankommt**
 - [x] 2 bis 3 starke YouTube-Videos zur Thumbnail-Erstellung mit `/watch` auswerten.
@@ -26,10 +26,17 @@ Signal Room Cover Lab kann laut README Cover-Pakete für Reels und YouTube erzeu
 **3. Bild von Chris**
 - [ ] Hautton wärmer und frischer, mehr Kontrast, nicht blass.
 - [ ] Gesicht minimal schlanker, Chris muss klar wiedererkennbar bleiben. Keine starke Veränderung.
-- [ ] Prüfen, ob das Problem aus dem Material kommt: Die Osmo Pocket filmt weitwinklig und nah, das macht Gesichter breiter. Falls ja, ein Foto-Shooting von 10 Minuten: Handy mit 2x-Zoom aus etwas Abstand, Kamera leicht über Augenhöhe, Licht von vorne seitlich, 3 bis 4 Mimiken.
+- [x] Prüfen, ob das Problem aus dem Material kommt: Die Osmo Pocket filmt weitwinklig und nah, das macht Gesichter breiter. Falls ja, ein Foto-Shooting von 10 Minuten: Handy mit 2x-Zoom aus etwas Abstand, Kamera leicht über Augenhöhe, Licht von vorne seitlich, 3 bis 4 Mimiken.
 
 **4. Neuer Lauf**
 - [ ] Nach Marks Ebenen-Vorgehen: Hintergrund, Person und Text einzeln zeigen und freigeben lassen, statt nur fertige Bilder.
 - [ ] 3 neue Varianten, Chris wählt eine.
 
 - 2026-09-29: Die Recherche ist abgeschlossen. Die Vorfassung für Playbook 18 steht in [Thumbnail-Regeln für den Builder](../../../substrate/playbooks/thumbnails-kurzfassung.md).
+
+- 2026-09-29 (Thumbnail-Builder, PR 5): Interview und Materialprüfung erledigt.
+  - Referenzfotos: Chris hat auf sein Profi-Shooting vom November 2025 (WeTransfer-Ordner) und sein Signaturbild verwiesen. Fünf Porträts plus Signatur liegen zugeschnitten in `~/Movies/YT-OS/gesicht/referenz/`, außerhalb aller Repos. Sie ersetzen die Standbilder aus dem Dreh als Gesichtsvorlage.
+  - Referenz-Thumbnails: 15 Thumbnails von Tristen O'Brien, von Chris per Screenshot ausgewählt. Sie stehen per Link in der Referenz-Bibliothek des Signal Room, jeweils mit einem Satz dazu. Die Sätze hat der Cook aus den Screenshots formuliert, Chris kann sie korrigieren. Der Lauf nutzt 6 davon plus 2 Outlier aus Signal Room.
+  - Material: Die Osmo Pocket filmt mit etwa 20 mm Kleinbild-Äquivalent aus etwa 50 bis 60 cm Abstand. Das Weitwinkel verbreitert die Gesichtsmitte, das frontale Teleprompter-Licht macht das Gesicht flach und blass. Die Profi-Porträts mit Porträtbrennweite zeigen das schmalere Gesicht und den wärmeren Hautton. Ein eigenes Shooting ist deshalb für Video 1 nicht nötig, für spätere Videos bleibt die Anleitung aus Abschnitt 3 gültig.
+  - Regelwerk: Der Builder liest `substrate/playbooks/thumbnails-kurzfassung.md` als verbindliche Regeln für den Planer.
+
