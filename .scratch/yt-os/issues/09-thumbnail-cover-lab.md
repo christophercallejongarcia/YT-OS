@@ -46,3 +46,9 @@ Signal Room Cover Lab kann laut README Cover-Pakete für Reels und YouTube erzeu
   - Ebenen-Ablauf läuft: Hintergrund, Person und Text werden einzeln gerendert und freigegeben. Für den ersten Durchgang hat der Cook Hintergrund und Person vorläufig freigegeben, damit Chris fertige Bilder sieht. Jede Ebene lässt sich neu rendern.
   - Ergebnis: drei Varianten in Signal Room (Lauf run-20260929T193526Z-ihtsji): "Welche der 6?", "Mehr als Antworten", "LASS ARBEITEN". Offen: Chris wählt eine.
 
+- 2026-09-29, Tagesabschluss (Thumbnail-Builder, PR 5, Commit 6169726): Zwischenstand gesichert.
+  - Chris: "wesentlich besser, aber noch nicht optimal". Nächster Termin geht tiefer.
+  - Stand der Technik: Codex-SDK 0.159 mit gpt-6-astra, Bilder über Codex' Bild-Tool (GPT Image 2.5 vom Backend gewählt), Drei-Elemente-Formel, Ebenen-Ablauf, Person als neues Studio-Porträt plus Retusche-Durchgang, Prompts nach dem offiziellen GPT-Image-2.5-Leitfaden.
+  - Aktuelle Varianten: Lauf run-20260929T193526Z-ihtsji ("Welche der 6?", "Mehr als Antworten", "LASS ARBEITEN"). Keine Variante gewählt.
+  - Offene Ideen: automatische Bildprüfung nach jeder Ebene (Anzahl, Text, Wiedererkennbarkeit), mehr Varianten erzeugen und die besten drei zeigen (Playbook-Regel 8), Gesten und Kleidung pro Variante planen lassen, bei Bedarf GPT Image 2.5 Sunburst über die API (braucht Schlüssel und Chris' Entscheidung zu ADR-0004).
+
