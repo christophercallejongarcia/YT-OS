@@ -19,9 +19,9 @@ Signal Room Cover Lab kann laut README Cover-Pakete für Reels und YouTube erzeu
 - [ ] Klären, ob ein eigenes kurzes Foto-Shooting fürs Thumbnail nötig ist (siehe 3).
 
 **2. Recherche: worauf es bei Thumbnails ankommt**
-- [ ] 2 bis 3 starke YouTube-Videos zur Thumbnail-Erstellung mit `/watch` auswerten.
-- [ ] Kallaways Thumbnail-System und Marks Thumbnail-Briefs (mobil lesbar, zeigt das Ergebnis des Videos, Ebenen einzeln freigeben) aus Ticket 18 dazunehmen.
-- [ ] Ergebnis: eine kurze Regel-Liste als Vorfassung von Playbook 18, die der Builder als Regelwerk bekommt.
+- [x] 2 bis 3 starke YouTube-Videos zur Thumbnail-Erstellung mit `/watch` auswerten.
+- [x] Kallaways Thumbnail-System und Marks Thumbnail-Briefs (mobil lesbar, zeigt das Ergebnis des Videos, Ebenen einzeln freigeben) aus Ticket 18 dazunehmen.
+- [x] Ergebnis: eine kurze Regel-Liste als Vorfassung von Playbook 18, die der Builder als Regelwerk bekommt.
 
 **3. Bild von Chris**
 - [ ] Hautton wärmer und frischer, mehr Kontrast, nicht blass.
@@ -31,3 +31,5 @@ Signal Room Cover Lab kann laut README Cover-Pakete für Reels und YouTube erzeu
 **4. Neuer Lauf**
 - [ ] Nach Marks Ebenen-Vorgehen: Hintergrund, Person und Text einzeln zeigen und freigeben lassen, statt nur fertige Bilder.
 - [ ] 3 neue Varianten, Chris wählt eine.
+
+- 2026-09-29: Die Recherche ist abgeschlossen. Die Vorfassung für Playbook 18 steht in [Thumbnail-Regeln für den Builder](../../../substrate/playbooks/thumbnails-kurzfassung.md).
