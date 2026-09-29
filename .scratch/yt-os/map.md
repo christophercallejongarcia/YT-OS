@@ -27,13 +27,13 @@ Jede Stufe von Outlier bis Upload hat einen entschiedenen Ansatz und, wo gebaut 
 - [Skript-Board: übernehmen oder bauen?](issues/10-skript-board-entscheidung.md): Bauen, als Poppy-Nachbau in Signal Room (`/board`). MVP: YouTube-, Text- und Chat-Node, Kanten als Kontext, `/`-Prompts aus den Playbooks, Export als `skript.md` und `beats.md`. Sprachnotizen per Wispr Flow statt eigenem Node. Chat über Claude Code, Codex und Command Code ohne Tools, in einer Sandbox. Plan fertig (`PLAN.md` im Signal-Room-Repo, siehe Comments im Ticket), Build per `/goal` nach dem Dreh.
 - [Wo lebt das Rohmaterial: Convex oder Ordner?](issues/14-rohmaterial-speicherort.md): Gesammeltes in Convex (Signal Room), Lernmaterial im Vault, YT-OS nur Verdichtetes. Kein raw-Ordner. Terminal-Zugriff über ein read-only CLI, Convex-Skills bleiben im Signal-Room-Repo.
 - [Signal Room für YouTube: was genau ist ein Outlier?](issues/11-signal-room-youtube-umfang.md): Suche wie vidIQ über Suchbegriffe (Englisch und Deutsch, vier Themen), Kanäle als Kandidaten, Outlier = Aufrufe durch Median der letzten 30 Longform-Videos des Kanals, Vorgabe 3x. Daraus Titel- und Thumbnail-Builder. Umsetzung per Captain nach Jays Factory.
+- [Roadmap Tag 5 bis 30](roadmap.md), entschieden am 2026-09-29: Video 1 geht am 10.10. (Tag 16) online, Video 2 ist bis Tag 30 gedreht, Thema aus einem neuen Signal-Room-Lauf. Schnitt-Werkzeug per Dreifach-Test HyperFrames, DaVinci, Descript ([Ticket 20](issues/20-schnitt-test.md)). B-Roll per Dreifach-Vergleich wie geplant. CTA ist der OS Coach auf Gumroad ([Ticket 21](issues/21-cta-gumroad-os-coach.md)), Leadmagnet-Landingpage erst nach Video 1. Chris hat 90 bis 120 Minuten pro Tag.
 
 ## Not yet specified
 
 - **Konflikt video-editor und Video 1:** Der Style `atlantic-hybrid` schließt Screen-Recordings aus, Video 1 plant Screen-B-Roll. Klären im Edit-Interview oder in der Editor-Spec.
 
-- **Upload-Stufe:** Beschreibung, Kapitel, Tags, Veröffentlichungszeit. Vermutlich ein Skill, sobald Titel und Thumbnail stehen.
-- **CTA für Video 1:** bestehender Lead-Magnet oder etwas anderes. Hängt davon ab, was im Video am Ende versprochen wird.
+- **Upload-Stufe:** jetzt [Ticket 22](issues/22-upload-stufe.md).
 - **Verbindung Signal Room und YT-OS:** Form des read-only CLI auf Convex und welche Exporte als Datei in YT-OS landen. Wird klar, wenn der YouTube-Umfang steht.
 - **Skripte für Video 2+:** wie Skript-Board, Hook-Muster und Kallaways Formate (16 Typen, 4-teilige Formel) zusammenspielen.
 - **Review-Schleife:** fertiges Video mit `/watch` prüfen lassen (Brads Muster), bevor es hochgeladen wird.
