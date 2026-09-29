@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YT-OS: Schritt für Schritt bis Tag 30</title>
+<style>
+  :root {
+    --bg: #fafaf8; --card: #ffffff; --ink: #1a1a1a; --muted: #6b6b6b; --faint: #a3a3a3;
+    --line: #e7e5e0; --accent: #c2410c; --accent-soft: #fff4ed; --done: #15803d; --done-soft: #f0fdf4;
+    --mono: ui-monospace, "SF Mono", Menlo, monospace;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+    font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 96px; }
+  h1 { font-size: 30px; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 8px; }
+  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted);
+    font-weight: 600; margin: 56px 0 16px; }
+  p { margin: 0 0 12px; }
+  .sub { color: var(--muted); margin-bottom: 32px; }
+  .mono { font-family: var(--mono); font-size: 13px; }
+
+  .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 20px; }
+  .stat { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .stat b { display: block; font-size: 24px; letter-spacing: -0.02em; }
+  .stat span { color: var(--muted); font-size: 13px; }
+  .bar { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; position: relative; }
+  .bar i { position: absolute; inset: 0 auto 0 0; background: var(--ink); }
+  .bar em { position: absolute; top: -3px; width: 2px; height: 12px; background: var(--accent); }
+  .barlabels { display: flex; justify-content: space-between; color: var(--faint); font-size: 12px; margin-top: 6px; }
+
+  .layers { display: grid; gap: 8px; }
+  .layer { display: grid; grid-template-columns: 120px 1fr; gap: 16px; padding: 14px 16px;
+    background: var(--card); border: 1px solid var(--line); border-radius: 10px; }
+  .layer b { font-size: 14px; }
+  .layer div { color: var(--muted); font-size: 14px; }
+  .answer { margin-top: 16px; padding: 14px 16px; border-left: 3px solid var(--accent); background: var(--accent-soft);
+    border-radius: 0 8px 8px 0; font-size: 14px; }
+
+  ol.routine { padding-left: 20px; margin: 0; }
+  ol.routine li { margin-bottom: 6px; }
+
+  .controls { display: flex; gap: 8px; margin-bottom: 16px; }
+  .controls button { font: inherit; font-size: 13px; padding: 6px 12px; border: 1px solid var(--line);
+    background: var(--card); border-radius: 999px; cursor: pointer; color: var(--muted); }
+  .controls button.on { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+  .day { background: var(--card); border: 1px solid var(--line); border-radius: 12px; margin-bottom: 10px; overflow: hidden; }
+  .day.today { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+  .day.past { opacity: 0.55; }
+  .day.milestone .head .title::after { content: "Meilenstein"; margin-left: 8px; font-size: 11px; font-weight: 600;
+    color: var(--accent); border: 1px solid var(--accent); border-radius: 999px; padding: 1px 7px; vertical-align: 2px; }
+  .head { display: grid; grid-template-columns: 64px 1fr auto; gap: 12px; align-items: center;
+    padding: 14px 16px; cursor: pointer; user-select: none; }
+  .head .n { font-family: var(--mono); font-size: 12px; color: var(--muted); line-height: 1.3; }
+  .head .n b { display: block; font-size: 17px; color: var(--ink); font-family: inherit; }
+  .head .title { font-weight: 600; }
+  .head .d { color: var(--faint); font-size: 12px; font-family: var(--mono); margin-top: 2px; }
+  .head .prog { font-family: var(--mono); font-size: 12px; color: var(--muted); }
+  .head .prog.full { color: var(--done); }
+  .body { display: none; padding: 0 16px 16px 92px; }
+  .day.open .body { display: block; }
+  .label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--faint);
+    font-weight: 600; margin: 12px 0 6px; }
+  .task { display: flex; gap: 10px; align-items: flex-start; padding: 6px 0; cursor: pointer; }
+  .task input { margin-top: 4px; accent-color: var(--done); width: 16px; height: 16px; flex: none; }
+  .task.checked span { color: var(--faint); text-decoration: line-through; }
+  ul.agents { margin: 0; padding-left: 18px; color: var(--muted); font-size: 14px; }
+  ul.agents li { margin-bottom: 4px; }
+  .donewhen { font-size: 14px; color: var(--muted); }
+  .chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
+  .chip { font-family: var(--mono); font-size: 11px; padding: 2px 8px; border-radius: 999px;
+    background: var(--bg); border: 1px solid var(--line); color: var(--muted); }
+  .chip.d { border-color: #fed7aa; color: var(--accent); background: var(--accent-soft); }
+
+  table { width: 100%; border-collapse: collapse; font-size: 14px; background: var(--card);
+    border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  th { text-align: left; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--faint);
+    font-weight: 600; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  td { padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  tr:last-child td { border-bottom: 0; }
+  td.nr { font-family: var(--mono); color: var(--muted); width: 44px; }
+  .st { font-size: 12px; font-weight: 600; white-space: nowrap; }
+  .st.ok { color: var(--done); } .st.open { color: var(--accent); } .st.later { color: var(--faint); }
+  .foot { margin-top: 48px; color: var(--faint); font-size: 12px; }
+  @media (max-width: 600px) {
+    .stats { grid-template-columns: 1fr; } .layer { grid-template-columns: 1fr; gap: 4px; }
+    .body { padding-left: 16px; } .head { grid-template-columns: 52px 1fr auto; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <h1>Schritt für Schritt bis Tag 30</h1>
+  <p class="sub">Video 1 ist am 10.10. online, Video 2 ist bis zum 24.10. gedreht. Du programmierst nichts selbst. Du entscheidest, drehst, schaust an und gibst frei. Das Programmieren machen die Agents.</p>
+
+  <div class="stats">
+    <div class="stat"><b id="s-today">Tag 5</b><span id="s-date">heute</span></div>
+    <div class="stat"><b id="s-v1">11 Tage</b><span>bis Video 1 online (10.10.)</span></div>
+    <div class="stat"><b id="s-v2">25 Tage</b><span>bis Challenge-Ende (24.10.)</span></div>
+  </div>
+  <div class="bar"><i id="bar-fill"></i><em style="left: 51.7%"></em></div>
+  <div class="barlabels"><span>Tag 1 · 25.09.</span><span>Video 1 · 10.10.</span><span>Tag 30 · 24.10.</span></div>
+
+  <h2>So hängt alles zusammen</h2>
+  <div class="layers">
+    <div class="layer"><b>Marks D-Schritte</b><div>Die Standard-Route in der EA/30-App. Sie sagt, was bis Tag 30 da sein soll. Du nutzt die D-Nummer nur beim Loggen.</div></div>
+    <div class="layer"><b>Tage auf dieser Seite</b><div>Wann du was machst. Jeder Tag hat deine Schritte zum Abhaken und die Aufträge für die Agents.</div></div>
+    <div class="layer"><b>Tickets</b><div>Arbeitspakete in <span class="mono">.scratch/yt-os/issues/</span>. Ein Ticket kann über mehrere Tage laufen und mehrere D-Schritte abdecken. Die Agents arbeiten nach Tickets.</div></div>
+  </div>
+  <div class="answer">Tickets und D-Schritte sind nicht deckungsgleich und müssen es auch nicht sein. Jeder D-Schritt, für den noch etwas zu tun ist, hat jetzt ein Ticket oder eine Aufgabe an einem Tag. Du musst nichts nachtragen. Die Lücken Ton (D22, D23) und Zuschauer-Test (D24 bis D26) sind seit heute die Tickets 24 und 25.</div>
+
+  <h2>Jeden Tag</h2>
+  <ol class="routine">
+    <li>Diese Seite öffnen. Die Karte von heute ist aufgeklappt.</li>
+    <li>Im Captain-Thread schreiben: <span class="mono">„Tag X starten“</span>. Der Captain gibt die Agent-Aufträge raus.</li>
+    <li>Deine Schritte erledigen und abhaken. Das Häkchen merkt sich der Browser.</li>
+    <li>In der EA/30-App loggen: ein bis zwei Sätze, die D-Nummer der Karte, den Commit als Beweis-Link.</li>
+    <li>Eine Antwort in der Skool-Community schreiben, bis 9 Antworten erreicht sind (Stand: 2).</li>
+  </ol>
+
+  <h2>Die Tage</h2>
+  <div class="controls">
+    <button data-f="ahead" class="on">Ab heute</button>
+    <button data-f="all">Alle Tage</button>
+    <button data-f="v1">Nur bis Video 1</button>
+  </div>
+  <div id="days"></div>
+
+  <h2>Tickets und D-Schritte</h2>
+  <table>
+    <thead><tr><th>Nr</th><th>Ticket</th><th>Marks D</th><th>Wann</th><th>Stand</th></tr></thead>
+    <tbody id="tickets"></tbody>
+  </table>
+
+  <p class="foot">Quelle: roadmap.md und map.md in .scratch/yt-os/. Stand 29.09.2026. Häkchen liegen nur in diesem Browser.</p>
+</div>
+
+<script>
+const DAYS = [
+  { n: 5, date: "2026-09-29", title: "Plan und Outlier-Auswahl", d: ["D05"], t: ["06", "09"],
+    du: ["Roadmap freigeben", "Dem Captain die zwei englischen Videos nennen, aus denen das Skript von Video 1 gemixt ist", "Tag 5 in der App loggen (D05)"],
+    ag: ["Cook A: Transkript des Haupt-Takes mit Zeitstempel pro Wort (WhisperX, lokal in private/)", "Cook C: PR 4 Titel-Builder und PR 5 Thumbnail-Builder fertig machen, Cleaner reviewt", "Captain: Outlier-Datei für Video 1 aus deinen zwei Videos plus Signal-Room-Funden"],
+    done: "Transkript liegt lokal, Outlier-Datei ist im Repo." },
+  { n: 6, date: "2026-09-30", title: "Rohschnitt festlegen", d: ["D19", "D22"], t: ["06", "20", "24"],
+    du: ["Rohschnitt-Vorschlag ansehen: Versprecher, doppelte Takes und Pausen sind markiert", "Ziellänge festlegen und entscheiden, welche Abschnitte bleiben", "3 der 5 Titel für den A/B-Test wählen"],
+    ag: ["Cook A: Schnittliste aus deinen Entscheidungen, prüfen ob ein CTA im Take ist", "Waiter: DaVinci 21.0.4 und Descript-Zugang prüfen (Konto nur mit deinem OK)", "Waiter: dieselbe Minute Ton durch Cleanvoice, Adobe Podcast und Descript Studio Sound", "Cook C: Review-Befunde aus PR 4 und 5 abarbeiten"],
+    done: "Schnittliste steht, 3 Titel gewählt, drei Ton-Proben liegen bereit." },
+  { n: 7, date: "2026-10-01", title: "Thumbnail, Ton und Schnitt-Test", d: ["D07", "D18", "D20"], t: ["09", "20", "24"],
+    du: ["Drei Thumbnail-Varianten ansehen, eine wählen", "Merge von PR 4 und PR 5 freigeben", "Drei Ton-Proben anhören, ein Werkzeug wählen"],
+    ag: ["Cook A: denselben Abschnitt (1 bis 2 min) dreimal schneiden: HyperFrames, DaVinci mit MCP, Descript"],
+    done: "Thumbnail gewählt (Stufe 3 echt benutzt), drei Test-Schnitte liegen nebeneinander." },
+  { n: 8, date: "2026-10-02", title: "Schnitt-Werkzeug entscheiden", d: ["D19"], t: ["20", "12", "08"],
+    du: ["Die drei Test-Schnitte vergleichen und das Werkzeug festlegen"],
+    ag: ["Captain: Entscheidung in die Map", "Cook A: Editor-Spec v0 für das gewählte Werkzeug", "Waiter: B-Roll-Vergleich an derselben Stelle: Playwright, Astra Computer Use, Chrome-Extension"],
+    done: "Schnitt-Werkzeug ist entschieden, Ticket 20 resolved." },
+  { n: 9, date: "2026-10-03", title: "B-Roll-Weg und Edit-Interview 1", d: ["D13", "D16"], t: ["08", "07"],
+    du: ["Drei B-Roll-Clips ansehen, einen Weg wählen", "Edit-Interview Teil 1: pro Stelle Grafik, B-Roll oder nichts wählen (erste Hälfte)"],
+    ag: ["Cook A: führt das Interview, schreibt die Cue-Liste"],
+    done: "B-Roll-Weg entschieden, halbe Cue-Liste steht." },
+  { n: 10, date: "2026-10-04", title: "Edit-Interview 2", d: ["D14", "D17"], t: ["07", "08"],
+    du: ["Edit-Interview Teil 2 (zweite Hälfte)", "Community-Post 3 freigeben (Schnitt- und B-Roll-Vergleich)"],
+    ag: ["Waiter: alle B-Roll-Stellen der Cue-Liste mit dem gewählten Weg aufnehmen", "Captain: Entwurf für Post 3"],
+    done: "Cue-Liste vollständig, Tickets 07 und 08 resolved." },
+  { n: 11, date: "2026-10-05", title: "Grobschnitt", d: ["D15", "D20"], t: ["20", "21"],
+    du: ["B-Roll-Clips sichten", "Was fehlt, selbst mit der macOS-Bildschirmaufnahme aufnehmen"],
+    ag: ["Cook A: Grobschnitt v1 komplett, erste Hälfte der HyperFrames-Grafiken", "Cook D: OS Coach als Gumroad-Produkt verpacken", "Waiter: Gumroad-Konto einrichten, Produkt bleibt unveröffentlicht"],
+    done: "Grobschnitt v1 gerendert, Stufe 5 echt benutzt." },
+  { n: 12, date: "2026-10-06", title: "Grobschnitt ansehen", d: ["D20"], t: ["20"],
+    du: ["Grobschnitt v1 ganz ansehen", "Notizen mit Zeitstempel diktieren (Wispr Flow)"],
+    ag: ["Cook A: zweite Hälfte der Grafiken, deine Notizen umsetzen"],
+    done: "Notizen sind eingearbeitet." },
+  { n: 13, date: "2026-10-07", title: "CTA, Ton und Untertitel", d: ["D22", "D23"], t: ["21", "22", "24"],
+    du: ["Gumroad-Produktseite prüfen und freigeben", "Fehlt der CTA im Take: 20 Sekunden nachdrehen oder Einblendung wählen"],
+    ag: ["Cook A: Schnitt v2 mit bereinigtem Ton, Musik (Epidemic Sound), Untertiteln und CTA", "Cook E: Upload-Skill für Beschreibung, Kapitel, Tags und Gumroad-Link"],
+    done: "Schnitt v2 gerendert, Gumroad-Produkt freigegeben." },
+  { n: 14, date: "2026-10-08", title: "Prüfen und Zuschauer-Test", d: ["D24", "D25", "D26", "D29"], t: ["25", "22"],
+    du: ["Schnitt v2 ansehen, letzte Änderungen nennen", "Eine echte Person aus der Zielgruppe schaut das Video und sagt, wo sie abschaltet"],
+    ag: ["Cook A: Video mit /watch gegen das Briefing prüfen, die wichtigste Änderung umsetzen", "Cook E: Upload-Paket füllen: 3 Titel, Thumbnail, Beschreibung, Kapitel, Tags"],
+    done: "Befunde abgearbeitet, Upload-Paket komplett." },
+  { n: 15, date: "2026-10-09", title: "Finale und privat hochladen", d: ["D28"], t: ["22"],
+    du: ["Finale Fassung ansehen und freigeben", "In YouTube Studio von Hand hochladen, zuerst auf „privat“"],
+    ag: ["Cook A: Finale in 4K rendern und prüfen", "Captain: Entwurf für Community-Post 4 und README-Log"],
+    done: "Video liegt privat in YouTube Studio." },
+  { n: 16, date: "2026-10-10", title: "Video 1 geht online", d: ["D27", "D30"], t: [], ms: true,
+    du: ["Video auf „öffentlich“ stellen", "Community-Post 4 mit Link freigeben"],
+    ag: ["Captain: README-Log, Map und memory.md aktualisieren, jede Stufe im Repo nachweisen"],
+    done: "Video 1 ist öffentlich, alle sieben Stufen einmal echt benutzt." },
+  { n: 17, date: "2026-10-11", title: "Thema für Video 2", d: [], t: ["23", "15", "16"],
+    du: ["Aus drei Themenvorschlägen aus dem Signal Room eines wählen"],
+    ag: ["Cook C: frischer Outlier-Lauf, drei Vorschläge mit je 3 bis 5 Outliern", "Pastry Chef: Playbooks Hooks und Titel (15) und Skript-Aufbau (16) über Nacht"],
+    done: "Thema steht." },
+  { n: 18, date: "2026-10-12", title: "Skript v1", d: [], t: ["23"],
+    du: ["Playbooks kurz prüfen", "skript-mix laufen lassen und v1 prüfen"], ag: [], done: "v1 freigegeben." },
+  { n: 19, date: "2026-10-13", title: "Skript v2 und v3", d: [], t: ["23"],
+    du: ["skript-anreichern für v2 (Community, Faktencheck) und v3 (Beispiele), jede Version prüfen"], ag: [], done: "v3 freigegeben." },
+  { n: 20, date: "2026-10-14", title: "Sprechfassung und Packaging", d: [], t: ["23"],
+    du: ["sprechfassung und text-check laufen lassen", "Skript in Talking Points umbauen, ausformuliert nur Stellen ohne Kamera (Jays Rat)"],
+    ag: ["Cook C: Titel-Builder und Thumbnail-Builder für Video 2"], done: "Talking Points stehen, Titel-Varianten liegen vor." },
+  { n: 21, date: "2026-10-15", title: "Probelauf", d: [], t: ["23", "13"],
+    du: ["Probelauf vor der Kamera mit Ton-Check", "B-Roll-Stellen markieren, Standbilder fürs Thumbnail planen"],
+    ag: ["Cook A: Editor-Ernte für Video 1 (Plan gegen tatsächlichen Ablauf)"], done: "Dreh ist vorbereitet." },
+  { n: 22, date: "2026-10-16", title: "Abgabe-Entwurf", d: [], t: [],
+    du: ["Den Entwurf der Shipped-Abgabe lesen (das Formular erscheint heute)"],
+    ag: ["Captain: Abgabe-Entwurf aus README-Log, Map und Commits"], done: "Entwurf liegt vor, Abgabe erst am Tag 29." },
+  { n: 23, date: "2026-10-17", title: "Dreh Video 2", d: [], t: ["23"], ms: true,
+    du: ["Video 2 drehen, vorher Mikro prüfen"],
+    ag: ["Cook A: Dreh-Log mit Metadaten und SHA-256, Transkript mit Wort-Zeitstempeln"], done: "Video 2 ist gedreht." },
+  { n: 24, date: "2026-10-18", title: "Puffer", d: [], t: [],
+    du: ["Nachdreh, falls nötig. Sonst frei."], ag: [], done: "" },
+  { n: 25, date: "2026-10-19", title: "B-Roll Video 2", d: [], t: ["08"],
+    du: ["B-Roll mit dem Recorder aus Woche 1 aufnehmen lassen und sichten"],
+    ag: ["Waiter: B-Roll-Stellen aufnehmen"], done: "" },
+  { n: 26, date: "2026-10-20", title: "Edit-Interview Video 2", d: [], t: ["07"],
+    du: ["Edit-Interview für Video 2, erste Hälfte"], ag: ["Pastry Chef: Playbook B-Roll und Edit (17)"], done: "" },
+  { n: 27, date: "2026-10-21", title: "Edit-Interview Video 2", d: [], t: ["07"],
+    du: ["Edit-Interview für Video 2, zweite Hälfte"], ag: ["Pastry Chef: Playbook Thumbnails (18)"], done: "Cue-Liste Video 2 steht." },
+  { n: 28, date: "2026-10-22", title: "Luft für Grobschnitt Video 2", d: [], t: [],
+    du: ["Playbooks 17 und 18 kurz prüfen"], ag: ["Cook A: Grobschnitt Video 2 beginnen, wenn Luft ist"], done: "" },
+  { n: 29, date: "2026-10-23", title: "Shipped-Abgabe", d: [], t: [], ms: true,
+    du: ["Shipped-Abgabe in der App einreichen"], ag: [], done: "Abgabe ist eingereicht." },
+  { n: 30, date: "2026-10-24", title: "Abschluss", d: [], t: [],
+    du: ["/os-coach audit laufen lassen", "Rückblick und nächste Schritte (Analytics, Funnel, Leadmagnet) in die Map"],
+    ag: [], done: "Challenge abgeschlossen." }
+];
+
+const TICKETS = [
+  ["01", "Ziel und Scope", "D02", "", "ok"], ["02", "Poppy-Klon-Recherche", "D08", "", "ok"],
+  ["03", "DaVinci Free mit MCP", "D19", "", "ok"], ["04", "YouTube-Datenquelle", "D05", "", "ok"],
+  ["05", "Nates Methode: Skill aus Video", "D16, D17", "", "ok"], ["06", "Dreh und Transkript", "D21", "Tag 5", "open"],
+  ["07", "Edit-Interview", "D13, D16", "Tag 9, 10", "open"], ["08", "B-Roll-Recorder-Vergleich", "D13 bis D15", "Tag 8 bis 10", "open"],
+  ["09", "Thumbnail mit Cover Lab", "D07", "Tag 5 bis 7", "open"], ["10", "Skript-Board", "D08 bis D10", "", "ok"],
+  ["11", "Signal Room: Outlier", "D05, D06", "", "ok"], ["12", "Editor-Spec v0", "D19", "Tag 8", "open"],
+  ["13", "Editor-Ernte", "", "Tag 21", "later"], ["14", "Rohmaterial-Speicherort", "", "", "ok"],
+  ["15", "Playbook Hooks und Titel", "D06", "Tag 17", "later"], ["16", "Playbook Skript-Aufbau", "D11", "Tag 17", "later"],
+  ["17", "Playbook B-Roll und Edit", "D16", "Tag 26", "later"], ["18", "Playbook Thumbnails", "D07", "Tag 27", "later"],
+  ["19", "Playbook Konkurrenz", "", "nach der Challenge", "later"], ["20", "Schnitt-Test", "D18 bis D20", "Tag 6 bis 12", "open"],
+  ["21", "CTA: OS Coach auf Gumroad", "", "Tag 11 bis 13", "open"], ["22", "Upload-Stufe", "D29", "Tag 13 bis 15", "open"],
+  ["23", "Video 2", "", "Tag 17 bis 23", "later"], ["24", "Ton und Untertitel", "D22, D23", "Tag 6, 7, 13", "open"],
+  ["25", "Review und Zuschauer-Test", "D24 bis D26", "Tag 14", "open"]
+];
+const STLABEL = { ok: "erledigt", open: "offen", later: "später" };
+
+const iso = d => d.toLocaleDateString("sv-SE");
+const todayIso = iso(new Date());
+const dayNo = Math.floor((new Date(todayIso) - new Date("2026-09-25")) / 864e5) + 1;
+const fmt = s => { const [y, m, d] = s.split("-"); return d + "." + m + "."; };
+const WD = ["So", "Mo", "Di", "Mi", "Do", "Fr", "Sa"];
+const store = JSON.parse(localStorage.getItem("ytos-roadmap") || "{}");
+const save = () => localStorage.setItem("ytos-roadmap", JSON.stringify(store));
+
+// Kopfzahlen
+const until = s => Math.max(0, Math.round((new Date(s) - new Date(todayIso)) / 864e5));
+document.getElementById("s-today").textContent = "Tag " + Math.min(30, Math.max(1, dayNo));
+document.getElementById("s-date").textContent = "heute, " + WD[new Date(todayIso).getDay()] + " " + fmt(todayIso);
+document.getElementById("s-v1").textContent = until("2026-10-10") + " Tage";
+document.getElementById("s-v2").textContent = until("2026-10-24") + " Tage";
+document.getElementById("bar-fill").style.width = Math.min(100, Math.max(0, (dayNo - 1) / 29 * 100)) + "%";
+
+let filter = "ahead";
+function render() {
+  const box = document.getElementById("days");
+  box.innerHTML = "";
+  DAYS.filter(x => filter === "all" || (filter === "v1" ? x.n <= 16 : x.n >= dayNo)).forEach(x => {
+    const key = i => x.n + ":" + i;
+    const doneCount = x.du.filter((_, i) => store[key(i)]).length;
+    const el = document.createElement("div");
+    el.className = "day" + (x.n === dayNo ? " today open" : "") + (x.n < dayNo ? " past" : "") + (x.ms ? " milestone" : "");
+    const wd = WD[new Date(x.date).getDay()];
+    el.innerHTML = `
+      <div class="head">
+        <div class="n">Tag<b>${x.n}</b></div>
+        <div><div class="title">${x.title}</div><div class="d">${wd} ${fmt(x.date)}${x.n === dayNo ? " · heute" : ""}</div></div>
+        <div class="prog ${doneCount === x.du.length ? "full" : ""}">${doneCount}/${x.du.length}</div>
+      </div>
+      <div class="body">
+        <div class="label">Du</div>
+        ${x.du.map((s, i) => `<label class="task ${store[key(i)] ? "checked" : ""}"><input type="checkbox" data-k="${key(i)}" ${store[key(i)] ? "checked" : ""}><span>${s}</span></label>`).join("")}
+        ${x.ag.length ? `<div class="label">Agents</div><ul class="agents">${x.ag.map(s => `<li>${s}</li>`).join("")}</ul>` : ""}
+        ${x.done ? `<div class="label">Fertig wenn</div><div class="donewhen">${x.done}</div>` : ""}
+        ${(x.d.length || x.t.length) ? `<div class="chips">${x.d.map(s => `<span class="chip d">${s}</span>`).join("")}${x.t.map(s => `<span class="chip">Ticket ${s}</span>`).join("")}</div>` : ""}
+      </div>`;
+    el.querySelector(".head").onclick = () => el.classList.toggle("open");
+    el.querySelectorAll("input").forEach(cb => cb.onchange = () => {
+      store[cb.dataset.k] = cb.checked; save();
+      cb.parentElement.classList.toggle("checked", cb.checked);
+      const c = x.du.filter((_, i) => store[key(i)]).length;
+      const p = el.querySelector(".prog"); p.textContent = c + "/" + x.du.length; p.classList.toggle("full", c === x.du.length);
+    });
+    box.appendChild(el);
+  });
+}
+document.querySelectorAll(".controls button").forEach(b => b.onclick = () => {
+  document.querySelectorAll(".controls button").forEach(o => o.classList.remove("on"));
+  b.classList.add("on"); filter = b.dataset.f; render();
+});
+render();
+
+document.getElementById("tickets").innerHTML = TICKETS.map(([n, t, d, w, s]) =>
+  `<tr><td class="nr">${n}</td><td>${t}</td><td class="mono">${d || "·"}</td><td>${w || "·"}</td><td><span class="st ${s}">${STLABEL[s]}</span></td></tr>`).join("");
+</script>
+</body>
+</html>
