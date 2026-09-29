@@ -43,8 +43,8 @@ Community-Posts: 2 von 4 sind verbraucht. Post 3 kommt am Tag 10 (Schnitt-Vergle
 
 ### Tag 6, Mi 30.09.
 - **Du:** Rohschnitt-Vorschlag ansehen (Versprecher, doppelte Takes, Pausen sind markiert). Die Ziellänge festlegen und entscheiden, welche Abschnitte bleiben. Dazu drei der fünf Titel für den A/B-Test wählen.
-- **Agents:** Cook A baut die Schnittliste aus deinen Entscheidungen und prüft, ob im Take ein CTA gesprochen wurde. Der Waiter prüft, ob DaVinci Resolve 21.0.4 installiert ist, und klärt den Descript-Zugang (ein Konto legt er nur mit deinem OK an). Cook C arbeitet die Review-Befunde ab.
-- **Fertig wenn:** Schnittliste steht, 3 Titel sind gewählt, alle drei Schnitt-Werkzeuge sind startklar.
+- **Agents:** Cook A baut die Schnittliste aus deinen Entscheidungen und prüft, ob im Take ein CTA gesprochen wurde. Der Waiter prüft, ob DaVinci Resolve 21.0.4 installiert ist, und klärt den Descript-Zugang (ein Konto legt er nur mit deinem OK an). Cook C arbeitet die Review-Befunde ab. Der Waiter testet die Ton-Rettung (das Mikro war beim Dreh nicht richtig eingestellt): dieselbe Minute durch Cleanvoice, Adobe Podcast Enhance und Descript Studio Sound.
+- **Fertig wenn:** Schnittliste steht, 3 Titel sind gewählt, alle drei Schnitt-Werkzeuge sind startklar, drei Ton-Proben liegen zum Anhören bereit.
 
 ### Tag 7, Do 01.10.
 - **Du:** Drei Thumbnail-Varianten ansehen und eine wählen. Merge von PR 4 und 5 freigeben.
@@ -84,7 +84,7 @@ Community-Posts: 2 von 4 sind verbraucht. Post 3 kommt am Tag 10 (Schnitt-Vergle
 - **Fertig wenn:** Schnitt v2 ist gerendert, das Gumroad-Produkt ist freigegeben.
 
 ### Tag 14, Do 08.10.
-- **Du:** Schnitt v2 ansehen und letzte Änderungen nennen.
+- **Du:** Schnitt v2 ansehen und letzte Änderungen nennen. Eine echte Person aus deiner Zielgruppe schaut das Video und sagt dir, wo sie abschaltet (Marks D25).
 - **Agents:** Cook A prüft das Video mit `/watch` (Brads Muster) und liefert eine Befundliste. Cook E füllt das Upload-Paket: 3 Titel, Thumbnail, Beschreibung, Kapitel, Tags.
 - **Fertig wenn:** Die Befundliste ist abgearbeitet, das Upload-Paket ist komplett.
 
@@ -138,6 +138,29 @@ Community-Posts: 2 von 4 sind verbraucht. Post 3 kommt am Tag 10 (Schnitt-Vergle
 
 ### Tag 30, Sa 24.10.
 - **Du:** `/os-coach audit`, Rückblick und die nächsten Schritte nach der Challenge (Analytics, Funnel, Leadmagnet-Landingpage) in die Map.
+
+## Marks Route in der EA/30-App
+
+Die App zeigt eine Standard-Route, die bei null anfängt und am Tag 21 dreht. Du bist bei einigen Schritten schon weiter, andere entfallen. So passt sie auf diesen Plan:
+
+| Marks Schritt | Stand | Hier |
+|---|---|---|
+| D02 bis D04 Scope, Repo, sechs Stufen | erledigt | |
+| D05 Outlier-Auswahl | heute | Tag 5 |
+| D06 Packaging-Muster | erledigt (Titel-Builder) | |
+| D07 Erstes Thumbnail | offen | Tag 7 |
+| D08 bis D10 Skript-Board | entfällt, Skript über Skills | |
+| D11, D12 Skript, sprechbar | erledigt | |
+| D13 bis D15 B-Roll-Recorder | offen | Tag 8 bis 11 |
+| D16 bis D18 Stil, Style-Pack, Grafik-Test | offen | Tag 9 bis 12 |
+| D19, D20 Schnitt einrichten, Grobschnitt | offen | Tag 6 bis 8, Tag 11 |
+| D21 Dreh | erledigt (27.09.) | |
+| D22 Ton ersetzen | offen | Tag 6 |
+| D23 Untertitel, Ton säubern | offen | Tag 13 |
+| D24 bis D26 Prüfen, Zuschauer-Test, Nachbessern | offen | Tag 14 |
+| D27 Alle Stufen im Repo | offen | Tag 16 |
+| D28, D29 Export, Upload vorbereiten | offen | Tag 14, 15 |
+| D30 Veröffentlichen | offen | Tag 16 |
 
 ## Wenn es hakt
 
