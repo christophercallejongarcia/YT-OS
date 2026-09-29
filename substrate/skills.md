@@ -14,6 +14,12 @@ Die Skript-Kette. Jede Stufe ist ein eigener Aufruf, nach jeder Version prüft C
 
 Alle Skills folgen dem Gerüst in `substrate/skript-geruest.md` und lesen die Playbooks, sobald es sie gibt.
 
+Der Schnitt, erste Stufe nach dem Dreh:
+
+| Stufe | Skill | Aus | Ergebnis |
+|---|---|---|---|
+| Rohschnitt | `/rough-cut <private/video-NN> <rohtake>` | Rohtake und ElevenLabs-Transkript | `schnitt-lokal/` mit Base-Cut, Schnittliste, remapptem Transkript und Bericht (alles in `private/`) |
+
 ## Globale Skills, die YT-OS nutzt
 
 | Pipeline-Stufe | Skill |
@@ -22,7 +28,7 @@ Alle Skills folgen dem Gerüst in `substrate/skript-geruest.md` und lesen die Pl
 | Planung | `wayfinder`, `grilling`, `prototype`, `to-spec`, `to-tickets` |
 | Texte prüfen | `slop-check`, `anti-response-patterns` (gebündelt in `text-check`) |
 | Stil aus Referenzvideo | `style-extract` |
-| Schnitt und Grafik | `rough-cut`, `graphics`, `hyperframes` |
+| Grafik über dem Base-Cut | `graphics`, `hyperframes` |
 | Session-Abschluss | `tldr` |
 
 ## Noch offen (über Wayfinder)
