@@ -13,6 +13,7 @@ Wie YT-OS nach draußen greift. Standard ist nur lesen. Schlüssel und Passwört
 | HyperFrames | Grafiken und Animationen rendern | schreibt lokale Dateien | läuft | CLI im Repo `dev/hyperframes` |
 | DaVinci Resolve 21.0.4 Free + MCP | Schnitt | schreibt ins lokale Projekt | geplant | Version 21.0.4, nie auf 21.1 updaten (Ticket 03) |
 | Computer Use, Playwright, Chrome-Extension | B-Roll aufnehmen | steuert den Rechner | offen | Dreifach-Vergleich (Ticket 08) |
+| ElevenLabs Scribe | Transkript eigener Aufnahmen mit Wort-Zeitstempeln | lädt die Tonspur hoch | geplant | Schlüssel in `~/.config/yt-os/.env`, nicht hier (Ticket 06) |
 | GitHub | Arbeitsnachweis | schreiben | läuft | Git-Guard vor jedem Commit und Push |
 | YouTube-Upload | Video veröffentlichen | schreiben | von Hand | später YouTube-API, nur mit Chris' Freigabe über das Publish-Gate |
 

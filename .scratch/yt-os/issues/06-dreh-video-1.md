@@ -10,3 +10,4 @@ A-Roll von Video 1 aufnehmen (Osmo Pocket 4, Elgato-Teleprompter) und ein Transk
 ## Comments
 
 - 2026-09-29: Dreh ist erledigt (27.09., siehe `videos/01-stufenleiter/dreh-log.md`). Offen ist nur noch das Transkript mit Wort-Zeitstempeln, laut Roadmap Tag 5.
+- 2026-09-29: Transkript wird mit ElevenLabs Scribe erstellt (Entscheidung Chris). Grund: genauer auf Deutsch, kommt mit dem schwachen Dreh-Ton besser klar, markiert Pausen und Geräusche, das hilft beim Finden von Versprechern und doppelten Takes. Chris hat das Hochladen der Tonspur zu ElevenLabs freigegeben. Ablauf: Tonspur lokal mit ffmpeg aus dem Haupt-Take ziehen, an Scribe schicken, Ergebnis als JSON mit Wort-Zeitstempeln plus lesbarer Fassung in `private/` ablegen, nie ins Repo. Schlüssel: `ELEVENLABS_API_KEY` in `~/.config/yt-os/.env` (außerhalb des Repos). Danach macht derselbe Cook-Thread den Schnittvorschlag.
