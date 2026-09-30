@@ -68,3 +68,10 @@ Signal Room Cover Lab kann laut README Cover-Pakete für Reels und YouTube erzeu
   - Playbook ergänzt: Regeln 19 bis 32 (Titel, Thumbnail und Hook als Paar) und zehn Evergreen-Formate.
   - Builder verbessert: Der Prompt verlangte warme Haut und verbot nur blasse, das Ergebnis war oft orange. Jetzt natürliche Haut wie auf den Fotos, keine Hände in der Ecke der Zeitanzeige, Riesenwort bleibt lesbar.
   - Offen: Chris wählt die drei Paare. Danach laufen die Finalisten durch den Ebenen-Ablauf.
+
+- 2026-09-30, später Abend (Thumbnail-Builder, PR 5, Commit 69be470): Chris' Feedback umgesetzt.
+  - Chris mag „Wo stehst du?“, „Gleiches Abo.“ und „STUFE 6“ (Haut, Haare, Zähne dort am besten). Den Schalter „Chat“ auf „Mitarbeiter“ lehnt er ab. Die Objekte wirkten ihm neben den Vorlagen billig.
+  - Ursache: Der Builder verlangte ein flaches Objekt. Jetzt hochwertige 3D-Objekte, Retusche ohne Überschärfen, Schriftfarbe passend zum Hintergrund.
+  - Alle 45 Vorlagen der Bibliothek ausgewertet, sieben neue Muster als Rezepte (unter anderem Liam Ottleys Objekte in offenen Händen). Im Cover Lab jetzt unter „Muster für Entwürfe“ auswählbar. Quellen in `docs/thumbnail-muster.md` im Signal-Room-Repo.
+  - Runde 4 und 5: neuer Lauf „Video 1 Finalisten 2“ mit „Gleiches Abo.“, „Wo stehst du?“ (Creme und Navy) und „STUFE 6“ (neu plus Chris' Favorit zum Vergleich).
+  - Offen: Chris wählt bei „Wo stehst du?“ Creme oder Navy und bestätigt die Reihenfolge.

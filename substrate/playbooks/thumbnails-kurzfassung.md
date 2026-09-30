@@ -20,6 +20,7 @@ Vorfassung für Playbook 18, zugeschnitten auf Videos über Claude, KI-Agents un
 16. Wähle eine echte, zum Versprechen passende Mimik und vermeide ein austauschbares Schockgesicht. ([Clouse-Analyse, 04:10 bis 04:22 und 11:00 bis 11:20](https://www.youtube.com/watch?v=ICy1ZcyEGgI))
 17. Richte den Blick auf Text oder Objekt, wenn Chris dorthin führen soll, und in die Kamera, wenn er als Sprecher Vertrauen aufbauen soll. ([Clouse-Analyse, 07:15 bis 07:25 und 12:25 bis 12:30](https://www.youtube.com/watch?v=ICy1ZcyEGgI), [Clouse, 05:30 bis 06:05](https://www.youtube.com/watch?v=7Cn0wncfkNA))
 18. Verändere Chris' Gesichtsform nur minimal und lehne jede Variante ab, in der er nicht sofort wiedererkennbar ist. ([Ticket 09](../../.scratch/yt-os/issues/09-thumbnail-cover-lab.md))
+18a. Baue das Objekt als hochwertiges 3D-Objekt mit Material, Glanz, Schatten und demselben Licht wie die Person. Flache Symbole wirken neben den Vorlagen der Nische billig. Drei Elemente bleiben die Regel, die Qualität kommt aus Material und Licht. (eigene Auswertung von 45 Referenz-Thumbnails, 30.09.2026; [Ticket 09](../../.scratch/yt-os/issues/09-thumbnail-cover-lab.md))
 
 ## Titel, Thumbnail und Hook als Paar
 

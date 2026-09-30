@@ -4,17 +4,19 @@ Stand 30.09.2026, Tag 6. Chris wählt, nichts ist hochgeladen.
 
 ## Empfehlung
 
-Drei Paare gehen in YouTubes Test & Compare, jedes als Kombination aus Titel und Thumbnail. Zuerst hochladen: P2. Endet der Test ohne klaren Gewinner, bleibt die zuerst hochgeladene Variante.
+Stand nach Chris' Feedback am 30.09. abends. Chris mag „Wo stehst du?“, „Gleiches Abo.“ und „STUFE 6“ und lehnt den Schalter „Chat“ auf „Mitarbeiter“ ab (Gesicht zu breit, Licht zu flau). Die Objekte wirkten ihm neben Liam Ottley und den anderen Vorlagen billig. Runde 4 und 5 haben das behoben: Die Objekte sind jetzt echte 3D-Objekte mit Material, Licht und Schatten, das Licht folgt seinem Lieblingsbild „STUFE 6“.
+
+Drei Paare gehen in YouTubes Test & Compare, jedes als Kombination aus Titel und Thumbnail. Zuerst hochladen: „Gleiches Abo.“. Endet der Test ohne klaren Gewinner, bleibt die zuerst hochgeladene Variante.
 
 | Reihenfolge | Paar | Titel | Thumbnail | Winkel |
 |---|---|---|---|---|
-| 1 | P2 | Claude nur als Chat nutzen? Dann verschenkst du fast alles | „Gleiches Abo.“, zwei Karten mit 20 €, links ein Brief, rechts ein Team | Verlust: Ich zahle dasselbe und hole weniger raus |
-| 2 | P4 | Die 6 Stufen, mit denen Claude wirklich für dich arbeitet | „Wo stehst du?“, Treppe 1 bis 6, Stufe 6 leuchtet | Neugier: Auf welcher Stufe stehe ich? |
-| 3 | P3 | Claude für Anfänger: Erst fragen, dann Arbeit abgeben | Schalter von „Chat“ auf „Mitarbeiter“ | Ergebnis: Aus dem Chat wird ein Mitarbeiter |
+| 1 | P2 | Claude nur als Chat nutzen? Dann verschenkst du fast alles | „Gleiches Abo.“, Chris hält zwei 3D-Karten mit 20 €, links grau mit Brief, rechts koralle mit Team | Verlust: Ich zahle dasselbe und hole weniger raus |
+| 2 | P4 | Die 6 Stufen, mit denen Claude wirklich für dich arbeitet | „Wo stehst du?“, Treppe 1 bis 6, Stufe 6 koralle (Creme oder Navy, Chris wählt) | Neugier: Auf welcher Stufe stehe ich? |
+| 3 | P5 | Vom Chat zum KI-Betriebssystem: So nutzt du Claude besser | „STUFE 6“, 3D-Treppe mit leuchtender oberster Stufe | Ziel: Wie sieht die oberste Stufe aus? |
 
-Die drei unterscheiden sich im Winkel. Motiv und Farbe variieren mit, das ist bei kombinierten Tests nicht zu trennen. Gewinner ist laut YouTube die Variante mit dem höchsten Anteil an Wiedergabezeit.
+P5 hatte im Persona-Test ein Veto (zweimal „überversprochen“). Chris nimmt es trotzdem, weil es ihm am besten gefällt. Der echte Test entscheidet.
 
-Die vier Finalisten (P2, P4, P3 und P5 als Reserve) liegen in Signal Room, Tab „Cover Lab“, Lauf „Video 1 Finalisten: 4 Paare aus Titel, Thumbnail und Hook“. Die Galerie sortiert nach der automatischen Prüfung, der Test-Platz steht jeweils am Anfang der Beschreibung.
+Alle Bilder liegen in Signal Room, Tab „Cover Lab“, Lauf „Video 1 Finalisten 2: deine drei Favoriten, hochwertig neu“. Der ältere Lauf „Video 1 Finalisten: 4 Paare“ zeigt den Stand vor dem Feedback.
 
 ## Beobachtete Muster
 
@@ -80,8 +82,16 @@ Nach dem Persona-Test nachgeschärft und nicht erneut getestet:
 - **Nach dem Persona-Test:** P1 „Die meisten: Stufe 1“ (Median 2, das Bild zeigt nur Stufe 1, der Titel verspricht sechs). Das Bild ist gut und passt als Zwischenbild im Video zu Sekunde 20.
 - **Nachschärfung:** „Gleiches Abo.“ auf Anthrazit (Glow, Gelb, Gesicht breiter als creme Fassung), P4-Neu-Render (Gesicht breiter).
 
+## Nach Chris' Feedback (Runde 4 und 5)
+
+- **Ursache „billig“:** Der Builder verlangte seit dem 29.09. ein flaches Objekt, als Antwort auf „zu überladen“. Alle 45 Vorlagen der Bibliothek zeigen dagegen dreidimensionale Objekte mit Glanz, Schatten und Licht passend zur Person. Drei Elemente bleiben, das Objekt wird hochwertig.
+- **Muster aus der ganzen Bibliothek:** Sieben neue Rezepte, unter anderem Liam Ottleys „zwei Objekte in offenen Händen“. Im Cover Lab lassen sie sich unter „Muster für Entwürfe“ auswählen.
+- **Überschärfte Haut:** Die Retusche verlangte ein „crisp“ Porträt. Jetzt natürliche Hautstruktur ohne Überschärfen.
+- **Verworfen:** „Gleiches Abo.“ auf Creme (gelbe oder koralle Schrift schlecht lesbar, Kopf verdeckt Buchstaben), „STUFE 6“ mit Wort hinter dem Kopf (verdeckt das U), Navy-Treppe aus Runde 4 (1 und 2 auf einem Block).
+- **Bekannte Schwäche:** Bei „Gleiches Abo.“ reichen die Hände in die Ecken, die Zeitanzeige verdeckt Fingerspitzen. Der Kopf berührt die Unterkante von „GLEICHES“, klein bleibt das Wort lesbar.
+
 ## Offen für Chris
 
-- Wahl der drei Paare und der Reihenfolge. Danach gehen die Finalisten durch den Ebenen-Ablauf (Hintergrund, Person, Text einzeln freigeben).
+- Bei „Wo stehst du?“ Creme oder Navy wählen und die Reihenfolge bestätigen. Danach gehen die Finalisten durch den Ebenen-Ablauf (Hintergrund, Person, Text einzeln freigeben).
 - Wiedererkennbarkeit: Die Haare wirken in allen Entwürfen etwas voller als auf den Fotos, der Haaransatz sitzt etwas tiefer. Chris entscheidet, ob das stört.
 - Personas statt Daten: Sobald der Kanal Analytics hat, die Personas aus echten Altersgruppen und Kommentaren neu bauen.
