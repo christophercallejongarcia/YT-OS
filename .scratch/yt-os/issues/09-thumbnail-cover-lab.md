@@ -59,3 +59,12 @@ Signal Room Cover Lab kann laut README Cover-Pakete für Reels und YouTube erzeu
   - Offen: Playbook-Abschnitt "Titel, Thumbnail und Hook als Paar", Runde 2, Persona-Test, `videos/01-stufenleiter/packaging.md`, Chris' Wahl.
   - Übergabe: `~/chriscasa/_handoff/2026-09-30-thumbnail-builder.md`
 
+
+- 2026-09-30, abends (Thumbnail-Builder, PR 5, Commit d623b20): Paar-Runden abgeschlossen, Chris wählt.
+  - Drei Runden nach Marks Prinzip: Runde 1 mit 10 Entwürfen über 5 Titel, Runde 2 mit 9 nachgeschärften, Runde 3 mit 4 gezielten Korrekturen. Titel E und sechs Richtungen verworfen, Gründe in `videos/01-stufenleiter/packaging.md`.
+  - Persona-Test mit vier Personas im Handy-Feed zwischen echten Konkurrenz-Videos. Empfehlung für Test & Compare: P2 „Gleiches Abo.“ zuerst, dann P4 „Wo stehst du?“ und P3 „Chat“ auf „Mitarbeiter“. P5 „STUFE 6“ als Reserve (Veto: zweimal „überversprochen“).
+  - Jedes Paar greift einen Satz aus dem gedrehten Hook auf. P2 wird schon im ersten Satz bestätigt.
+  - Signal Room, Cover Lab: Lauf „Video 1 Finalisten: 4 Paare aus Titel, Thumbnail und Hook“.
+  - Playbook ergänzt: Regeln 19 bis 32 (Titel, Thumbnail und Hook als Paar) und zehn Evergreen-Formate.
+  - Builder verbessert: Der Prompt verlangte warme Haut und verbot nur blasse, das Ergebnis war oft orange. Jetzt natürliche Haut wie auf den Fotos, keine Hände in der Ecke der Zeitanzeige, Riesenwort bleibt lesbar.
+  - Offen: Chris wählt die drei Paare. Danach laufen die Finalisten durch den Ebenen-Ablauf.
