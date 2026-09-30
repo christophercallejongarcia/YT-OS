@@ -52,3 +52,10 @@ Signal Room Cover Lab kann laut README Cover-Pakete für Reels und YouTube erzeu
   - Aktuelle Varianten: Lauf run-20260929T193526Z-ihtsji ("Welche der 6?", "Mehr als Antworten", "LASS ARBEITEN"). Keine Variante gewählt.
   - Offene Ideen: automatische Bildprüfung nach jeder Ebene (Anzahl, Text, Wiedererkennbarkeit), mehr Varianten erzeugen und die besten drei zeigen (Playbook-Regel 8), Gesten und Kleidung pro Variante planen lassen, bei Bedarf GPT Image 2.5 Sunburst über die API (braucht Schlüssel und Chris' Entscheidung zu ADR-0004).
 
+- 2026-09-30 (Thumbnail-Builder, PR 5, Commit 6878867): Übergabe an einen frischen Thread.
+  - Gesichert: Entwurfs-Läufe mit bis zu 20 Varianten, 17 Rezepten aus der Creator-Recherche, automatischer Bildprüfung und Bewertung in Signal Room. Fehler von gestern behoben (Varianten ab 10, Zeitlimit Render plus Retusche). Fremde KI-Logos verboten.
+  - Recherche fertig: Outlier von Nate Herk, Jack Roberts, Mark Kashef und Liam Ottley (YouTube Data API, Faktor gegen Kanal-Median) und Chris' 15 Tristen-Referenzen liegen in der Referenz-Bibliothek. Paar-Regeln und Evergreen-Formate als private Notiz, noch nicht ins Playbook übernommen.
+  - Paar-Runde 1 läuft: 10 Entwürfe, zwei Botschaften je Titel A bis E, jeweils mit Bezug zum gedrehten Hook.
+  - Offen: Playbook-Abschnitt "Titel, Thumbnail und Hook als Paar", Runde 2, Persona-Test, `videos/01-stufenleiter/packaging.md`, Chris' Wahl.
+  - Übergabe: `~/chriscasa/_handoff/2026-09-30-thumbnail-builder.md`
+
