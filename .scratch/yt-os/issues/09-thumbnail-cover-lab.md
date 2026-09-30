@@ -75,3 +75,9 @@ Signal Room Cover Lab kann laut README Cover-Pakete für Reels und YouTube erzeu
   - Alle 45 Vorlagen der Bibliothek ausgewertet, sieben neue Muster als Rezepte (unter anderem Liam Ottleys Objekte in offenen Händen). Im Cover Lab jetzt unter „Muster für Entwürfe“ auswählbar. Quellen in `docs/thumbnail-muster.md` im Signal-Room-Repo.
   - Runde 4 und 5: neuer Lauf „Video 1 Finalisten 2“ mit „Gleiches Abo.“, „Wo stehst du?“ (Creme und Navy) und „STUFE 6“ (neu plus Chris' Favorit zum Vergleich).
   - Offen: Chris wählt bei „Wo stehst du?“ Creme oder Navy und bestätigt die Reihenfolge.
+
+- 2026-09-30, Tagesabschluss (Thumbnail-Builder, PR 5, Commit 69be470): Chris' Feedback: Die Finalisten entsprechen noch nicht seinem Vorstellungsbild, da ist deutlich mehr rauszuholen. Heute keine weiteren Renders.
+  - Einschätzung des Cooks: Chris wird in jedem Bild neu erzeugt (Haare, Gesichtsbreite und Haut schwanken), Schrift und Objekt entstehen im selben Bildaufruf wie die Person, und die Ideen sind wörtlich statt spannend.
+  - Drei Hebel für Tag 7: ein festes, freigegebenes Hero-Porträt mit Ausdrucks-Varianten per Edit (Marks Ansatz laut EA Brain), die Überschrift per Code mit echter Schrift setzen, pro Paar eine konkrete Vorlage von Tristen oder Liam remixen und Seite an Seite prüfen.
+  - Zuerst klären: welche 2 bis 3 Vorlagen Chris' Bild treffen, Creme oder Navy bei „Wo stehst du?“, Reihenfolge im Test.
+  - Übergabe: `~/chriscasa/_handoff/2026-10-01-thumbnail-verfeinern.md`
