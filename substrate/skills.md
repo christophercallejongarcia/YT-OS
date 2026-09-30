@@ -2,17 +2,18 @@
 
 ## Eigene Skills (nur in diesem OS)
 
-Die Skript-Kette. Jede Stufe ist ein eigener Aufruf, nach jeder Version prüft Chris.
+Die Skript-Kette. Einstieg ist immer `skript-partner`, er steuert die übrigen Stufen. Nach jeder Stufe prüft Chris.
 
 | Stufe | Skill | Aus | Ergebnis |
 |---|---|---|---|
-| 1 | `/skript-mix <ordner> <urls>` | 3 bis 5 Outlier-Videos | `skript-v1-mix.md` |
+| 0 | `/skript-partner [ordner]` | Thema, 3 bis 5 Outlier-URLs und/oder Brain Dump im Chat | `packaging.md` (Versprechen, Thumbnail-Botschaft, Titel, 2 bis 3 Hook-Varianten, gewählter Hook, Pitch) |
+| 1 | `/skript-mix <ordner> [urls]` | packaging.md plus Outlier und/oder Brain Dump | `skript-v1-mix.md`, `quellen.md` |
 | 2 | `/skript-anreichern <ordner> v2` | v1 | `skript-v2-community.md` (EA Brain, Faktencheck) |
 | 2 | `/skript-anreichern <ordner> v3` | v2 | `skript-v3-beispiele.md` |
-| 3 | `/sprechfassung <ordner>` | v3 | `skript-v4-sprechfassung.md` |
-| 4 | `/text-check <ordner>` | v4 | Prüfbericht, nach Freigabe `skript.md` |
+| 3 | `/sprechfassung <ordner>` | v3 und packaging.md | `skript-v4a-hybrid.md` (Hybrid) und `skript-v4b-wortlaut.md` (Wort für Wort) |
+| 4 | `/text-check <ordner>` | v4a und v4b | Prüfbericht mit vorlese-check, Küchentisch-Test, nach Freigabe `skript.md` |
 
-Alle Skills folgen dem Gerüst in `substrate/skript-geruest.md` und lesen die Playbooks, sobald es sie gibt.
+Drei Eingänge, pro Video gewählt: nur Outlier (Hauptweg), Outlier plus Brain Dump, nur Brain Dump. Alle Skills folgen dem Gerüst in `substrate/skript-geruest.md` und lesen die Playbooks, sobald es sie gibt. Die Wortlaut-Regeln stehen in `sprechfassung`, der Messwert für KI-Klang beim Vorlesen in `.claude/skills/text-check/scripts/vorlese-check.py`.
 
 Der Schnitt, erste Stufe nach dem Dreh:
 

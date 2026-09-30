@@ -41,9 +41,10 @@
 
 - 2026-09-26 YouTube-Upload vorerst von Hand, später über die YouTube-API mit Freigabe durch das Publish-Gate. Musik und Sounds über Epidemic Sound, austauschbar.
 
+- 2026-09-30 Skript-Kette: Einstieg über skript-partner (Interviewer), zwei Fassungen pro Skript (Simtent-Hybrid und Wort für Wort), Wortlaut nach Simtents Regeln statt aus dem Dreh-Transkript (Ticket 26).
+
 ## Open questions
 - Konkurrenz-Creator-Liste (5 bis 10 Kanäle) liefert Chris später über Ticket 19.
 - Video 1 hat noch keine kurze Vorstellung von Chris im Skript. Vor dem Dreh ergänzen.
-- Stimmvorlage für sprechfassung: Transkript vom Dreh Video 1 (Ticket 06) in regeln.md einarbeiten.
 
 ## Audit log (append)
