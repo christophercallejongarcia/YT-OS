@@ -1,0 +1,37 @@
+{
+  "$comment": "Teardown of one reference thumbnail, following references/teardown-prompt.md. Look at the image (Read tool), fill every field in English with concrete, measurable wording, save it as styles/<videoId>.json. layout, person, object, background, camera, lighting, palette and mood go into the image prompt (person: style only, never the reference's identity). text steers the code typography. The four analysis fields steer the concepts.",
+  "example": {
+    "layout": {
+      "grid": "centred host, objects on a shallow arc at eye level, headline band across the bottom",
+      "zones": {"person": "centre, face 45% of frame height", "object": "three tiles left and three right of the head at eye level", "text": "bottom 22%, centred"},
+      "empty_areas": "top corners, bottom-right corner"
+    },
+    "person": {
+      "pose": "chest up, facing the camera, hands clasped under the chin",
+      "expression": "warm toothy smile",
+      "gaze": "into the camera",
+      "position": "centre",
+      "share_of_frame_height": "face 45%",
+      "crop": "cut at the chest by the bottom edge",
+      "clothing": "plain black t-shirt"
+    },
+    "object": {
+      "what": "six rounded app tiles with simple glyphs",
+      "material": "glossy plastic with soft inner light",
+      "finish": "beveled edges, slight reflections",
+      "lighting": "lit by the same key as the host, warm glow around each tile",
+      "shadow": "glow instead of cast shadows",
+      "size": "each tile about 15% of frame height"
+    },
+    "background": {"type": "dark studio with bokeh lights", "color": "deep navy #0B1329 with warm orange bokeh", "depth": "strongly out of focus, slight vignette"},
+    "text": {"word_count": 2, "font_style": "condensed grotesk", "weight": "heavy", "case": "all caps", "color": "#FFFFFF", "outline": "none, soft drop shadow", "position": "bottom centre", "size": "cap height about 14% of frame height"},
+    "camera": {"lens": "85 mm portrait", "angle": "eye level", "focus": "host and tiles sharp, background soft"},
+    "lighting": {"key": "soft frontal key from upper camera-left, about 25 degrees above", "fill": "gentle, low contrast", "rim": "warm rim on hair and shoulders", "color_temperature": "neutral skin, warm accents"},
+    "palette": {"base": "navy #0B1329", "accent": "coral #D97757, white"},
+    "mood": "friendly, confident, premium",
+    "why_it_works": "The arc of tool icons promises everything in one video and the calm smile says it is easy.",
+    "verdict": "both",
+    "evergreen_fit": "yes, as long as every tile stands for one concrete step",
+    "borrow": "an arc of 3D tiles, one per step of the video, around a smiling host"
+  }
+}
