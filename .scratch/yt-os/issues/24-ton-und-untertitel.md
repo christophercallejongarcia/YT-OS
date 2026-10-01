@@ -19,3 +19,7 @@ Die fertige WAV-Spur hat nach Anpassung von Samplerate und Dateiende exakt diese
 ### 2026-10-01: Hörfeedback und weitere Recherche
 
 Chris lehnt die erste Cleanvoice-Fassung wegen künstlichem Stimmklang ab. Nächster empfohlener Vergleich: reine Rauschentfernung ohne Studio Sound, weiterhin ohne Schnitte. Die App bietet dafür kostenlose Neuberechnungen an; noch kein weiterer Durchlauf gestartet. Auphonic, iZotope RX und Adobe Podcast anhand offizieller Dokumentation als Alternativen geprüft. Recherche und Feedback sind im privaten Bericht ergänzt.
+
+### 2026-10-01: Mildere Cleanvoice-Fassung erstellt
+
+Auf Chris' Wunsch kostenlos neu berechnet: nur Rauschentfernung und Normalisierung, Studio Sound und alle Schnittfunktionen aus. Fertige Spur, Vergleich mit Original und erster Fassung bei gleicher Lautheit sowie Messdaten bleiben lokal im privaten Ordner. Dauer und Samplezahl stimmen mit der Schnittspur überein; ein kleiner konstanter Verarbeitungsversatz wurde lokal ausgeglichen. Kein weiterer Guthabenverbrauch. Hörfreigabe weiterhin offen.
