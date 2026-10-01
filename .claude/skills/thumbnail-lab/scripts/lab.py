@@ -53,6 +53,9 @@ def cmd_render(args):
     run = util.require_run(args.run)
     concept = util.find_concept(run, args.concept)
     request = prompt.build(run, concept)
+    print(f"SWAPPED {len(request['changed'])} fields ({request['changed_share']:.0%} of the template): " + ", ".join(request["changed"][:12]) + (" ..." if len(request["changed"]) > 12 else ""))
+    if request["changed_share"] > 0.35:
+        print("WARN more than a third of the template changed; swap content fields only (headline, objects, person), keep layout, light and colours.")
     try:
         path = backends.render(run, concept, request, backend=args.backend, variant=args.variant, fmt=args.prompt_format)
     except RuntimeError as error:
@@ -110,7 +113,7 @@ def main(argv=None):
     p.add_argument("--max-age-days", type=int, default=1095, help="search only videos younger than this (default 3 years)")
     p.set_defaults(func=cmd_refs)
 
-    p = sub.add_parser("render", help="render one concept without text")
+    p = sub.add_parser("render", help="render one concept from its remix (remix/<id>.json)")
     p.add_argument("run")
     p.add_argument("--concept", required=True)
     p.add_argument("--backend", default="auto", choices=["auto", "openai", "gemini", "codex"])
@@ -118,7 +121,7 @@ def main(argv=None):
     p.add_argument("--prompt-format", choices=list(backends.FORMATS), help="json (default) or prose: the same fields as labelled paragraphs; also THUMBNAIL_LAB_PROMPT_FORMAT")
     p.set_defaults(func=cmd_render)
 
-    p = sub.add_parser("text", help="set the headline with the bundled font")
+    p = sub.add_parser("text", help="write finals; sets the headline in code if the concept has a text spec")
     p.add_argument("run")
     p.add_argument("--concept", required=True)
     p.add_argument("--variant", type=int, help="variant number (default: all rendered variants)")

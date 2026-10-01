@@ -139,7 +139,7 @@ def apply(run: Path, concept: dict, variant: int | None = None) -> tuple[Path, l
     out, all_warnings = None, []
     for render in renders:
         original = Image.open(render).convert("RGB")
-        # No lines: a deliberately text-free thumbnail (common in food, travel, product niches).
+        # No lines: the headline is in the image (default), or a deliberately text-free thumbnail.
         final, placed = draw(original, spec) if spec.get("lines") else (original, [])
         out = run / "finals" / render.name
         final.save(out)

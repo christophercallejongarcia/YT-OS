@@ -1,6 +1,6 @@
 # Rules: title, thumbnail and hook as one package
 
-Distilled from a creator's playbook, a style study of 105 outlier thumbnails, a channel check of 458 more and a controlled 12-variant experiment (September and October 2026). Sources for the public research are linked at the end.
+Distilled from a creator's playbook, a style study of 105 outlier thumbnails, a channel check of 458 more and a 12-variant experiment and a blind test with 40 images (September and October 2026). Sources for the public research are linked at the end.
 
 ## The package
 
@@ -14,14 +14,14 @@ Distilled from a creator's playbook, a style study of 105 outlier thumbnails, a 
 8. **Show the TLDR.** On a phone the thumbnail shows the result or the transformation, with one focal point.
 9. **Derive, do not copy.** Put several outliers of the niche side by side, name what they share, rebuild that move with your own content.
 10. **Ask why it won.** For every outlier ask: did the thumbnail carry it, or the title plus a trending topic? Check the same channel's other videos in the same weeks. A format that also wins on boring topics is worth copying; a format that only won with fresh news is not.
-11. **Rounds, not one shot.** Generate many, judge hard, keep a few, refine, keep three. Use a fixed prompt template so variants differ only where you want them to.
+11. **Rounds, not one shot.** Generate many, judge hard, keep a few, refine, keep three. Keep the remix fixed so variants differ only where you want them to.
 12. **Test three that really differ.** YouTube Test & Compare runs up to three title/thumbnail variants and picks the winner by share of watch time, not click rate. Without a clear winner the first upload stays, so upload the strongest first. Vary one axis per test: angle (pain, result, curiosity), subject (face, object, action), text amount or colour. Changing title or thumbnail during the test stops it.
 
 ## The image
 
 13. **Three elements.** The person (big), one headline (two to four words), one object that shows the promise. Plain or calm background. Richness comes from material and light, not from more parts.
 14. **Objects are real 3D.** Glossy or matte material, contact shadows, lit by the same light as the person. Flat clip-art icons make a thumbnail look cheap next to the top of the niche.
-15. **Headline set in code.** Image models misspell, change case and push letters into the head. Render the image without text, keep a calm zone, set the headline with a real font afterwards.
+15. **Short headline, checked letter by letter.** Two to four words drawn by the image model from the remix came out exact 40 of 40 times. Check every render anyway. Set it in code when it is long, needs an exact font or keeps coming out wrong.
 16. **Readable at 168 px.** Capitals at least 8% of the image height, contrast at least 4.5:1 against what is behind them.
 17. **Bottom-right corner empty.** YouTube prints the video length there.
 18. **Face: big, natural, recognisable.** Face around 40% of the frame height, eyes sharp, natural skin (no orange cast, no over-sharpening), proportions untouched. Look into the camera to build trust, or at the object to lead the eye.
@@ -35,9 +35,9 @@ Distilled from a creator's playbook, a style study of 105 outlier thumbnails, a 
 
 ## Prompting
 
-23. **Fields beat format.** Sending the prompt as JSON or as prose made no visible difference in a controlled test. What mattered was what the fields said: a wrong background field ("split") showed up exactly as written.
-24. **Style teardown is the lever.** Describing a proven reference as a style JSON (light, colours, lens, composition, material) and applying it to the new content lifted three of four variants to a clearly more premium look.
-25. **Preserve list in every render.** Face shape, features, hairline, beard, skin tone, proportions. Repeat it every time.
+23. **The complete teardown is the lever.** Ask for "the complete JSON for this image" of a proven thumbnail, without fields or a length limit. Thousands of concrete details (pixel positions, hex colours, materials, light) beat anything you would write yourself.
+24. **Swap content, keep the rest.** Change headline, objects and person; keep layout, light, colours and camera. JSON was slightly better than the same content as prose, but braces around your own prompt gain nothing.
+25. **One photo plus the template.** Send one good photo of the creator as Image 1 and the template as Image 2, with their roles named. The person fields say: face, hair, beard, skin tone and eye colour exactly from Image 1.
 
 ## Public sources
 

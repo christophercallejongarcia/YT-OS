@@ -1,33 +1,53 @@
-# Teardown prompt
+# Teardown and remix
 
-The skill tears every reference down with this prompt (step 3). It also works on its own: paste it into any vision model together with a thumbnail you like.
+A JSON image trick that circulates among creators: let a model tear a thumbnail that works down into its complete JSON, swap only the content, and apply it to your own photo. It also works on its own in any chat with a vision model.
 
-```
-Describe this thumbnail as a complete JSON style spec so an image model can
-recreate the style for a different topic. Fields: layout (grid, zones for
-person, object and text, empty areas), person (pose, expression, gaze,
-position, share of frame height, crop, clothing), object (what, material,
-finish, lighting, shadow, size), background (type, color, depth), text
-(word count, font style, weight, case, color, outline, position, size),
-camera (lens, angle, focus), lighting (key, fill, rim, color temperature),
-palette (base, accent), mood. Describe style only, not the creator's identity
-or brand.
-```
+## 1. Teardown
 
-Then apply it:
+Upload the thumbnail and ask, word for word:
 
 ```
-Apply this style JSON to my video about [topic]. Keep layout, light and
-materials. Replace the object with [your idea]. Leave the text zone empty.
+Give me the complete JSON for this image.
 ```
 
-## What the skill adds on top
+Do not give it fields, a schema or a length. The value is in the detail you would never write yourself: positions and sizes in pixels, hex colours, font weight and outline, materials, light direction, glow, grain, the exact texts. A good answer runs to 8,000 to 20,000 characters. Cut it to a fixed schema and you lose most of that.
 
-The skill fills the same fields and four analysis fields that steer the concepts and never go into the image prompt:
+In the skill, you answer this request yourself, looking at `refs/<id>.jpg`, and save the JSON unchanged as `styles/<id>.json`.
 
-- `why_it_works`: the one idea a viewer gets in half a second, and the question it opens
-- `verdict`: `thumbnail`, `title_and_trend`, `both` or `unclear`. Did the image carry this outlier, or its title plus a trending topic?
-- `evergreen_fit`: would the format carry a topic with no news behind it?
-- `borrow`: the transferable move, not the content
+## 2. Remix: swap content, keep everything else
 
-Rules for filling it: be concrete and measurable (hex colours, light direction in degrees, share of the frame), describe gradients explicitly (an unspecified two-colour background tends to come back as a hard split), and write "no person" when there is none.
+Copy the JSON and change only the content fields:
+
+- **Headline:** the exact new text, same typography, position and size. Remove any other text of the template, unless it is part of the format (for example panel numbers).
+- **Objects, icons, panels:** the new items in reading order, same style, colours, glow and positions.
+- **Person, with your face:** remove every appearance detail of the template's person (age, hair, eye colour, beard colour, skin description) and state that face, hair, beard, skin tone and eye colour come exactly from Image 1. Keep pose, expression, gaze, clothing and light.
+- **Person, faceless:** replace the person with an object or remove them, and adjust the layout fields that mention them.
+- **Descriptions:** rewrite every description, summary or recreation-prompt field so it matches the changes.
+- **Everything else stays:** layout, coordinates, background, colours, effects, camera, light, mood.
+
+Edge cases:
+- Text inside the scene (a sign, a wordmark on a banner, a label on an icon) goes, unless the format needs it (panel numbers).
+- Traces of the template's person outside the person block go too: skin hex values in the palette, "sharp on the beard", hair colour in a rim-light note. Keep the light itself.
+- A longer headline keeps the position and the text box; if it no longer fits at the same size, lower the size until it fits the box.
+- New objects take the size and position of the ones they replace. Remove values that described only the old content (an accent colour that belonged to a removed diagram).
+
+## 3. Apply
+
+Send the remixed JSON as the prompt, with your photo as Image 1 and the template as Image 2, and name their roles at the top of the JSON:
+
+```json
+"input_images": {
+  "Image 1": "photo of the creator; the person in this JSON is this person: face, hair, beard, skin tone and eye colour exactly from this image",
+  "Image 2": "the original thumbnail this JSON describes; style reference only, do not copy its person, its logos or its text"
+}
+```
+
+In a chat it is two messages: "Give me the complete JSON for this image." with the template, then your photo with "Apply the previous JSON to this image." Then change single fields for variants.
+
+## What the test showed (40 images, judged blind)
+
+- The complete teardown is the big lever. With a face, every arm with a teardown beat "template image plus a short sentence" in 10 of 10 judgements.
+- JSON beat the same content as prose by a small margin: ahead on all 6 sheets where both judges agreed, never behind.
+- Best overall: JSON plus photo plus template in context. Without a face, the template image in the call made the clear difference.
+- Short headlines drawn by the image model were exact 40 of 40 times, umlauts included.
+- Wrapping your own prompt in braces gains nothing. The content of the JSON matters, not the brackets.

@@ -8,7 +8,7 @@ Look at `review/sheet.png` (full size plus the 168 px preview) and `review/feed.
 | 2 | One idea | one focal point, at most three elements, nothing competes |
 | 3 | Promise and curiosity | it shows the result or transformation and opens a question the title sharpens |
 | 4 | Package fit | thumbnail message, title and first hook line are one promise; no repeated phrase |
-| 5 | Premium finish | real 3D material, consistent light, no AI artefacts, natural skin, no extra fingers or melted objects |
+| 5 | Premium finish | real 3D material, consistent light, no AI artefacts, natural skin, no extra fingers or melted objects; at least as premium as its template |
 | 6 | Beats its neighbours | next to the references in the feed it looks at least as professional |
 | 7 | Face (face mode only) | instantly the creator: same face shape, hairline, beard; natural proportions |
 
@@ -16,13 +16,13 @@ Look at `review/sheet.png` (full size plus the 168 px preview) and `review/feed.
 
 - headline unreadable at 168 px or touching the face
 - anything important in the bottom-right corner
-- text or letters drawn by the image model (the image must be text-free)
-- the face looks like someone else, or wider / younger than in the photos
+- a misspelled headline, stray letters, or the template's text, person or logos copied
+- the face looks like someone else, or wider / younger than in the photo
 - a promise the video does not keep
 - logos of brands that have nothing to do with the video
 
 ## What to do with the scores
 
 - Write `review/scores.md`: one row per final with the seven scores, the sum and one sentence on the main flaw.
-- Re-render the weakest third once, changing only the field that caused the flaw (the object, the expression, the background, the empty zone). Never change more than one field per re-render, so the parameter table stays meaningful.
+- Re-render the weakest third once, changing only the remix field that caused the flaw (the object, the expression, the headline size, the person's position). Never change more than one field per re-render, so the parameter table stays meaningful.
 - Pick the best three that differ on one axis (angle, subject or text amount). Show the user only finals you would post yourself.

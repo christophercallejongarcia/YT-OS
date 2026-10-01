@@ -200,6 +200,8 @@ def render(run: Path, concept: dict, request: dict, backend: str = "auto", varia
         print(f"WARN {stem.name}: could not confirm that the prompt arrived verbatim (no Codex session log found).", file=sys.stderr)
     util.write_json(stem.with_suffix(".meta.json"), {
         "concept": concept["id"], "variant": variant, "backend": backend, "model": model, "prompt_format": fmt, "verbatim": verbatim,
-        "seconds": round(time.time() - started), "style_ref": concept.get("style_ref"), "face": isinstance(request["prompt"].get("person"), dict),
+        "seconds": round(time.time() - started), "style_ref": concept.get("style_ref"),
+        "face": any("photos" in Path(image).parts for image in request["images"]),
+        "text": "code" if "text_rule" in request["prompt"] else "image", "changed_fields": request.get("changed", []),
     })
     return stem.with_suffix(".png")

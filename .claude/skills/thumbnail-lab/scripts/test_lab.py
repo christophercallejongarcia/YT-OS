@@ -99,7 +99,7 @@ class Prompts(unittest.TestCase):
             self.assertEqual(backends.codex_delivered_prompt(Path(folder), "abc123"), '{"task": "x"}')
             self.assertIsNone(backends.codex_delivered_prompt(Path(folder), "other"))
 
-    def test_prompt_is_text_free_and_carries_the_preserve_list(self):
+    def test_remix_goes_out_verbatim_with_photo_and_template(self):
         with tempfile.TemporaryDirectory() as folder:
             run = Path(folder)
             (run / "photos").mkdir()
@@ -107,19 +107,32 @@ class Prompts(unittest.TestCase):
             Image.new("RGB", (8, 8)).save(run / "photos" / "face-1.jpg")
             Image.new("RGB", (8, 8)).save(run / "refs" / "abc.jpg")
             util.write_json(run / "intake.json", {"title": "T", "mode": "face", "photos": ["face-1.jpg"]})
-            util.write_json(run / "styles" / "abc.json", {"lighting": {"key": "soft"}, "text": {"word_count": 2}, "verdict": "thumbnail"})
+            teardown = {"image": {"description": "a man holds a red cube"}, "typography": [{"text": "OLD", "fill": "#FFFFFF"}],
+                        "lighting": {"key": "soft, upper left"}, "palette": ["#101010", "#FF5A16"]}
+            util.write_json(run / "styles" / "abc.json", teardown)
+            remix = json.loads(json.dumps(teardown))
+            remix["image"]["description"] = "the man from Image 1 holds a blue sphere"
+            remix["typography"][0]["text"] = "NEW"
+            util.write_json(run / "remix" / "C1.json", remix)
+
             built = prompt.build(run, {"id": "C1", "style_ref": "abc", "face": True})
-            self.assertEqual(len(built["images"]), 2)
-            self.assertIn("NO text", built["prompt"]["text"])
-            self.assertIn("hairline and hair volume", built["prompt"]["person"]["preserve"])
-            self.assertEqual(set(built["prompt"]["style_from_reference"]), {"lighting"})
+            self.assertEqual([Path(p).name for p in built["images"]], ["face-1.jpg", "abc.jpg"])
+            self.assertEqual(list(built["prompt"])[0], "input_images")
+            self.assertEqual({k: v for k, v in built["prompt"].items() if k != "input_images"}, remix)
+            self.assertEqual(built["changed"], ["image.description", "typography[0].text"])
+            self.assertNotIn("text_rule", built["prompt"])
+
+            coded = prompt.build(run, {"id": "C1", "style_ref": "abc", "face": True, "send_template": False, "text": {"lines": [{"text": "NEW"}]}})
+            self.assertIn("NO text", coded["prompt"]["text_rule"])
+            self.assertEqual(len(coded["images"]), 1)
+
             util.write_json(run / "intake.json", {"title": "T", "mode": "faceless", "photos": []})
             with self.assertRaises(SystemExit):
-                prompt.build(run, {"id": "C3", "face": True})
-            faceless = prompt.build(run, {"id": "C2", "style_ref": "abc", "face": False})
-            self.assertTrue(faceless["prompt"]["person"].startswith("No face"))
-            self.assertEqual(len(faceless["images"]), 1)
-
+                prompt.build(run, {"id": "C1", "style_ref": "abc", "face": True})
+            with self.assertRaises(SystemExit):
+                prompt.build(run, {"id": "C2", "style_ref": "abc", "face": False})  # no remix written yet
+            faceless = prompt.build(run, {"id": "C1", "style_ref": "abc", "face": False})
+            self.assertEqual(faceless["prompt"]["input_images"], {"Image 1": prompt.TEMPLATE_ROLE})
 
 if __name__ == "__main__":
     unittest.main(verbosity=1)

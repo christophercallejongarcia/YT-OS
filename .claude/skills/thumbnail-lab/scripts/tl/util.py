@@ -50,7 +50,7 @@ def new_run(title: str, audience: str, photos: str | None, faceless: bool, out: 
         sys.exit("Choose either --photos (face mode) or --faceless, not both.")
     stamp = dt.datetime.now().strftime("%Y%m%d-%H%M")
     run = Path(out).expanduser().resolve() / f"{slugify(title)}-{stamp}"
-    for sub in ("refs", "styles", "renders", "finals", "review", "final"):
+    for sub in ("refs", "styles", "remix", "renders", "finals", "review", "final"):
         (run / sub).mkdir(parents=True, exist_ok=True)
     copied = copy_photos(run, photos) if photos else []
     write_json(run / "intake.json", {

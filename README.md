@@ -55,7 +55,7 @@ Die Planung läuft als Wayfinder-Map mit Entscheidungs-Tickets unter `.scratch/y
 
 ## Community gift: thumbnail-lab
 
-A Claude Code skill for YouTube thumbnails, built from the experiments in this repo: outlier check (did the thumbnail or the trend carry it?), style teardown of references, title + thumbnail + hook packages, text-free renders with OpenAI, Gemini or Codex, headline set in code, review in a mock phone feed, best three with a Test & Compare plan.
+A Claude Code skill for YouTube thumbnails, built from the experiments in this repo: outlier check (did the thumbnail or the trend carry it?), complete JSON teardown of proven templates, title + thumbnail + hook packages, remix of the content only, renders with your photo and the template through OpenAI, Gemini or Codex (tested with Codex), optional headline in code, review in a mock phone feed, best three with a Test & Compare plan.
 
 Folder: [.claude/skills/thumbnail-lab](.claude/skills/thumbnail-lab/). Install: copy it into `~/.claude/skills/`, then `/thumbnail-lab` in Claude Code. Details in its [README](.claude/skills/thumbnail-lab/README.md).
 

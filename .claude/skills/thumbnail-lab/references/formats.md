@@ -15,10 +15,11 @@ Ten formats that keep showing up among outliers. Pick two or three per video and
 | Bold claim | one short sentence against common belief, little else | with a strong claim | opinion pieces |
 | Interface as message | a familiar toggle or button tells the story | with a known UI | "switch from X to Y" |
 
-## Lessons from a controlled experiment (12 variants, one factor changed each)
+## Lessons from the experiments
 
-- JSON prompt vs prose prompt with identical content: no visible difference in two of three pairs; prose was better in the third because a JSON field was taken too literally.
-- Style teardown of a proven reference applied to new content: three of four clearly more premium (big number grid, icon arc, objects in hands). The miss came from a background the schema could not express (a colour gradient became a black/white split). Describe gradients explicitly.
-- Headline set in code: exact in 12 of 12. Image-model text was often wrong in earlier runs (case, spacing, letters touching the head).
+- A blind test with 40 images: the complete teardown of a proven thumbnail, with only the content swapped, beat "template image plus a short sentence" in 10 of 10 judgements when a face was involved. JSON beat the same content as prose by a small margin. Best overall: JSON plus the creator's photo plus the template in context.
+- An earlier test compared our own short recipe as JSON and as prose: no difference. Braces alone gain nothing; what the JSON says matters.
+- Short headlines drawn by the image model from the remix: exact 40 of 40, umlauts included. Code typography stays available for long headlines or an exact font.
+- A fixed teardown schema could not express a colour gradient; it came back as a black/white split. The free, complete teardown keeps such details.
 - Surprised vs laughing expression: surprise read livelier, but skin was flagged as over-sharpened more often.
 - Hands presenting objects tend to reach into the bottom-right corner. Ask for hands at chest height, close to the body.
