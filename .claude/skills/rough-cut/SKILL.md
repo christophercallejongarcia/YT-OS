@@ -1,6 +1,6 @@
 ---
 name: rough-cut
-description: Rohschnitt eines kompletten Talking-Head-Takes aus einem vorhandenen ElevenLabs-Transkript mit Wort-Zeitstempeln. Wählt pro Zeile den letzten Take, strafft Pausen auf etwa 0,1 s, sichert jeden Schnittpunkt per Pegelanalyse, poliert den Ton einmal auf -14 LUFS, rendert mit ffmpeg und prüft das Ergebnis mit lokalem Whisper gegen. Erste Stufe nach dem Dreh, vor Grafiken und B-Roll.
+description: Rohschnitt eines kompletten Talking-Head-Takes aus einem vorhandenen ElevenLabs-Transkript mit Wort-Zeitstempeln. Wählt pro Zeile den letzten Take, setzt Pausen nach den Langform-Zielwerten (Satzende 0,3 s, Absatz 0,5 s, neue Stufe 0,8 s), sichert jeden Schnittpunkt per Pegelanalyse, poliert den Ton einmal auf -14 LUFS, rendert mit ffmpeg und prüft das Ergebnis mit lokalem Whisper gegen. Erste Stufe nach dem Dreh, vor Grafiken und B-Roll.
 when_to_use: Nach dem Transkript (Ticket 06), oder "Rohschnitt", "rough cut", "schneide das Video", "mach den Base-Cut".
 argument-hint: <private/video-NN> <pfad zum Rohtake>
 disable-model-invocation: true
@@ -46,7 +46,8 @@ schnitt-lokal/
 6. **Schnittliste rechnen (`cutsheet.json`).**
    - Aneinandergrenzende Bereiche zusammenlegen, dann an jeder Pause über 0,3 s teilen.
    - Pegelkurve: Tonspur als 16 kHz mono dekodieren, RMS in 10-ms-Fenstern. Schwelle etwa 15 dB über dem Grundrauschen (im ersten Lauf Rauschen bei -71 dB, Schwelle -56 dB).
-   - Out-Punkt: Wortende plus Ausklang, solange der Pegel über der Schwelle liegt (höchstens 0,3 s), plus 0,05 s. In-Punkt: Wortanfang, bis zu 0,15 s vorgezogen, wenn schon Pegel da ist, minus 0,04 s. So bleiben an jeder Naht etwa 0,1 s Pause.
+   - Out-Punkt: Wortende plus Ausklang, solange der Pegel über der Schwelle liegt (höchstens 0,3 s), plus 0,05 s. In-Punkt: Wortanfang, bis zu 0,15 s vorgezogen, wenn schon Pegel da ist, minus 0,04 s. Das ist der Wortschutz, danach liegen an einer Naht etwa 0,1 bis 0,15 s.
+   - **Danach die Pausen auf Zielwert bringen** (siehe Abschnitt Pausen). Verlängert wird nur in Stille oder leisen Atem hinein (Pegel unter -50 dB), nie über das nächste Wort der Quelle hinaus. Reicht die Stille nicht, bleibt die Pause kürzer und kommt in den Bericht.
    - Liegt das verworfene Nachbarwort näher als 0,12 s, den Schnitt ins leiseste 10-ms-Fenster zwischen die beiden Wörter legen und die Stelle markieren.
    - Nie über die Grenze eines verworfenen Nachbarworts hinaus verlängern.
    - Jedes Segment trägt Quelle, Start, Ende, Frames, Wortbereich und den Text. Mit dem Textfeld lässt sich der ganze Schnitt durch Lesen prüfen.
@@ -68,6 +69,20 @@ schnitt-lokal/
 
 Der Base-Cut wird danach nicht neu gerendert. Grafiken und B-Roll kommen als eigene Stufe darüber.
 
+## Pausen (Langform, YouTube 16:9)
+
+Gemessen von Wortende bis Wortanfang. Werte aus Video 1 abgeleitet (Chris' natürliche Satzpause liegt bei 0,6 s, Ziel ist ein Schnitttempo nahe seinem Sprechtempo).
+
+| Stelle | Ziel |
+|---|---|
+| Hook (erste 15 s) | 0,2 s |
+| Satzende | 0,3 s |
+| Absatz- oder Themenwechsel | 0,5 s |
+| neue Stufe, neues Kapitel, Call-to-Action | 0,8 s |
+| innerhalb eines Satzes | wie gesprochen, längere Lücken auf 0,3 s |
+
+Kürzer als der Zielwert nur, wenn die Quelle keine Stille hergibt. Reels und Shorts sind schneller, dort gilt die Reel-Regel mit etwa 0,1 s. Prüfwert für Langform: Schnitttempo höchstens etwa 200 Wörter pro Minute.
+
 ## Gotchas aus dem ersten Lauf (Video 1, 29.09.2026)
 
 - **HEVC über VideoToolbox geht mit einem x86-ffmpeg unter Rosetta nicht.** Fehler -12908, `-q:v` ist ebenfalls nicht verfügbar. `h264_videotoolbox` mit `-b:v` funktioniert. Deshalb immer zuerst 5 Sekunden Probe-Encode, bevor der lange Render startet.
@@ -80,7 +95,8 @@ Der Base-Cut wird danach nicht neu gerendert. Grafiken und B-Roll kommen als eig
 - **Scribe schreibt über längere Strecken "Cloud" statt "Claude".** Vor dem Verwerfen einer Zeile, die kaputt aussieht, die Hörfehler-Liste prüfen.
 - **Geräusche direkt vor einem behaltenen Anlauf** (Klackern, Klappern) können trotz sauberem Schnitt hörbar bleiben. Solche Stellen im Bericht markieren.
 - **"Immer der letzte Take" kann Inhalt kosten**, wenn ein Satz nur im abgebrochenen Anlauf vorkam. Im Bericht als Inhaltsverlust nennen, nicht still zurückholen.
-- **0,1 s Pause überall kann an Stufenwechseln gehetzt wirken.** Die Pausenlänge ist ein Parameter, im Bericht als Stellschraube nennen.
+- **0,1 s Pause überall ist zu gehetzt für Langform.** Das war die Reel-Regel. Video 1 kam damit auf 207 Wörter pro Minute, Chris spricht natürlich mit etwa 191. Deshalb gelten die Zielwerte im Abschnitt Pausen.
+- **Descript Underlord kann Pausen nur kürzen, nicht verlängern**, auch bei weichen Schnitten. Und Descript schneidet nach eigenen Wortzeiten oft in den Ausklang (Video 1: 189 von 218 Out-Punkten zu knapp, das letzte Wort um 0,12 s gekappt). Wer mit Descript schneidet, gibt Underlord die Zielwerte als Obergrenze mit ("kürze Pausen über X auf X") und legt den Wortschutz danach lokal drüber: FCPXML exportieren, Schnittpunkte per Pegelkurve nachziehen, aus dem Original rendern.
 
 ## Richtwerte vom ersten Lauf
 

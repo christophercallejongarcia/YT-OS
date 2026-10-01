@@ -20,6 +20,7 @@ Eingabe: `$ARGUMENTS` ist der Video-Ordner (`videos/<ordner>` oder bei Probeläu
 4. **Fassung A ableiten.** Aus B entsteht A nach dem Aufbau unten. A und B sagen inhaltlich dasselbe.
 5. **Nachschärfen.** Beide Fassungen einmal durch `python3 .claude/skills/text-check/scripts/vorlese-check.py <datei>` und `~/.claude/skills/slop-check/scripts/slop-lint.sh <datei>` schicken. Harte Treffer außerhalb des Hooks umschreiben, bis beide grün sind. Danach von Hand lesen: gehäuftes "sondern", "genau", "wirklich", "einfach" ausdünnen und jedes Wort tauschen, das Chris nie sagen würde.
 6. **Speichern.** `skript-v4b-wortlaut.md` und `skript-v4a-hybrid.md` im Ordner, Frontmatter mit `version: v4a` bzw. `v4b`, `basis:` (die Grundlage) und `hook:` (Variante aus `packaging.md`).
+   Dazu `prompter.txt`: die wörtlichen Teile aus A (Hook, Pitch, Mini-Hooks, CTA) mit Prompter-Markierung, siehe unten. Wünscht Chris Fassung B am Prompter, die ganze Fassung B markieren.
 7. **Stopp.** Weiter mit `text-check`. Keine weitere Stufe von selbst starten.
 
 ## Wortlaut-Regeln
@@ -90,6 +91,19 @@ Die erste Minute sitzt Wort für Wort, danach spricht Chris frei entlang von Sti
 - **Stichpunkte:** 3 bis 5 pro Kapitel, Stichwörter statt ganzer Sätze, in der Reihenfolge des Spannungsbogens. Die Auflösung steht immer als letzter Punkt. Beispiele und Zahlen stehen als Stichwort drin ("Lern-App, 71 → 80 Prozent"), damit Chris sie nicht vergisst.
 - **Jedes Kapitel funktioniert allein**, damit es später als Short taugt.
 - **Clip-Marken:** ein Clip pro Hook, Pitch und Kapitel. Versprecher: den Clip neu sprechen oder klatschen als Marke für den Schnitt.
+
+## Prompter-Markierung
+
+Format und Begründung stehen in `substrate/playbooks/vor-der-kamera.md`. Kurz:
+
+- `/` kurze Pause, einmal atmen. `//` lange Pause am Absatzende.
+- Ein Wort pro Satz in GROSSBUCHSTABEN, das Gewicht bekommt. Nie mehr als eins.
+- Höchstens ein Regiehinweis pro Block in Klammern, z. B. `(lächeln)`.
+- `▶ BLOCK n · <Titel>` vor jedem Clip, jeder Block endet mit `(3 Sekunden still)`.
+- Zeilen nach Sinneinheiten brechen, höchstens etwa 7 Wörter pro Zeile.
+- Fachwörter so schreiben, wie sie gesprochen werden (z. B. "K-I-O-S", "claude.ai").
+
+Kein Markdown in `prompter.txt`, die Prompter-App zeigt nur Text. Vorlage: `videos/01-stufenleiter/prompter.txt`.
 
 ## Am Ende sagen
 

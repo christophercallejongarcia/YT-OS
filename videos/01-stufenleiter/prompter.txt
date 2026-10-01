@@ -1,0 +1,419 @@
+▶ BLOCK 1 · HOOK
+(lächeln, 3 Sekunden still, dann los)
+
+Du nutzt Claude schon, /
+hast aber das Gefühl, /
+da geht noch VIEL mehr? /
+Dann bist du hier genau richtig. //
+
+Stell dir vor, /
+zwei Leute haben dasselbe Claude-Abo. /
+Der eine lässt sich damit ab und zu /
+eine E-Mail UMFORMULIEREN. /
+Der andere lässt sich damit Arbeit abnehmen, /
+für die er früher jemanden EINGESTELLT hätte. //
+
+Und der einzige Unterschied ist, /
+auf welcher STUFE du gerade stehst. //
+
+In diesem Video zeige ich dir alle SECHS Stufen, /
+vom einfachen Chat /
+bis zu deinem eigenen KI-Betriebssystem. /
+Danach weißt du genau, /
+wo du stehst /
+und was dein NÄCHSTER Schritt ist. //
+
+Damit meine ich ein System, /
+das dein Business KENNT, /
+dir morgens sagt, was heute wichtig ist, /
+und Aufgaben erledigt, /
+während du UNTERWEGS bist. //
+
+Und keine Sorge: /
+Du musst kein PROGRAMMIERER sein. /
+Ich zeige dir alles an echten Beispielen, /
+und coden musst du dafür keine EINZIGE Zeile. /
+Vor allem Stufe SECHS solltest du nicht verpassen, /
+weil da alles zusammenkommt. //
+
+(3 Sekunden still)
+
+
+▶ BLOCK 2 · KURZ ZU MIR
+(lächeln)
+
+Kurz zu mir, /
+falls wir uns noch nicht kennen. /
+Ich baue Systeme, /
+die KI mit deinem Wissen, /
+deinen Werkzeugen und deinen Abläufen VERBINDEN. /
+Als Berater in einem Tech-Unternehmen /
+unterstütze ich Firmen bei der Einführung von KI /
+und setze KI-Anwendungen PRAKTISCH um. /
+Und hier zeige ich dir Schritt für Schritt, /
+wie du KI für DEINE Arbeit nutzt. //
+
+Dann lass uns EINSTEIGEN. //
+
+(3 Sekunden still)
+
+
+▶ BLOCK 3 · STUFE EINS
+(kurz lächeln)
+
+Stufe Nummer EINS ist der ganz normale Chat. /
+Du gehst auf claude.ai, /
+tippst eine Frage ein /
+und bekommst eine Antwort. /
+Am Handy genauso wie am Laptop. //
+
+Genau hier bleiben aber VIELE stehen, /
+weil sie Claude wie GOOGLE benutzen. /
+Die tippen so was ein wie: /
+„Schreib mir einen LinkedIn-Post über Führung.“ /
+Und zurück kommt ein glatter Absatz, /
+der NICHTS aussagt. //
+
+Viel mehr holst du raus, /
+wenn du Claude als SPARRINGSPARTNER nimmst. /
+Du gibst ihm deinen halbfertigen Gedanken /
+und sagst ihm: Halt DAGEGEN. /
+Was ist daran schwach? /
+Was fehlt noch? /
+Gibt es dafür BELEGE? /
+Und wenn Claude dir Fakten liefert, /
+frag ruhig noch mal NACH, ob die wirklich stimmen. //
+
+(Hand dazunehmen)
+Ich hatte genau das vor ein paar Monaten /
+bei einem Angebot. /
+Ich wollte bei ZWÖLFTAUSEND Euro deckeln /
+und hab Claude gebeten, mich vorher richtig auszufragen. /
+Und statt das Angebot runterzuschreiben, /
+hat Claude mir VORGERECHNET, /
+wie viele Arbeitstage bei dem Preis überhaupt drin sind. /
+Sinngemäß kam zurück: /
+Sonst hast du ein Angebot, /
+das du nach drei Wochen nicht mehr HALTEN kannst. /
+Am Ende stand ein anderer Preis drin /
+und ein kleinerer, EHRLICHER Umfang. /
+Das war bei mir übrigens in Claude CODE, /
+das zeige ich dir gleich. /
+Im normalen Chat funktioniert das GENAUSO. //
+
+(3 Sekunden still)
+
+
+▶ BLOCK 4 · STUFE ZWEI
+
+Stufe Nummer ZWEI sind Projekte. /
+Und die lösen ein Problem, /
+das du von Stufe eins kennst: /
+Du fängst jedes Mal bei NULL an. /
+In jedem neuen Chat erklärst du wieder, /
+wer du bist und wie du schreibst. //
+
+Ein Projekt ist im Grunde ein ORDNER in Claude. /
+Da legst du EINMAL alles rein, /
+was Claude zu deinem Thema wissen muss: /
+Dateien, Hintergrund, deine Regeln, dein Tonfall. //
+
+Nehmen wir an, du bist SELBSTSTÄNDIG /
+und schreibst regelmäßig Angebote. /
+Dann legst du ein Projekt „Angebote“ an. /
+Da kommt deine PREISLISTE rein, /
+drei alte Angebote, die gut gelaufen sind, /
+und eine kurze Anleitung. /
+Zum Beispiel: /
+„Ich schreibe direkt, ohne FLOSKELN. /
+Wenn ich dir eine Kundenanfrage gebe, /
+schreibst du ein Angebot im Stil der Beispiele. /
+Wenn Infos fehlen, FRAGST du nach.“ //
+
+Ab dann kopierst du nur noch die Anfrage rein. /
+Den Rest weiß Claude SCHON. //
+
+Mein Tipp: /
+Lieber mehrere KLEINE Projekte als eins für alles. /
+Deine Angebote brauchen einen ganz anderen Kontext /
+als deine URLAUBSPLANUNG. //
+
+(lächeln)
+Und schreib mir gern in die Kommentare, /
+auf welcher Stufe DU gerade stehst. /
+Das interessiert mich wirklich. //
+
+(3 Sekunden still)
+
+
+▶ BLOCK 5 · STUFE DREI
+
+Stufe Nummer DREI ist der größte Sprung in diesem Video. /
+Bis hierhin hast du mit Claude GEREDET. /
+Ab jetzt ARBEITET Claude für dich. //
+
+Das Werkzeug dafür heißt Claude COWORK. /
+Eine Desktop-App für Mac und Windows, /
+aktuell in den bezahlten Plänen. /
+Der Unterschied zum Chat: /
+Cowork arbeitet direkt auf deinem RECHNER, /
+mit echten Dateien. /
+Es kann sie öffnen, bearbeiten und neue speichern. /
+Du stellst also keine Frage mehr, /
+du gibst einen AUFTRAG. //
+
+Zum Beispiel: /
+„Nimm alle Rechnungen aus dem Ordner SEPTEMBER, /
+trag Datum, Betrag und Kunde in eine Tabelle ein /
+und markier mir alles, was noch OFFEN ist.“ /
+Oder: „Geh meinen Desktop durch /
+und sortier die Dateien in sinnvolle ORDNER.“ //
+
+Wann nimmst du Chat und wann Cowork? /
+Cowork, wenn die Dateien schon auf deinem RECHNER liegen. /
+Wenn die Aufgabe MEHRERE Schritte hat. /
+Oder wenn am Ende wieder eine DATEI rauskommen soll. //
+
+Und dann gibt es noch DISPATCH. /
+Damit schickst du Claude vom HANDY aus eine Aufgabe, /
+Claude erledigt sie auf deinem Rechner /
+und schickt dir das Ergebnis zurück aufs Handy. //
+
+(Hand dazunehmen)
+Stell dir vor, du sitzt im ZUG, /
+gibst den Auftrag ab, /
+und wenn du ankommst, liegt das Ergebnis schon DA. /
+Und es bleibt dieselbe Unterhaltung, /
+du machst am Laptop einfach WEITER. //
+
+(3 Sekunden still)
+
+
+▶ BLOCK 6 · STUFE VIER
+
+Stufe Nummer VIER klingt erst mal nach Programmieren. /
+Und viele schalten genau hier AB, /
+sobald sie das Wort „Code“ hören. /
+Musst du aber NICHT. //
+
+Mit Claude Code baust du dir eigene kleine WERKZEUGE, /
+indem du einfach beschreibst, was du brauchst. /
+Claude schreibt den Code, /
+testet ihn /
+und sucht selbst nach FEHLERN. /
+Du musst den Code nicht mal LESEN können. /
+Du musst nur wissen, welches PROBLEM du lösen willst. //
+
+Stell dir vor, /
+du hast DREI Kundengespräche am Tag. /
+Und nach jedem sitzt du eine halbe Stunde /
+an Notizen, To-dos und der Mail hinterher. /
+Das sind jeden Tag ANDERTHALB Stunden Nacharbeit. //
+
+Viele nutzen dafür schon ein Tool wie FATHOM, /
+das deine Videocalls aufzeichnet /
+und ein Transkript schreibt. /
+Mit Claude Code baust du dir dazu ein EIGENES Werkzeug. /
+Du gibst Claude den Link zur Anleitung von dem Tool /
+und beschreibst in normalen Worten, was du willst. /
+Zum Beispiel: /
+Alle Gespräche mit einem bestimmten KUNDEN finden /
+und nachlesen, was gesagt wurde. /
+Den Code dafür schreibt CLAUDE. //
+
+Und dann erweiterst du das Werkzeug, /
+damit es nach jedem Gespräch AUTOMATISCH /
+deine Notizen, die To-dos /
+und einen Entwurf für die Mail macht. /
+Dann hast du die anderthalb Stunden jeden Tag ZURÜCK. /
+Für die Arbeit, die wirklich GELD bringt. //
+
+Was du mitbringen musst, /
+ist nur ein KLARES Ziel. /
+Du weißt am besten, /
+wie eine gute Nachbereitung für deine Kunden aussieht. /
+Claude macht daraus ein Werkzeug, /
+das genau das jeden Tag für dich ERLEDIGT. //
+
+Und das BESTE kommt noch. /
+In der nächsten Stufe zeige ich dir, /
+wie du so ein Werkzeug deutlich STÄRKER machst, /
+sodass Claude sich MERKT, wie du arbeitest, /
+und direkt mit deinen anderen Programmen zusammenspielt. //
+
+(3 Sekunden still)
+
+
+▶ BLOCK 7 · STUFE FÜNF
+
+Stufe Nummer FÜNF ist kein neues Produkt. /
+Hier machst du alles, was wir bisher hatten, STÄRKER. /
+Dafür gibt es VIER Bausteine. //
+
+Der erste Baustein sind SKILLS. /
+Ein Skill ist eine Anleitung, /
+die du Claude EINMAL gibst. /
+Technisch ist das nur ein Ordner /
+mit einer Beschreibung, wie eine Aufgabe erledigt wird. /
+Und Claude liest sie JEDES Mal, /
+wenn die Aufgabe wieder drankommt. /
+Alles, was du öfter als EINMAL machst, /
+gehört deshalb in einen Skill. //
+
+Der zweite Baustein sind PLUGINS. /
+Fertige Pakete aus Werkzeugen, /
+so eine Art APP STORE für Claude. /
+Installierst du zum Beispiel das Slack-Plugin, /
+kann Claude direkt mit SLACK arbeiten. //
+
+Der dritte Baustein sind CONNECTORS. /
+Die verbinden Claude mit deinen anderen Programmen. /
+(Hand dazunehmen)
+Stell dir das wie einen SCHLÜSSELBUND vor. /
+Claude bekommt einen Schlüssel /
+zu deinem Google Drive, deinem Kalender, deinem Notion /
+und kann dort Sachen für dich ERLEDIGEN. //
+
+Und der vierte Baustein ist Claude in CHROME, /
+eine Erweiterung für deinen Browser. /
+Claude sieht, was du gerade OFFEN hast, /
+und hilft dir direkt dort. /
+Du liest einen Bericht mit VIERZIG Seiten, /
+Claude zieht dir die drei wichtigsten Punkte raus. /
+Du füllst ein FORMULAR aus, /
+Claude hilft dir dabei. //
+
+Damit fehlt nur noch EINE Stufe. /
+Und für mich ist das die WICHTIGSTE. /
+Weil aus allem, was du bisher gesehen hast, /
+etwas wird, das für dich MITARBEITET, /
+auch wenn du gar nicht davorsitzt. //
+
+(3 Sekunden still)
+
+
+▶ BLOCK 8 · STUFE SECHS
+
+Stufe Nummer SECHS ist die, /
+auf die alles HINAUSLÄUFT. /
+Auf den ersten fünf Stufen nutzt du einzelne WERKZEUGE. /
+Auf Stufe sechs baust du daraus ein SYSTEM, /
+das dein Business kennt /
+und für dich mitarbeitet. /
+Das nennt man ein KI-Betriebssystem, /
+kurz K-I-O-S. //
+
+Klingt GROSS, /
+ist aber simpel. /
+So ein KI-OS ist eine KOMMANDOZENTRALE /
+für einen bestimmten Bereich in deinem Business. /
+EINS pro Bereich. /
+Eins für deinen Vertrieb, /
+eins für deinen Content, /
+eins für deine Buchhaltung. //
+
+Jedes davon besteht aus SECHS Schichten. /
+Und ein paar davon kennst du schon aus diesem Video. //
+
+Die erste Schicht ist die IDENTITÄT. /
+Wer bist du, /
+was macht dein Business, /
+was ist dir wichtig /
+und was geht GAR nicht. /
+Das ist eine einzige Datei, /
+sozusagen die SEELE von deinem System. //
+
+Die zweite Schicht ist der KONTEXT. /
+Deine Unterlagen, Notizen, Kundenlisten. /
+Das ist die Schicht, die am meisten ARBEIT macht, /
+weil das am Anfang meistens ein ziemliches CHAOS ist. /
+Ein Trick dabei: /
+Die Rohdaten hebst du auf, /
+aber Claude bekommt nur die KURZFASSUNG. /
+Statt dem Meeting-Transkript mit zwei Stunden /
+bekommt Claude die ZEHN Punkte, auf die es ankommt. //
+
+Die dritte Schicht sind SKILLS, /
+die kennst du schon aus Stufe fünf. /
+Du fängst von Hand an, /
+machst sie mit jedem Einsatz ein bisschen BESSER, /
+und irgendwann laufen manche ganz von ALLEIN. //
+
+Die vierte Schicht sind REGELN. /
+Manche sind eher Empfehlungen, /
+an die sich Claude MEISTENS hält. /
+Andere sind feste SPERREN, /
+die immer greifen. /
+Zum Beispiel: /
+Keine Mail geht raus, /
+ohne dass du sie vorher GESEHEN hast. //
+
+Die fünfte Schicht sind WERKZEUGE und Verbindungen. /
+Also die Connectors aus Stufe fünf, /
+dein SCHLÜSSELBUND zu Kalender, Mail und CRM. //
+
+Und die sechste Schicht sind AGENTEN. /
+Also Helfer, die Aufgaben SELBSTSTÄNDIG übernehmen. /
+Und hier gibt es eine Regel, /
+die ich dir wirklich mitgeben will: /
+Agenten kommen ZULETZT. //
+Viele wollen sofort ein ganzes TEAM aus KI-Mitarbeitern. /
+Aber ein Agent ohne Identität, /
+ohne Kontext /
+und ohne Regeln /
+macht nur SCHNELLER Fehler. //
+
+Und die Schichten sind nicht alle gleich GROSS. /
+Ein Steuer-OS besteht vor allem aus KONTEXT. /
+Ein Vertriebs-OS lebt von WERKZEUGEN und Skills. /
+Und ein OS für Kundenberatung /
+braucht richtig viele REGELN. //
+
+Und jetzt merkst du vielleicht, /
+warum das die LETZTE Stufe ist. /
+Das Projekt aus Stufe zwei /
+wird zu Identität und KONTEXT. /
+Die Arbeit am Rechner aus Stufe drei /
+wird zum ALLTAG von deinem System. /
+Mit Claude Code aus Stufe vier /
+BAUST du das Ganze. /
+Und Skills und Connectors aus Stufe fünf /
+sind die MUSKELN. /
+Auf Stufe sechs kommt also ALLES zusammen, /
+was du bis hierhin gelernt hast. //
+
+(3 Sekunden still)
+
+
+▶ BLOCK 9 · MEIN SYSTEM
+(lächeln)
+
+Wie sieht das im ALLTAG aus? /
+Bei mir ist das ein Ordner /
+mit Notizen, Zielen, Projekten und Skills. /
+MORGENS liest das System meine Tagesnotiz /
+und sagt mir, was heute wichtig ist. /
+ABENDS fasst es zusammen, was ich geschafft habe, /
+und schiebt Offenes in den nächsten Tag. /
+Weil ich es über TELEGRAM erreiche, /
+kann ich ihm auch vom Handy aus Aufgaben geben. /
+Und das Wissen liegt immer in MEINEN eigenen Dateien. //
+
+(3 Sekunden still)
+
+
+▶ BLOCK 10 · CALL TO ACTION
+(lächeln, direkt in die Linse)
+
+Wenn du dein eigenes KI-Betriebssystem aufbauen willst /
+und nicht weißt, wo du ANFANGEN sollst: /
+Hol dir den KI-OS-BAUPLAN. /
+Den Link findest du in der Beschreibung. //
+
+Das ist ein Plan, /
+der dich Schicht für SCHICHT durch den Aufbau führt. /
+Mit einer Vorlage für deine erste Datei /
+und einer Anleitung, /
+mit der du HEUTE noch anfangen kannst. //
+
+(lächeln, 3 Sekunden still in die Linse schauen)

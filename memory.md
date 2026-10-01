@@ -46,6 +46,7 @@
 - 2026-10-01 DJI-Aufnahmen gehen nie direkt in Descript. Vorher per ffmpeg nach H.264 8 Bit mit nur Bild und Ton umwandeln, sonst bleibt der Upload hängen und der Export findet die Quelle nicht.
 - 2026-10-01 Descript wird über den Descript-MCP gesteuert statt per Computer Use. Schnitt macht Agent Underlord, Chris hört danach selbst ab (so arbeitet auch Mark). MP4-Export bleibt in der Desktop-App, weil der MCP Dateien nur über einen veröffentlichten Link liefert.
 - 2026-10-01 Thumbnails: Stil-JSON aus zerlegten Vorlagen und Schrift per Code statt im Bild. JSON als Prompt-Format allein bringt nichts messbar. Noch kein festes Hero-Porträt, erst mehr Läufe.
+- 2026-10-01 Schnitt-Pausen für Langform nach Zielwert (Satzende 0,3 s, Absatz 0,5 s, neue Stufe 0,8 s), 0,1 s nur für Reels. Dreh mit Teleprompter nach `substrate/playbooks/vor-der-kamera.md`, Prompter-Text mit Markierung aus `sprechfassung`.
 
 ## Open questions
 - Konkurrenz-Creator-Liste (5 bis 10 Kanäle) liefert Chris später über Ticket 19.
