@@ -2,9 +2,9 @@
 
 **Goal:** YT-OS aufsetzen: eine Claude-Code-Pipeline von der YouTube-Outlier-Recherche bis zum veröffentlichten Video. Ziel der 30-Tage-Challenge: Video 1 ist veröffentlicht und jede Pipeline-Stufe wurde einmal echt benutzt, Handarbeit ist erlaubt.
 **Who it is for:** Chris allein als Betreiber. Das Publikum des Kanals sind Selbstständige und Teams (Nische: Claude, KI-Agents, KI-Betriebssystem).
-**Created:** 2026-09-26   **Updated:** 2026-09-26
+**Created:** 2026-09-26   **Updated:** 2026-10-01
 **Current layer:** audit
-**Next action:** Video 1 ist gedreht (27.09., 23:38 min, siehe videos/01-stufenleiter/dreh-log.md). Als Nächstes Schnitt in DaVinci Resolve und /os-coach audit.
+**Next action:** Tag 8 (02.10.): Schnitt-Werkzeug für Video 1 festlegen (lokaler Schnitt 10:29 gegen Descript-MCP 10:06, Ticket 20), Cleanvoice-Fassung anhören (Ticket 24), drei Thumbnails für Test & Compare wählen (Ticket 09). Danach B-Roll-Vergleich (Ticket 08).
 
 ## Layer status
 - Identity: solid - identity.md steht (Wer, Für wen, Ziel, Stimme, Immer, Nie). CLAUDE.md lädt identity.md, memory.md und AGENTS.md, AGENTS.md verweist auf beide.
@@ -42,6 +42,10 @@
 - 2026-09-26 YouTube-Upload vorerst von Hand, später über die YouTube-API mit Freigabe durch das Publish-Gate. Musik und Sounds über Epidemic Sound, austauschbar.
 
 - 2026-09-30 Skript-Kette: Einstieg über skript-partner (Interviewer), zwei Fassungen pro Skript (Simtent-Hybrid und Wort für Wort), Wortlaut nach Simtents Regeln statt aus dem Dreh-Transkript (Ticket 26).
+
+- 2026-10-01 DJI-Aufnahmen gehen nie direkt in Descript. Vorher per ffmpeg nach H.264 8 Bit mit nur Bild und Ton umwandeln, sonst bleibt der Upload hängen und der Export findet die Quelle nicht.
+- 2026-10-01 Descript wird über den Descript-MCP gesteuert statt per Computer Use. Schnitt macht Agent Underlord, Chris hört danach selbst ab (so arbeitet auch Mark). MP4-Export bleibt in der Desktop-App, weil der MCP Dateien nur über einen veröffentlichten Link liefert.
+- 2026-10-01 Thumbnails: Stil-JSON aus zerlegten Vorlagen und Schrift per Code statt im Bild. JSON als Prompt-Format allein bringt nichts messbar. Noch kein festes Hero-Porträt, erst mehr Läufe.
 
 ## Open questions
 - Konkurrenz-Creator-Liste (5 bis 10 Kanäle) liefert Chris später über Ticket 19.
