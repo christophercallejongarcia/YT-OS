@@ -89,3 +89,11 @@ Signal Room Cover Lab kann laut README Cover-Pakete für Reels und YouTube erzeu
   - Ergebnis: JSON gegen Fließtext ohne klaren Unterschied. Stil-JSON aus Vorlagen bei drei von vier Entwürfen deutlich hochwertiger.
   - Empfehlung für Test & Compare: „Gleiches Abo.“ im Liam-Stil zuerst, dann „Wo stehst du?“ im Tristen-Stil, dann „6 Stufen“ ohne Gesicht. Chris wählt.
   - Signal Room, Cover Lab: Lauf „Video 1 Versuchsreihe 01.10.: 12 Entwürfe, je ein Faktor variiert“.
+
+- 2026-10-02 (JSON-Prompts, Nachprüfung der Versuchsreihe vom 01.10.): Ursache gefunden und neu getestet. Bericht privat unter `private/json-test/bericht.md`.
+  - Übergabe war nicht das Problem: Die Codex-Protokolle zeigen, dass alle 12 Prompts vom 01.10. zeichengenau beim Bild-Tool ankamen, JSON wie Fließtext.
+  - Ursache: Getestet wurde unser eigenes Rezept in zwei Schreibweisen, mit denselben Eingabebildern und je einem Bild pro Arm, nicht blind. Dass dabei kein Unterschied herauskommt, sagt auch OpenAIs Leitfaden voraus. Das "verlorene" Paar lag an einem Widerspruch im Prompt (schwarze Hälfte gegen Verlauf), nicht am Format.
+  - Neu-Test nach Darkos Methode (Vorlage per "Give me the complete JSON for this image." zerlegen, nur Inhaltsfelder tauschen, auf Chris' Foto anwenden): 40 Bilder, 4 Arme, 2 Vorlagen, alle Prompts nachweislich wörtlich übergeben, zwei blinde Bewerter.
+  - Ergebnis: Die Zerlegung ist der große Hebel (mit Gesicht 10 von 10 Urteilen vor "Vorlage plus kurzer Satz"). JSON ist leicht besser als derselbe Inhalt als Fließtext (auf den 6 Bögen mit einigen Bewertern 6-mal vorn, Abstand klein). Am sichersten ist JSON plus Foto plus Vorlage im Aufruf. Schrift im Bild stimmte 40 von 40 Mal.
+  - Für den Builder: Stil-JSON ohne festes Schema erzeugen, beim Vorlagen-Remix das zerlegte JSON direkt als Prompt nutzen, ein Foto plus Vorlage mitgeben, Fließtext-Pfad entfernen, gesendeten Prompt pro Render speichern.
+  - Offen: Chris bewertet die Blind-Bögen selbst (`private/json-test/neu/blind/`), Gegenprobe mit Nano Banana, Vergleich Schrift im Bild gegen Schrift per Code.
