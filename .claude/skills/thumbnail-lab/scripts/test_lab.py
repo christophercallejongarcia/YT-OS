@@ -5,6 +5,7 @@
 # ///
 """Offline checks for the deterministic parts: uv run scripts/test_lab.py"""
 import base64
+import json
 import sys
 import tempfile
 import unittest
@@ -70,15 +71,33 @@ class Prompts(unittest.TestCase):
             photo = Path(folder) / "face.jpg"
             Image.new("RGB", (8, 8)).save(photo)
             request = {"prompt": {"task": "x"}, "images": [str(photo)]}
-            url, body = backends.openai_body(request, "gpt-image-2.5-sunburst")
+            url, body = backends.openai_body(request, "gpt-image-2.5-sunburst", "P")
+            self.assertEqual(body["prompt"], "P")
             self.assertTrue(url.endswith("/images/edits"))
             self.assertEqual(body["size"], "1536x864")
             self.assertTrue(body["images"][0]["image_url"].startswith("data:image/jpeg;base64,"))
-            url, _ = backends.openai_body({"prompt": {"task": "x"}, "images": []}, "m")
+            url, _ = backends.openai_body({"prompt": {"task": "x"}, "images": []}, "m", "P")
             self.assertTrue(url.endswith("/images/generations"))
-            gemini = backends.gemini_body(request)
+            gemini = backends.gemini_body(request, "P")
+            self.assertEqual(gemini["contents"][0]["parts"][0]["text"], "P")
             self.assertEqual(gemini["generationConfig"]["imageConfig"]["aspectRatio"], "16:9")
             self.assertEqual(base64.b64decode(gemini["contents"][0]["parts"][1]["inlineData"]["data"]), photo.read_bytes())
+
+    def test_prompt_formats_carry_the_same_fields(self):
+        request = {"prompt": {"task": "Make one image.", "layout": {"composition": "centred", "keep_empty": ["top", "corner"]}, "palette": "",
+                              "input_images": [{"image": 1, "role": "style"}]}, "images": []}
+        self.assertEqual(json.loads(backends.prompt_text(request)), request["prompt"])
+        prose = backends.prompt_text(request, "prose")
+        self.assertEqual(prose, "Task: Make one image.\n\nLayout: composition: centred; keep empty: top; corner\n\nInput images: (image: 1; role: style)")
+
+    def test_codex_delivered_prompt_comes_from_the_session_log(self):
+        with tempfile.TemporaryDirectory() as folder:
+            log = Path(folder) / "sessions" / "2026" / "10" / "01" / "rollout-2026-10-01T10-00-00-abc123.jsonl"
+            log.parent.mkdir(parents=True)
+            item = {"type": "item_completed", "item": {"type": "Extension", "kind": "image_gen.generation", "revisedPrompt": "{\"task\": \"x\"}"}}
+            log.write_text(json.dumps({"type": "session_meta", "payload": {}}) + "\n" + json.dumps({"type": "event_msg", "payload": item}) + "\n")
+            self.assertEqual(backends.codex_delivered_prompt(Path(folder), "abc123"), '{"task": "x"}')
+            self.assertIsNone(backends.codex_delivered_prompt(Path(folder), "other"))
 
     def test_prompt_is_text_free_and_carries_the_preserve_list(self):
         with tempfile.TemporaryDirectory() as folder:
@@ -98,7 +117,7 @@ class Prompts(unittest.TestCase):
             with self.assertRaises(SystemExit):
                 prompt.build(run, {"id": "C3", "face": True})
             faceless = prompt.build(run, {"id": "C2", "style_ref": "abc", "face": False})
-            self.assertEqual(faceless["prompt"]["person"], "No person, no face, no hands.")
+            self.assertTrue(faceless["prompt"]["person"].startswith("No face"))
             self.assertEqual(len(faceless["images"]), 1)
 
 

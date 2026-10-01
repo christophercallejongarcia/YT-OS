@@ -1,8 +1,9 @@
 """Reference thumbnails: metadata, outlier factor against the channel median, channel context.
 
 No API key: everything comes from yt-dlp. The factor is views divided by the median
-views of the channel's most recent long-form uploads (Shorts live in another tab and
-are excluded; uploads shorter than three minutes are dropped as well).
+views of the channel's long-form uploads from the same period, six months either side
+of the reference (Shorts live in another tab and are excluded; uploads shorter than
+three minutes are dropped as well).
 """
 from __future__ import annotations
 
@@ -208,7 +209,7 @@ def collect(run: Path, urls: list[str], search: str | None, count: int, recent: 
         info["channel_sheet"] = str(context.relative_to(run)) if context else None
         util.write_json(run / "refs" / f"{info['id']}.json", info)
         refs.append(info)
-        print(f"  {info['id']}  {info['factor']:>6.1f}x  {info['views']:>10,} views  {info['upload_date']}  {info['title'][:56]}  [median: {basis}]")
+        print(f"  {info['id']}  {info['factor']:>6.1f}x  {info['views']:>10,} views  {info['upload_date']}  {info['title'][:56]}  [median {int(median):,} views from {basis}]")
     if not refs:
         sys.exit("No reference could be read. Check the URLs or your network.")
     util.write_json(run / "refs.json", refs)

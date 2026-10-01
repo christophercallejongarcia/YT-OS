@@ -1,5 +1,5 @@
 {
-  "$comment": "Teardown of one reference thumbnail, following references/teardown-prompt.md. Look at the image (Read tool), fill every field in English with concrete, measurable wording, save it as styles/<videoId>.json. layout, person, object, background, camera, lighting, palette and mood go into the image prompt (person: style only, never the reference's identity). text steers the code typography. The four analysis fields steer the concepts.",
+  "$comment": "Teardown of one reference thumbnail, following references/teardown-prompt.md. Look at the image (Read tool), fill every field in English with concrete, measurable wording, save it as styles/<videoId>.json as a flat object: the fields of example, without the example wrapper. layout, person, object, background, camera, lighting, palette and mood go into the image prompt (person: style only, never the reference's identity). text steers the code typography. The four analysis fields steer the concepts.",
   "example": {
     "layout": {
       "grid": "centred host, objects on a shallow arc at eye level, headline band across the bottom",

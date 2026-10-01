@@ -13,6 +13,11 @@ BG, FG, MUTED, ACCENT = "#0f0f0f", "#f1f1f1", "#aaaaaa", "#D97757"
 PHONE = (168, 94)  # thumbnail size in the YouTube sidebar and small phone lists
 
 
+def _plain(text: str) -> str:
+    """Drop emoji and joiners; the label fonts have no glyphs for them (tofu boxes)."""
+    return "".join(c for c in text if not (ord(c) >= 0x1F000 or 0x2600 <= ord(c) <= 0x27BF or ord(c) in (0x200D, 0xFE0F))).strip()
+
+
 def _label_font(size: int):
     for candidate in ("/System/Library/Fonts/Helvetica.ttc", "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", "C:/Windows/Fonts/arial.ttf"):
         try:
@@ -30,7 +35,7 @@ def grid(tiles: list[tuple[Path, str, bool]], out: Path, columns: int = 3, tile=
     sheet = Image.new("RGB", (columns * (tile[0] + pad) + pad, head + rows * (tile[1] + label_h + pad) + pad), BG)
     draw = ImageDraw.Draw(sheet)
     if title:
-        draw.text((pad, 14), title, fill=FG, font=_label_font(22))
+        draw.text((pad, 14), _plain(title), fill=FG, font=_label_font(22))
     for index, (path, label, highlight) in enumerate(tiles):
         x = pad + (index % columns) * (tile[0] + pad)
         y = head + (index // columns) * (tile[1] + label_h + pad)
@@ -38,7 +43,7 @@ def grid(tiles: list[tuple[Path, str, bool]], out: Path, columns: int = 3, tile=
         sheet.paste(image, (x, y))
         if highlight:
             draw.rectangle((x - 3, y - 3, x + tile[0] + 2, y + tile[1] + 2), outline=ACCENT, width=3)
-        draw.text((x, y + tile[1] + 6), label, fill=FG if highlight else MUTED, font=_label_font(15))
+        draw.text((x, y + tile[1] + 6), _plain(label), fill=FG if highlight else MUTED, font=_label_font(15))
     out.parent.mkdir(parents=True, exist_ok=True)
     sheet.save(out)
     return out
@@ -52,7 +57,7 @@ def review(run: Path) -> list[Path]:
     finals = _finals(run)
     if not finals:
         raise SystemExit("No finals yet. Run `lab.py text` for your renders first.")
-    concepts = {c["id"]: c for c in util.read_json(run / "concepts.json", default={"concepts": []}).get("concepts", [])}
+    concepts = {c["id"]: c for c in util.load_concepts(run)}
     refs = util.read_json(run / "refs.json", default=[])
 
     # 1. All finals with their phone-size preview next to the label.
@@ -72,7 +77,7 @@ def review(run: Path) -> list[Path]:
         warnings = util.read_json(path.with_suffix(".text.json"), default={}).get("warnings", [])
         draw.text((x, y + tile[1] + 8), path.stem, fill=ACCENT, font=_label_font(20))
         draw.text((x, y + tile[1] + 36), (concept.get("format") or "")[:40], fill=FG, font=_label_font(15))
-        draw.text((x, y + tile[1] + 58), (concept.get("title") or "")[:46], fill=MUTED, font=_label_font(14))
+        draw.text((x, y + tile[1] + 58), _plain(concept.get("title") or "")[:46], fill=MUTED, font=_label_font(14))
         if warnings:
             draw.text((x, y + tile[1] + 80), f"{len(warnings)} text warning(s)", fill="#ff6b6b", font=_label_font(14))
     sheet_path = run / "review" / "sheet.png"
@@ -92,7 +97,7 @@ def review(run: Path) -> list[Path]:
         if len(neighbours) > 1:
             items.append((neighbours[1], refs[(2 * index + 1) % len(refs)]["title"], refs[(2 * index + 1) % len(refs)]["channel"]))
         feed_columns.append((path.stem, items))
-    per_row = 4
+    per_row = max(1, min(4, len(feed_columns)))
     rows = (len(feed_columns) + per_row - 1) // per_row
     cell_h = 3 * (thumb_h + 70) + 40
     feed = Image.new("RGB", (per_row * (column_w + 20) + 20, rows * cell_h + 20), BG)
@@ -104,8 +109,8 @@ def review(run: Path) -> list[Path]:
         y += 30
         for image_path, title, channel in items:
             feed.paste(util.fit_16x9(Image.open(image_path)).resize((column_w, thumb_h)), (x, y))
-            draw.text((x, y + thumb_h + 6), title[:42], fill=FG, font=_label_font(15))
-            draw.text((x, y + thumb_h + 28), channel[:30], fill=MUTED, font=_label_font(13))
+            draw.text((x, y + thumb_h + 6), _plain(title)[:42], fill=FG, font=_label_font(15))
+            draw.text((x, y + thumb_h + 28), _plain(channel)[:30], fill=MUTED, font=_label_font(13))
             y += thumb_h + 70
     feed_path = run / "review" / "feed.png"
     feed.save(feed_path)
@@ -127,7 +132,7 @@ def review(run: Path) -> list[Path]:
 
 
 def final(run: Path, picks: list[str]) -> list[Path]:
-    concepts = {c["id"]: c for c in util.read_json(run / "concepts.json", default={"concepts": []}).get("concepts", [])}
+    concepts = {c["id"]: c for c in util.load_concepts(run)}
     intake = util.read_json(run / "intake.json")
     tiles, rows = [], []
     for pick in picks:
@@ -140,7 +145,8 @@ def final(run: Path, picks: list[str]) -> list[Path]:
         headline = " / ".join("".join(s["text"] for s in (l.get("segments") or [{"text": l.get("text", "")}])) for l in text_spec.get("lines", []))
         tiles.append((path, f"{pick} · {concept.get('title', '')[:52]}", True))
         rows.append([pick, concept.get("title", ""), headline, concept.get("hook_line", ""), concept.get("format", ""), concept.get("style_ref", ""),
-                     "face" if meta.get("face") else "no face", meta.get("backend", ""), meta.get("model", ""), f"renders/{pick}.prompt.json", f"finals/{pick}.text.json"])
+                     "face" if meta.get("face") else "no face", meta.get("backend", ""), meta.get("model", ""),
+                     f"renders/{pick}.prompt.txt ({meta.get('prompt_format', 'json')}, {'verbatim' if meta.get('verbatim') else 'not confirmed verbatim'})", f"finals/{pick}.text.json"])
     sheet = grid(tiles, run / "final" / "contact-sheet.png", columns=len(tiles), tile=(640, 360), title=f"{intake['title']} · best {len(tiles)}")
     # Phone strip under the sheet.
     full = Image.open(sheet)
@@ -157,6 +163,6 @@ def final(run: Path, picks: list[str]) -> list[Path]:
     table = ["| " + " | ".join(header) + " |", "|" + "---|" * len(header)]
     table += ["| " + " | ".join(str(c).replace("|", "/") for c in row) + " |" for row in rows]
     params = run / "final" / "params.md"
-    params.write_text(f"# {intake['title']}: parameters to reproduce\n\n" + "\n".join(table) + "\n\nRe-render a pick: `uv run scripts/lab.py render RUN --concept <id>` then `text`. Prompts are stored verbatim.\n", encoding="utf-8")
+    params.write_text(f"# {intake['title']}: parameters to reproduce\n\n" + "\n".join(table) + f"\n\nRe-render a pick: `uv run {util.SKILL_DIR / 'scripts' / 'lab.py'} render {run} --concept <id>`, then `text`. Each prompt.txt is the exact text the image model got.\n", encoding="utf-8")
     util.write_json(run / "final" / "picks.json", {"picks": picks, "rows": rows})
     return [run / "final" / "contact-sheet.png", params]

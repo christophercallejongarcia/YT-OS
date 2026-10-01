@@ -95,9 +95,17 @@ def require_run(value: str) -> Path:
     return run
 
 
-def find_concept(run: Path, concept_id: str) -> dict:
+def load_concepts(run: Path) -> list[dict]:
+    """concepts.json as {"concepts": [...]} (documented) or a bare list."""
     data = read_json(run / "concepts.json", default={"concepts": []})
-    for concept in data.get("concepts", []):
+    concepts = data if isinstance(data, list) else data.get("concepts")
+    if not isinstance(concepts, list):
+        sys.exit(f"{run / 'concepts.json'} must look like {{\"concepts\": [{{\"id\": \"C1\", ...}}]}}.")
+    return concepts
+
+
+def find_concept(run: Path, concept_id: str) -> dict:
+    for concept in load_concepts(run):
         if concept.get("id") == concept_id:
             return concept
     sys.exit(f"Concept {concept_id} not found in {run / 'concepts.json'}.")
@@ -148,6 +156,12 @@ def doctor():
     for name, path in FONTS.items():
         print(f"font     {name}: {'ok' if path.exists() else 'MISSING ' + str(path)}")
         ok &= path.exists()
+    if shutil.which("codex"):
+        try:
+            version = subprocess.run(["codex", "--version"], capture_output=True, text=True, timeout=20).stdout.strip()
+        except Exception:
+            version = "unknown version"
+        print(f"codex    {version}, " + ("logged in" if codex_available() else "NOT logged in (`codex login`)"))
     backends = available_backends()
     print("backends " + (", ".join(backends) if backends else "NONE"))
     if not backends:

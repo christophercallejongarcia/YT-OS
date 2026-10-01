@@ -10,7 +10,7 @@ What it does, in one run:
 2. **Teardown.** Each reference becomes a style JSON: layout, person, object, background, text, camera, light, palette, mood. Style only, never the creator's identity.
 3. **Packages.** Title, thumbnail message and first hook sentence written as one promise.
 4. **Render.** Images without text, with your face (from your photos) or faceless, through the image tool you already have: OpenAI, Google Gemini (Nano Banana) or the Codex CLI.
-5. **Headline in code.** A real font (Anton, bundled), exact spelling, fixed gap to your head, bottom-right corner left free for YouTube's video length.
+5. **Headline in code.** A real font (Anton, bundled), exact spelling, checked for contrast and size, bottom-right corner left free for YouTube's video length.
 6. **Review.** Phone-size previews, a mock feed between your references, a strict rubric, the weakest redone.
 7. **Hand-over.** The best three as a contact sheet, a parameter table to reproduce every image, and a YouTube Test & Compare plan.
 
@@ -36,6 +36,8 @@ A run renders about 8 images (6 concepts plus 2 redos). Prices as of October 202
 
 Change the model with `THUMBNAIL_LAB_OPENAI_MODEL` or `THUMBNAIL_LAB_GEMINI_MODEL`. YouTube research uses yt-dlp and costs nothing.
 
+Your prompt reaches the image model word for word. OpenAI and Gemini get it directly. Codex passes it through its agent to its image tool, so the skill compares what the image tool received against what it sent and warns if anything was rewritten. The prompt is JSON by default; `--prompt-format prose` sends the same fields as labelled paragraphs. Codex renders give up after 600 seconds (`THUMBNAIL_LAB_CODEX_TIMEOUT`).
+
 ## The teardown prompt
 
 Works on its own too. Paste it with a thumbnail you like into any vision model:
@@ -56,7 +58,7 @@ Then: "Apply this style JSON to my video about [topic]. Keep layout, light and m
 
 ## What the tests taught it
 
-Built from more than 60 thumbnail drafts for one video plus test runs in three niches (AI tutorials, cooking, fitness), with and without a face:
+Built from 78 thumbnail drafts for one video plus test runs in three niches (AI tutorials, cooking, fitness), with and without a face:
 
 - **Copy the structure of a winner, not its words.** Prompt as JSON or as prose made no visible difference. Tearing a proven thumbnail down into a style spec and applying it to new content did: 3 of 4 drafts looked clearly more professional.
 - **Never let the image model write the headline.** Set in code it was exact 12 of 12 times.
@@ -65,7 +67,7 @@ Built from more than 60 thumbnail drafts for one video plus test runs in three n
 
 ## Where it lives
 
-Each run writes to `./thumbnail-lab/<title>-<date>/`: references, style JSONs, concepts, renders (with the exact prompt next to each), finals, review sheets and the final contact sheet with `params.md`. Nothing is uploaded anywhere.
+Each run writes to `./thumbnail-lab/<title>-<YYYYMMDD-HHMM>/`: references, style JSONs, concepts, renders (with the exact prompt next to each), `finals/` with the headlines set, review sheets and `final/` with the contact sheet and `params.md`. Nothing is uploaded anywhere.
 
 Run the scripts by hand if you like: `uv run ~/.claude/skills/thumbnail-lab/scripts/lab.py --help`.
 

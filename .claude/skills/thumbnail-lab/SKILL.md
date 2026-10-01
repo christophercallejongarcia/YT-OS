@@ -9,7 +9,7 @@ argument-hint: "[video title or topic]"
 
 You are a thumbnail art director with a lab. Scripts do the deterministic work (YouTube data, rendering, typography, sheets). You do the judging: what a reference does, which concepts are worth rendering, which results are good enough to show. Your bar: only show what a top creator in the niche would post.
 
-`SKILL` below is the base directory shown when this skill loaded. Every command is `uv run SKILL/scripts/lab.py <command>`; uv installs Python dependencies on first use. Run commands from the user's current project folder; runs land in `./thumbnail-lab/`.
+`SKILL` below is the base directory shown when this skill loaded. Every command is `uv run SKILL/scripts/lab.py <command>`; uv installs Python dependencies on first use. Run commands from the user's current project folder; each run lands in `./thumbnail-lab/<title-slug>-<YYYYMMDD-HHMM>/` (another parent folder with `new --out <folder>`).
 
 Read before you start: `SKILL/references/rules.md` (packaging and image rules). Read when the step needs it: `references/teardown-prompt.md` and `references/style-schema.json` (step 3), `references/formats.md` (step 4), `references/rubric.md` (step 7).
 
@@ -32,13 +32,13 @@ Then create the run: `uv run SKILL/scripts/lab.py new --title "<title>" --audien
 
 ## 2. References
 
-`uv run SKILL/scripts/lab.py refs RUN --url "<url>" --url "<url>" ...` (always quote URLs) or `--search "<topic in the language of the niche>" --count 5`. Add one or two URLs of your own choice to a search if the results miss the obvious leaders of the niche.
+`uv run SKILL/scripts/lab.py refs RUN --url "<url>" --url "<url>" ...` (always quote URLs) or `--search "<topic in the language of the niche>" --count 5`. A search takes two to four minutes because every candidate's channel is fetched; tell the user before you start it. It keeps videos of the last three years (`--max-age-days`), `--recent` searches the newest uploads instead. Add one or two URLs of your own choice if the results miss the obvious leaders of the niche. In faceless mode, references with a host are fine: only their light, layout and material are borrowed, the person never reaches the image prompt.
 
-The script prints each reference with its outlier factor (views divided by the median of the channel's long-form uploads of the last six months; approximate, YouTube rounds view counts in channel lists). It writes `refs-sheet.png` and, per reference, `refs/<id>-channel.png`: the channel's uploads nearest in time, each with its factor.
+The script prints each reference with its outlier factor (views divided by the median of the channel's long-form uploads from the same period, six months either side of the reference; approximate, YouTube rounds view counts and, for older uploads, dates in channel lists). It writes `refs-sheet.png` and, per reference, `refs/<id>-channel.png`: the channel's uploads nearest in time, each with its factor.
 
 ## 3. Teardown (you, with your eyes)
 
-For every reference, read `refs/<id>.jpg` and `refs/<id>-channel.png` with the Read tool. Apply the prompt in `references/teardown-prompt.md` to the thumbnail, follow the structure of `references/style-schema.json` (same fields, plus the four analysis fields) and save the result as `RUN/styles/<id>.json`. Be concrete and measurable: hex colours, light direction in degrees, share of the frame. Describe style only, never the creator's identity or brand.
+For every reference, read `refs/<id>.jpg` and `refs/<id>-channel.png` with the Read tool. Apply the prompt in `references/teardown-prompt.md` to the thumbnail, fill the fields of the `example` object in `references/style-schema.json` (including the four analysis fields) and save them as a flat object, without the `example` wrapper, in `RUN/styles/<id>.json`. Be concrete and measurable: hex colours, light direction in degrees, share of the frame. Describe style only, never the creator's identity or brand.
 
 For `verdict`, answer the question every outlier deserves: did the thumbnail carry it, or the title plus a trending topic? Signals for "thumbnail": the same format wins on this channel on other, boring topics too. Signals for "title_and_trend": the title names a fresh release or news, and the same format flopped on this channel in the same weeks.
 
@@ -51,7 +51,7 @@ Read `references/formats.md`. Write `RUN/concepts.json` with 6 concepts (4 if th
 - in face mode at least one faceless concept; in faceless mode none with a face
 - every concept is a package: `title` (the YouTube title for this variant), `message` (2 to 4 words on the thumbnail), `hook_line` (the first spoken sentence that confirms the click). Message and title must not repeat each other. Avoid literal visuals: find the tension (cheap vs valuable, level 1 vs level 6, before vs after).
 
-Schema (one object per concept):
+The file is `{"concepts": [ ... ]}`, one object per concept:
 
 ```json
 {
@@ -70,7 +70,6 @@ Schema (one object per concept):
   "lighting": "soft studio key from upper left, soft contact shadows",
   "palette": "cream, coral, near-black",
   "keep_empty": "top 22% and bottom 20% of the frame",
-  "person": {"position": "right third", "expression": "warm laugh, eyes into the camera", "gesture": "points at the object", "clothing": "cream hoodie"},
   "avoid": ["numbers on the columns"],
   "text": {
     "font": "anton", "align": "center", "x": 0.5, "y": 0.82, "size": 0.12, "shadow": true,
@@ -79,17 +78,17 @@ Schema (one object per concept):
 }
 ```
 
-Field notes: `person` only when `face` is true. Describe gradients explicitly, never leave the background to chance. `text` is set in code afterwards: take case, colours and position from the reference's typography, keep capitals at 12% to 22% of the height (`size` 0.12 to 0.25), never in the bottom-right corner, never over the face. Labels like column numbers are extra lines with their own `x`, `y`, `size` and `"role": "label"`. Fonts: `anton` (condensed, the YouTube standard) and `archivo` (wide, heavy).
+Field notes: `person` only when `face` is true, for example `"person": {"position": "right third", "expression": "warm laugh, eyes into the camera", "gesture": "points at the object", "clothing": "cream hoodie"}`. Describe gradients explicitly, never leave the background to chance. `text` is set in code afterwards: take case, colours and position from the reference's typography, never in the bottom-right corner, never over the face. All positions and sizes are shares of the image: `x` and `align` (left, center, right) place a line horizontally, `y` is the top of the capitals, `size` is the font size as a share of the height (0.12 to 0.25 puts Anton capitals at about 10% to 22%; the check warns below 8%). Optional: `max_width` (lines shrink to fit, default 0.9), `line_gap`, `shadow`, `stroke` with `stroke_color`. Each line can override `font`, `size`, `x`, `y`, `align` and `max_width`; a line without `y` sits below the previous one. Labels like column numbers are extra lines with `"role": "label"`, exempt from the size check. Fonts: `anton` (condensed, the YouTube standard) and `archivo` (wide, heavy). An empty `lines` list makes a deliberately text-free thumbnail.
 
 ## 5. Render
 
-`uv run SKILL/scripts/lab.py render RUN --concept C1` for every concept. Run up to three renders in parallel as background shell jobs; each takes one to three minutes. The image model gets a JSON prompt with the style JSON, the preserve list for the face, the empty zones and a strict no-text rule. The prompt and backend are stored next to every render.
+`uv run SKILL/scripts/lab.py render RUN --concept C1` for every concept. Run up to three renders in parallel as background shell jobs, never two of the same concept at once; each takes one to three minutes (Codex gives up after 600 s, `THUMBNAIL_LAB_CODEX_TIMEOUT`). The image model gets one prompt with the style JSON, the preserve list for the face, the empty zones and a strict no-text rule, as JSON by default or as labelled prose with `--prompt-format prose`. The prompt reaches the image model verbatim: next to every render, `prompt.txt` holds the exact text and `meta.json` says `"verbatim": true`. With Codex the script checks this against Codex's own log; if it warns that the prompt was rewritten, re-render.
 
-Look at every render before setting text. Re-render at once (same concept, new variant) if it has drawn text, a wrong number of items, a split background you did not ask for, a deformed hand, or a face that is not the creator.
+Look at every render before setting text. Re-render at once (same concept, new variant) if it has drawn text, a wrong number of items, a split background you did not ask for, anything important in the bottom-right corner (no script checks the image there), a deformed hand, or a face that is not the creator.
 
 ## 6. Headline in code
 
-`uv run SKILL/scripts/lab.py text RUN --concept C1` sets the headline on all variants of a concept and prints warnings (contrast, size, corner, word count). Fix warnings by editing the concept's `text` spec and running `text` again. Do not re-render for text problems.
+`uv run SKILL/scripts/lab.py text RUN --concept C1` sets the headline on all variants of a concept, writes them to `RUN/finals/` and prints warnings (contrast, size, corner, word count). It checks the text only, not whether it touches the object or a head: look at the result. Fix warnings by editing the concept's `text` spec and running `text` again. Do not re-render for text problems.
 
 ## 7. Review, strictly
 

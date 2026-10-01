@@ -115,7 +115,7 @@ def check(original: Image.Image, placed: list[dict]) -> list[str]:
             warnings.append(f"line {index} '{text}' leaves the image")
         if line["role"] == "label":
             pass  # small on purpose: column numbers, captions
-        elif line["cap_height"] < 0.06 * height:
+        elif line["cap_height"] < 0.08 * height:
             warnings.append(f"line {index} '{text}' is small: capitals {line['cap_height'] / height:.0%} of height, aim for 8% or more for the headline (or mark it \"role\": \"label\")")
         else:
             words += len(text.split())

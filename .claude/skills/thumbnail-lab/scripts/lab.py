@@ -10,7 +10,7 @@ Run with uv (dependencies install themselves):
     uv run scripts/lab.py new --title "..." [--audience "..."] [--photos DIR | --faceless]
     uv run scripts/lab.py photos RUN --dir DIR      (add face photos later)
     uv run scripts/lab.py refs RUN --url URL [--url URL ...]   or   --search "topic" [--count 5]
-    uv run scripts/lab.py render RUN --concept C1 [--backend auto|openai|gemini|codex]
+    uv run scripts/lab.py render RUN --concept C1 [--backend auto|openai|gemini|codex] [--prompt-format json|prose]
     uv run scripts/lab.py text RUN --concept C1 [--variant 1]
     uv run scripts/lab.py review RUN
     uv run scripts/lab.py final RUN --pick C1-v1,C3-v2,C4-v1
@@ -54,7 +54,7 @@ def cmd_render(args):
     concept = util.find_concept(run, args.concept)
     request = prompt.build(run, concept)
     try:
-        path = backends.render(run, concept, request, backend=args.backend, variant=args.variant)
+        path = backends.render(run, concept, request, backend=args.backend, variant=args.variant, fmt=args.prompt_format)
     except RuntimeError as error:
         sys.exit(f"RENDER FAILED {args.concept}: {error}")
     print(f"RENDER={path}")
@@ -115,6 +115,7 @@ def main(argv=None):
     p.add_argument("--concept", required=True)
     p.add_argument("--backend", default="auto", choices=["auto", "openai", "gemini", "codex"])
     p.add_argument("--variant", type=int, help="variant number (default: next free)")
+    p.add_argument("--prompt-format", choices=list(backends.FORMATS), help="json (default) or prose: the same fields as labelled paragraphs; also THUMBNAIL_LAB_PROMPT_FORMAT")
     p.set_defaults(func=cmd_render)
 
     p = sub.add_parser("text", help="set the headline with the bundled font")

@@ -66,7 +66,7 @@ def build(run: Path, concept: dict) -> dict:
     images, roles = [], []
     for photo in photos:
         images.append(photo)
-        roles.append({"image": len(images), "role": "identity of the creator (face photo). Photograph him anew in this scene; never paste or copy the photo, its clothes or its background."})
+        roles.append({"image": len(images), "role": "identity of the creator (face photo). Photograph this person anew in this scene; never paste or copy the photo, its clothes or its background."})
     if ref_image:
         images.append(ref_image)
         roles.append({"image": len(images), "role": "style reference only: light, colour, depth, material, framing. Ignore its people, logos and words."})
@@ -90,7 +90,7 @@ def build(run: Path, concept: dict) -> dict:
             "expression": person.get("expression", "genuine warm laugh, eyes into the camera"),
             "gesture": person.get("gesture", "no hands in the frame"),
             "clothing": person.get("clothing", "plain, well-fitting hoodie or t-shirt without print"),
-        } if face else "No person, no face, no hands."),
+        } if face else "No face and no identifiable person. Hands, legs or feet only if the object field asks for them."),
         "object": concept.get("object", ""),
         "background": concept.get("background", ""),
         "lighting": concept.get("lighting", ""),
