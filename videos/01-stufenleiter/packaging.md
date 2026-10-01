@@ -90,8 +90,21 @@ Nach dem Persona-Test nachgeschärft und nicht erneut getestet:
 - **Verworfen:** „Gleiches Abo.“ auf Creme (gelbe oder koralle Schrift schlecht lesbar, Kopf verdeckt Buchstaben), „STUFE 6“ mit Wort hinter dem Kopf (verdeckt das U), Navy-Treppe aus Runde 4 (1 und 2 auf einem Block).
 - **Bekannte Schwäche:** Bei „Gleiches Abo.“ reichen die Hände in die Ecken, die Zeitanzeige verdeckt Fingerspitzen. Der Kopf berührt die Unterkante von „GLEICHES“, klein bleibt das Wort lesbar.
 
+## Versuchsreihe 01.10. (ohne und mit Gesicht)
+
+Anlass: Mark Kashef rät Chris, am Anfang auch Thumbnails ohne Gesicht zu testen, weil Fremde eher für das Thema klicken als für eine Person. Chris will außerdem herausfinden, warum seine Thumbnails weniger professionell wirken als die Vorlagen. Deshalb gab es 12 Entwürfe, bei denen jeweils ein Faktor gegenüber einer Basis geändert wurde. Alle Parameter stehen in Signal Room (Lauf „Video 1 Versuchsreihe 01.10.“) bei jedem Entwurf.
+
+Beobachtete Muster:
+- **Ohne Gesicht trägt meist der Trend.** Von 11 gesichtslosen Ausreißern der Bibliothek lagen 6 vor allem an Titel und Trend-Thema (neues Modell, Nachricht der Woche). Getragen hat das Bild nur bei den Level-Spalten und bei einer Ergebnis-Collage. Level-Spalten liefen auf zwei Kanälen ohne Trend, derselbe Titel mit anderem Bild fiel unter den Kanal-Median.
+- **JSON gegen Fließtext:** kein Qualitätsunterschied bei zwei von drei Paaren, beim dritten war der Fließtext besser. Das Format allein ist kein Hebel.
+- **Stil aus einer zerlegten Vorlage:** Eine erfolgreiche Vorlage wird erst als Stil-JSON beschrieben (Licht, Farben, Kamera, Material), dann aufs eigene Thema angewendet. Drei von vier Entwürfen wirkten damit deutlich hochwertiger.
+
+Eigene Entscheidungen:
+- **Schrift per Code:** Die Überschrift setzt jetzt ein Skript mit echter Schrift (Anton) statt das Bildmodell. Schreibweise, Position und Abstand sind damit in jedem Entwurf exakt.
+- **Empfehlung für Test & Compare,** ein Thumbnail ohne und zwei mit Gesicht. Zuerst hochladen: „Gleiches Abo.“ im Stil von Liam (zerbrochene gegen leuchtende Kachel, Titel B). Danach „Wo stehst du?“ im Stil von Tristens Icon-Bogen (Titel A), dann „6 Stufen“ ohne Gesicht mit großer Zahl und Neon-Raster (Titel C). Chris wählt.
+
 ## Offen für Chris
 
-- Bei „Wo stehst du?“ Creme oder Navy wählen und die Reihenfolge bestätigen. Danach gehen die Finalisten durch den Ebenen-Ablauf (Hintergrund, Person, Text einzeln freigeben).
+- Aus der Versuchsreihe drei Entwürfe wählen (einer ohne Gesicht) und die Reihenfolge bestätigen. Die Frage Creme oder Navy bei „Wo stehst du?“ ist damit offen, falls die Treppe gewinnt.
 - Wiedererkennbarkeit: Die Haare wirken in allen Entwürfen etwas voller als auf den Fotos, der Haaransatz sitzt etwas tiefer. Chris entscheidet, ob das stört.
 - Personas statt Daten: Sobald der Kanal Analytics hat, die Personas aus echten Altersgruppen und Kommentaren neu bauen.

@@ -81,3 +81,11 @@ Signal Room Cover Lab kann laut README Cover-Pakete für Reels und YouTube erzeu
   - Drei Hebel für Tag 7: ein festes, freigegebenes Hero-Porträt mit Ausdrucks-Varianten per Edit (Marks Ansatz laut EA Brain), die Überschrift per Code mit echter Schrift setzen, pro Paar eine konkrete Vorlage von Tristen oder Liam remixen und Seite an Seite prüfen.
   - Zuerst klären: welche 2 bis 3 Vorlagen Chris' Bild treffen, Creme oder Navy bei „Wo stehst du?“, Reihenfolge im Test.
   - Übergabe: `~/chriscasa/_handoff/2026-10-01-thumbnail-verfeinern.md`
+
+- 2026-10-01 (Thumbnail-Builder, PR 5, Commits 6043a7c und 17772d0): Versuchsreihe mit 12 Entwürfen, davon 4 ohne Gesicht.
+  - Chris' Korrektur: noch kein festes Hero-Porträt. Erst mehr Läufe, damit mehr Referenzbilder entstehen.
+  - Marks Rat aus Skool: auch Thumbnails ohne Gesicht testen. Die Prüfung der 11 gesichtslosen Ausreißer zeigt, dass meist Titel und Trend getragen haben. Für ein Evergreen-Thema passen am ehesten Level-Spalten.
+  - Neu im Builder: Lauf-Modus „Schrift per Code“ (Bild ohne Schrift, Überschrift per Skript mit echter Schrift), Prompt wörtlich als JSON oder Fließtext, Stil-JSON aus zerlegten Vorlagen.
+  - Ergebnis: JSON gegen Fließtext ohne klaren Unterschied. Stil-JSON aus Vorlagen bei drei von vier Entwürfen deutlich hochwertiger.
+  - Empfehlung für Test & Compare: „Gleiches Abo.“ im Liam-Stil zuerst, dann „Wo stehst du?“ im Tristen-Stil, dann „6 Stufen“ ohne Gesicht. Chris wählt.
+  - Signal Room, Cover Lab: Lauf „Video 1 Versuchsreihe 01.10.: 12 Entwürfe, je ein Faktor variiert“.
