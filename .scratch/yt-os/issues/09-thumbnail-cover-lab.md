@@ -97,3 +97,24 @@ Signal Room Cover Lab kann laut README Cover-Pakete für Reels und YouTube erzeu
   - Ergebnis: Die Zerlegung ist der große Hebel (mit Gesicht 10 von 10 Urteilen vor "Vorlage plus kurzer Satz"). JSON ist leicht besser als derselbe Inhalt als Fließtext (auf den 6 Bögen mit einigen Bewertern 6-mal vorn, Abstand klein). Am sichersten ist JSON plus Foto plus Vorlage im Aufruf. Schrift im Bild stimmte 40 von 40 Mal.
   - Für den Builder: Stil-JSON ohne festes Schema erzeugen, beim Vorlagen-Remix das zerlegte JSON direkt als Prompt nutzen, ein Foto plus Vorlage mitgeben, Fließtext-Pfad entfernen, gesendeten Prompt pro Render speichern.
   - Offen: Chris bewertet die Blind-Bögen selbst (`private/json-test/neu/blind/`), Gegenprobe mit Nano Banana, Vergleich Schrift im Bild gegen Schrift per Code.
+
+- 2026-10-02 (Runde 6): 30 Thumbnails in vier Stilen nach Arm D aus dem Neu-Test. Alles privat unter `private/thumbnails-runde6/`.
+  - Chris' Urteil zu den Blind-Bögen: "Z finde ich gut". Laut Schlüssel ist Z auf dem Mark-Bogen 3 der Arm A ("6 SKILLS FÜR CLAUDE", Vorlage plus kurzer Satz). Wunsch: Die Blöcke im Hintergrund brauchen mehr Power, gern in Glasoptik, mehr Kontrast.
+  - Methode: Vorlage per "Give me the complete JSON for this image." zerlegt, nur Inhalt und Person getauscht, gerendert mit Foto plus Vorlage im Aufruf (Codex, gpt-6-astra über das Abo). Alle 30 Prompts kamen laut `verbatim.py` zeichengenau und mit genau einem Bildaufruf an.
+  - Vorlagen: Je 10 Outlier von Mark Kashef und Chase AI (YouTube Data API, maxres, Faktor gegen Median der letzten 30 Longform-Videos) waren vollständig. Ergänzt wurden die Originale zu Chris' Screenshots ("USE BOTH", "SPEND LESS", zwei VS-Splits, "STOP DOING THIS") und Tristens "Learn 95% of Claude Cowork in Under 9 Minutes".
+  - Gewählte Vorlagen:
+    - Riesenwort: Tristens Cowork-Original, weil Chris genau dieses Bild gezeigt hat und es die Drei-Elemente-Formel sauber erfüllt.
+    - 3D-Glas: Marks "USE BOTH". Die Maskottchen haben die meiste Plastizität. "SPEND LESS" zeigt nur flache App-Kacheln.
+    - VS-Split: Marks "80% CHEAPER" (Astra gegen Sol). Als einziger VS-Split hat er eine Überschrift über dem Split und Labels unten, also Platz für "Gleiches Abo." plus "Fragensteller" und "Chef". Chases Sonnet-gegen-Sol hat mehr Aufrufe, aber keine Überschriftenzeile.
+    - Z: das Z-Bild selbst (mark-v3-A), weil Chris genau dieses Bild gut fand.
+  - Ergebnis:
+    - Glasoptik und mehr Kontrast funktionieren in Stil 2 und 4 deutlich.
+    - Haut natürlich in allen 12 Bildern mit Gesicht, nicht orange.
+    - Schrift exakt in allen 30.
+    - Schwäche: Beim Riesenwort "6 STUFEN" verdeckt der Kopf in allen drei Varianten das U, wie schon in Runde 2. "GLEICHES ABO." und "WO STEHST DU?" bleiben lesbar.
+  - Signal Room, Cover Lab: zwei Läufe, weil die App höchstens 20 Entwürfe pro Lauf erlaubt. "Video 1 Runde 6 (1/2): Riesenwort und 3D-Glas, 18 Entwürfe" und "Video 1 Runde 6 (2/2): VS-Split und Z mit Glas-Blöcken, 12 Entwürfe".
+  - Empfehlung für Test & Compare (drei Botschaften, eins mit und zwei ohne Gesicht):
+    1. VS-Split mit Gesicht V2, "Gleiches Abo." (Grau gegen Claude-Orange)
+    2. 3D-Glas V2, "Wo stehst du?" (Mitternachtsblau)
+    3. Z V3, "6 Stufen" (Glas mit Orange-Blau-Verlauf)
+  - Offen: Chris wählt die drei. YouTube-fertige JPGs (1280x720, unter 2 MB) liegen in `private/thumbnails-runde6/youtube/`.
