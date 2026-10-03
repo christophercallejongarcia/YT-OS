@@ -53,6 +53,12 @@ Die Planung läuft als Wayfinder-Map mit Entscheidungs-Tickets unter `.scratch/y
 - [Kallaway: YouTube for Business Owners Blueprint](.scratch/yt-os/assets/kallaway-blueprint-vsl.md): Referenzmodell für die Stufen
 - [Brad Bonanno: automatische B-Roll](.scratch/yt-os/assets/brad-bonanno-auto-broll.md): Vorbild für den B-Roll-Recorder
 
+## Community gift: thumbnail-lab
+
+A Claude Code skill for YouTube thumbnails, built from the experiments in this repo: outlier check (did the thumbnail or the trend carry it?), complete JSON teardown of proven templates, title + thumbnail + hook packages, remix of the content only, renders with your photo and the template through OpenAI, Gemini or Codex (tested with Codex), optional headline in code, review in a mock phone feed, best three with a Test & Compare plan.
+
+Folder: [.claude/skills/thumbnail-lab](.claude/skills/thumbnail-lab/). Install: copy it into `~/.claude/skills/`, then `/thumbnail-lab` in Claude Code. Details in its [README](.claude/skills/thumbnail-lab/README.md).
+
 ## Log
 
 | Datum | Was |
