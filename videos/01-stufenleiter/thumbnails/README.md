@@ -1,6 +1,6 @@
 # Thumbnails Video 1
 
-78 Entwürfe aus 26 Läufen zwischen 28.09. und 01.10.2026.
+140 Entwürfe zwischen 28.09. und 03.10.2026: 78 aus 26 Läufen im Cover Lab bis 01.10., dazu Runde 6 (30) und Runde 7 (32).
 
 Alle Thumbnail-Entwürfe, die für Video 1 („Vom Fragensteller zum Chef“) entstanden sind, als Nachweis für Tag 7 der Challenge. Erzeugt im Cover Lab von Signal Room, exportiert als JPG in 1280 × 720 wie für YouTube. Die Datei `uebersicht-320px.jpg` in jedem Tagesordner zeigt alle Entwürfe des Tages in 320 Pixel Breite, so klein wie in der YouTube-Seitenleiste. Daran lässt sich prüfen, ob die Schrift klein noch lesbar ist.
 
@@ -231,3 +231,83 @@ Dateinamen: Uhrzeit des Laufs in UTC, Kurzkennung des Laufs, Nummer der Variante
 | [1945-versu1-v10.jpg](2026-10-01/1945-versu1-v10.jpg) | V10 · mit Gesicht | STUFE 6 | Vom Chat zum KI-Betriebssystem: So nutzt du Claude besser |
 | [1945-versu1-v11.jpg](2026-10-01/1945-versu1-v11.jpg) | V11 · mit Gesicht | Gleiches Abo. | Claude nur als Chat nutzen? Dann verschenkst du fast alles |
 | [1945-versu1-v12.jpg](2026-10-01/1945-versu1-v12.jpg) | V12 · mit Gesicht | Wo stehst du? | Die 6 Stufen, mit denen Claude wirklich für dich arbeitet |
+
+## 02.10. Runde 6 (30 Entwürfe)
+
+Übersicht: [2026-10-02/uebersicht-320px.jpg](2026-10-02/uebersicht-320px.jpg)
+
+Vier Stile für die drei Botschaften von Video 1, je 3 Varianten. Methode: Eine erfolgreiche Vorlage wird komplett als JSON zerlegt, nur Inhalt und Person werden getauscht, gerendert mit Foto plus Vorlage (Codex, gpt-6-astra). Auswertung und Empfehlung in [Ticket 09](../../../.scratch/yt-os/issues/09-thumbnail-cover-lab.md).
+
+| Datei | Stil | Text im Bild | Gesicht |
+|---|---|---|---|
+| [runde6-riesenwort-6-stufen-v1.jpg](2026-10-02/runde6-riesenwort-6-stufen-v1.jpg) | Riesenwort hinter dem Kopf | 6 Stufen | ja |
+| [runde6-riesenwort-6-stufen-v2.jpg](2026-10-02/runde6-riesenwort-6-stufen-v2.jpg) | Riesenwort hinter dem Kopf | 6 Stufen | ja |
+| [runde6-riesenwort-6-stufen-v3.jpg](2026-10-02/runde6-riesenwort-6-stufen-v3.jpg) | Riesenwort hinter dem Kopf | 6 Stufen | ja |
+| [runde6-riesenwort-gleiches-abo-v1.jpg](2026-10-02/runde6-riesenwort-gleiches-abo-v1.jpg) | Riesenwort hinter dem Kopf | Gleiches Abo. | ja |
+| [runde6-riesenwort-gleiches-abo-v2.jpg](2026-10-02/runde6-riesenwort-gleiches-abo-v2.jpg) | Riesenwort hinter dem Kopf | Gleiches Abo. | ja |
+| [runde6-riesenwort-gleiches-abo-v3.jpg](2026-10-02/runde6-riesenwort-gleiches-abo-v3.jpg) | Riesenwort hinter dem Kopf | Gleiches Abo. | ja |
+| [runde6-riesenwort-wo-stehst-du-v1.jpg](2026-10-02/runde6-riesenwort-wo-stehst-du-v1.jpg) | Riesenwort hinter dem Kopf | Wo stehst du? | ja |
+| [runde6-riesenwort-wo-stehst-du-v2.jpg](2026-10-02/runde6-riesenwort-wo-stehst-du-v2.jpg) | Riesenwort hinter dem Kopf | Wo stehst du? | ja |
+| [runde6-riesenwort-wo-stehst-du-v3.jpg](2026-10-02/runde6-riesenwort-wo-stehst-du-v3.jpg) | Riesenwort hinter dem Kopf | Wo stehst du? | ja |
+| [runde6-glas3d-6-stufen-v1.jpg](2026-10-02/runde6-glas3d-6-stufen-v1.jpg) | 3D-Objekte in Glasoptik | 6 Stufen | nein |
+| [runde6-glas3d-6-stufen-v2.jpg](2026-10-02/runde6-glas3d-6-stufen-v2.jpg) | 3D-Objekte in Glasoptik | 6 Stufen | nein |
+| [runde6-glas3d-6-stufen-v3.jpg](2026-10-02/runde6-glas3d-6-stufen-v3.jpg) | 3D-Objekte in Glasoptik | 6 Stufen | nein |
+| [runde6-glas3d-gleiches-abo-v1.jpg](2026-10-02/runde6-glas3d-gleiches-abo-v1.jpg) | 3D-Objekte in Glasoptik | Gleiches Abo. | nein |
+| [runde6-glas3d-gleiches-abo-v2.jpg](2026-10-02/runde6-glas3d-gleiches-abo-v2.jpg) | 3D-Objekte in Glasoptik | Gleiches Abo. | nein |
+| [runde6-glas3d-gleiches-abo-v3.jpg](2026-10-02/runde6-glas3d-gleiches-abo-v3.jpg) | 3D-Objekte in Glasoptik | Gleiches Abo. | nein |
+| [runde6-glas3d-wo-stehst-du-v1.jpg](2026-10-02/runde6-glas3d-wo-stehst-du-v1.jpg) | 3D-Objekte in Glasoptik | Wo stehst du? | nein |
+| [runde6-glas3d-wo-stehst-du-v2.jpg](2026-10-02/runde6-glas3d-wo-stehst-du-v2.jpg) | 3D-Objekte in Glasoptik | Wo stehst du? | nein |
+| [runde6-glas3d-wo-stehst-du-v3.jpg](2026-10-02/runde6-glas3d-wo-stehst-du-v3.jpg) | 3D-Objekte in Glasoptik | Wo stehst du? | nein |
+| [runde6-vs-gleiches-abo-gesicht-v1.jpg](2026-10-02/runde6-vs-gleiches-abo-gesicht-v1.jpg) | VS-Split | Gleiches Abo. | ja |
+| [runde6-vs-gleiches-abo-gesicht-v2.jpg](2026-10-02/runde6-vs-gleiches-abo-gesicht-v2.jpg) | VS-Split | Gleiches Abo. | ja |
+| [runde6-vs-gleiches-abo-gesicht-v3.jpg](2026-10-02/runde6-vs-gleiches-abo-gesicht-v3.jpg) | VS-Split | Gleiches Abo. | ja |
+| [runde6-vs-gleiches-abo-ohne-v1.jpg](2026-10-02/runde6-vs-gleiches-abo-ohne-v1.jpg) | VS-Split | Gleiches Abo. | nein |
+| [runde6-vs-gleiches-abo-ohne-v2.jpg](2026-10-02/runde6-vs-gleiches-abo-ohne-v2.jpg) | VS-Split | Gleiches Abo. | nein |
+| [runde6-vs-gleiches-abo-ohne-v3.jpg](2026-10-02/runde6-vs-gleiches-abo-ohne-v3.jpg) | VS-Split | Gleiches Abo. | nein |
+| [runde6-z-6-stufen-v1.jpg](2026-10-02/runde6-z-6-stufen-v1.jpg) | Stufen-Blöcke in Glasoptik (Z-Variante) | 6 Stufen | nein |
+| [runde6-z-6-stufen-v2.jpg](2026-10-02/runde6-z-6-stufen-v2.jpg) | Stufen-Blöcke in Glasoptik (Z-Variante) | 6 Stufen | nein |
+| [runde6-z-6-stufen-v3.jpg](2026-10-02/runde6-z-6-stufen-v3.jpg) | Stufen-Blöcke in Glasoptik (Z-Variante) | 6 Stufen | nein |
+| [runde6-z-wo-stehst-du-v1.jpg](2026-10-02/runde6-z-wo-stehst-du-v1.jpg) | Stufen-Blöcke in Glasoptik (Z-Variante) | Wo stehst du? | nein |
+| [runde6-z-wo-stehst-du-v2.jpg](2026-10-02/runde6-z-wo-stehst-du-v2.jpg) | Stufen-Blöcke in Glasoptik (Z-Variante) | Wo stehst du? | nein |
+| [runde6-z-wo-stehst-du-v3.jpg](2026-10-02/runde6-z-wo-stehst-du-v3.jpg) | Stufen-Blöcke in Glasoptik (Z-Variante) | Wo stehst du? | nein |
+
+## 03.10. Runde 7 (32 Entwürfe)
+
+Übersicht: [2026-10-03/uebersicht-320px.jpg](2026-10-03/uebersicht-320px.jpg)
+
+Breite Stil-Erkundung: 8 Stile mit je 4 Varianten, allgemeine Themen aus der Nische statt nur Video 1. Bei Bildern mit Gesicht ist der Ausdruck jedes Mal ein anderer. Statt bekannter Personen gibt es erfundene Archetypen.
+
+| Datei | Stil | Text im Bild | Gesicht | Ausdruck |
+|---|---|---|---|---|
+| [runde7-riesenwort-v1.jpg](2026-10-03/runde7-riesenwort-v1.jpg) | Riesenwort hinter dem Kopf | SKILLS | ja | ueberrascht |
+| [runde7-riesenwort-v2.jpg](2026-10-03/runde7-riesenwort-v2.jpg) | Riesenwort hinter dem Kopf | KI-TEAM | ja | lachen |
+| [runde7-riesenwort-v3.jpg](2026-10-03/runde7-riesenwort-v3.jpg) | Riesenwort hinter dem Kopf | AGENTEN | ja | skeptisch |
+| [runde7-riesenwort-v4.jpg](2026-10-03/runde7-riesenwort-v4.jpg) | Riesenwort hinter dem Kopf | KI-OS | ja | nachdenklich |
+| [runde7-bildschirm-v1.jpg](2026-10-03/runde7-bildschirm-v1.jpg) | Gesicht plus Bildschirm | CLAUDE CODE | ja | zeigt |
+| [runde7-bildschirm-v2.jpg](2026-10-03/runde7-bildschirm-v2.jpg) | Gesicht plus Bildschirm | MEIN KI-BÜRO | ja | nachdenklich |
+| [runde7-bildschirm-v3.jpg](2026-10-03/runde7-bildschirm-v3.jpg) | Gesicht plus Bildschirm | SKILLS BAUEN | ja | ueberrascht |
+| [runde7-bildschirm-v4.jpg](2026-10-03/runde7-bildschirm-v4.jpg) | Gesicht plus Bildschirm | LÄUFT NACHTS | ja | skeptisch |
+| [runde7-haende-v1.jpg](2026-10-03/runde7-haende-v1.jpg) | Objekt in offenen Händen | TOOLS / KI-OS | ja | skeptisch |
+| [runde7-haende-v2.jpg](2026-10-03/runde7-haende-v2.jpg) | Objekt in offenen Händen | PROMPT / SKILL | ja | lachen |
+| [runde7-haende-v3.jpg](2026-10-03/runde7-haende-v3.jpg) | Objekt in offenen Händen | ALLEIN / KI-TEAM | ja | ueberrascht |
+| [runde7-haende-v4.jpg](2026-10-03/runde7-haende-v4.jpg) | Objekt in offenen Händen | ABO / MITARBEITER | ja | haende |
+| [runde7-glas3d-v1.jpg](2026-10-03/runde7-glas3d-v1.jpg) | 3D-Maskottchen in Glasoptik | BEIDE NUTZEN | nein | None |
+| [runde7-glas3d-v2.jpg](2026-10-03/runde7-glas3d-v2.jpg) | 3D-Maskottchen in Glasoptik | DEIN KI-TEAM | nein | None |
+| [runde7-glas3d-v3.jpg](2026-10-03/runde7-glas3d-v3.jpg) | 3D-Maskottchen in Glasoptik | SKILLS LADEN | nein | None |
+| [runde7-glas3d-v4.jpg](2026-10-03/runde7-glas3d-v4.jpg) | 3D-Maskottchen in Glasoptik | NACHTSCHICHT | nein | None |
+| [runde7-kaputt-v1.jpg](2026-10-03/runde7-kaputt-v1.jpg) | Zerbrochene Objekte auf Sockel | PROMPTS SIND TOT | nein | None |
+| [runde7-kaputt-v2.jpg](2026-10-03/runde7-kaputt-v2.jpg) | Zerbrochene Objekte auf Sockel | TOOL-CHAOS | nein | None |
+| [runde7-kaputt-v3.jpg](2026-10-03/runde7-kaputt-v3.jpg) | Zerbrochene Objekte auf Sockel | FALSCH GENUTZT | nein | None |
+| [runde7-kaputt-v4.jpg](2026-10-03/runde7-kaputt-v4.jpg) | Zerbrochene Objekte auf Sockel | WORKFLOW KAPUTT | nein | None |
+| [runde7-vs-v1.jpg](2026-10-03/runde7-vs-v1.jpg) | VS-Split | CHAT vs AGENT | nein | None |
+| [runde7-vs-v2.jpg](2026-10-03/runde7-vs-v2.jpg) | VS-Split | PROMPT vs SKILL | nein | None |
+| [runde7-vs-v3.jpg](2026-10-03/runde7-vs-v3.jpg) | VS-Split | CLAUDE vs CODEX | nein | None |
+| [runde7-vs-v4.jpg](2026-10-03/runde7-vs-v4.jpg) | VS-Split | TOOLS vs KI-OS | nein | None |
+| [runde7-chip-v1.jpg](2026-10-03/runde7-chip-v1.jpg) | Objekt auf Signalfarbe | DEIN EIGENER AGENT | nein | None |
+| [runde7-chip-v2.jpg](2026-10-03/runde7-chip-v2.jpg) | Objekt auf Signalfarbe | SKILLS EINSTECKEN | nein | None |
+| [runde7-chip-v3.jpg](2026-10-03/runde7-chip-v3.jpg) | Objekt auf Signalfarbe | CLAUDE CODE | nein | None |
+| [runde7-chip-v4.jpg](2026-10-03/runde7-chip-v4.jpg) | Objekt auf Signalfarbe | KI-MITARBEITER | nein | None |
+| [runde7-archetyp-v1.jpg](2026-10-03/runde7-archetyp-v1.jpg) | Archetyp-Szene ohne echte Person | NEUER KOLLEGE | nein | None |
+| [runde7-archetyp-v2.jpg](2026-10-03/runde7-archetyp-v2.jpg) | Archetyp-Szene ohne echte Person | BÜHNE FREI | nein | None |
+| [runde7-archetyp-v3.jpg](2026-10-03/runde7-archetyp-v3.jpg) | Archetyp-Szene ohne echte Person | SCHLÄFST DU? | nein | None |
+| [runde7-archetyp-v4.jpg](2026-10-03/runde7-archetyp-v4.jpg) | Archetyp-Szene ohne echte Person | MEIN KI-ICH | ja | zeigt |
